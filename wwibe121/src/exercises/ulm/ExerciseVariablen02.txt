@@ -1,0 +1,9 @@
+https://studium.hs-ulm.de/de/org/I/vorkurse/Documents/java_aufgaben.pdf
+Aufgabe Variablen-2
+
+Integer (byte, short, int, long)
+Character (char)
+Boolean (boolean)
+Date/Time (LocalDateTime)
+String (String)
+Floating Point Number (float, double)
