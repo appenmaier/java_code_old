@@ -1,0 +1,6 @@
+wwibe121/bin/
+wwibe221/bin/
+
+*.settings
+*.classpath
+*.project
