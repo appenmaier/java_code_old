@@ -122,7 +122,7 @@ public final class TableLamp extends Light implements WiredDevice, Comparable<Ta
 	@Override
 	public String toString() {
 		return "TableLamp [isShining=" + isShining + ", isOn=" + isOn + ", isConnected=" + isConnected
-				+ ", lightBulb.color=" + (lightBulb != null ? lightBulb.getColor().toString() : "-")
+				+ ", lightBulb.color=" + (lightBulb != null ? lightBulb.color().toString() : "-")
 				+ ", plugType.description=" + plugType.getDescription() + "]";
 	}
 

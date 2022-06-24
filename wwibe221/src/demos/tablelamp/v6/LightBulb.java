@@ -6,34 +6,15 @@ import java.awt.Color;
  * Gluehbirne
  * 
  * @author Daniel Appenmaier
- * @version 2.0
+ * @version 3.0
  */
-public class LightBulb {
-
-	/*
-	 * Attribute
-	 */
-	/**
-	 * Farbe
-	 */
-	private Color color;
+public record LightBulb(Color color) {
 
 	/*
 	 * Konstruktoren
 	 */
 	public LightBulb() {
-		this.color = Color.WHITE;
+		this(Color.WHITE);
 	}
 
-	public LightBulb(Color color) {
-		this.color = color;
-	}
-
-	/*
-	 * Setter und Getter
-	 */
-	public Color getColor() {
-		return color;
-	}
-	
 }
