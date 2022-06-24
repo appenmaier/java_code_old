@@ -1,0 +1,11 @@
+https://tutego.de/javabuch/aufgaben/intro.html
+Aufgabe Intro-1.2.1
+
+Frage: Ein Hauptprogramm wird erst dann gestartet, wenn die Klasse eine besondere Methode public static void main(String[] args) hat. Was passiert, wenn die Methode z. B. nicht main heisst, sondern irgendwie anders, z. B. Main oder losgehts?
+Antwort: Die Klasse kann zwar kompiliert und die Methode anderweitig aufgerufen, aber nicht ausgefuehrt werden
+
+Frage: Gebe Umlaute oder Herzchen aus; geht das?
+Antwort: Nein
+
+Frage: Oftmals wird Weissraum eingesetzt, also Leerzeichen (in der Regel kein Tabulator) und Zeilenumbrueche oftmals nach jeder Anweisung. Ist Folgendes so gueltig?
+Antwort: Ja

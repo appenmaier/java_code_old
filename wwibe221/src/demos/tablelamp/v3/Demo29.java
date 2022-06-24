@@ -1,0 +1,41 @@
+package demos.tablelamp.v3;
+
+/**
+ * Statische und nicht-statische Elemente einer Klasse
+ * 
+ * @author Daniel Appenmaier
+ * @version 1.0
+ */
+public class Demo29 {
+
+	public static void main(String[] args) {
+
+		LightBulb redLightBulb = new LightBulb("rot");
+		LightBulb whiteLightBulb = new LightBulb();
+
+		int numberOfTableLamps = TableLamp.getNumberOfTableLamps();
+		System.out.println("numberOfTableLamps: " + numberOfTableLamps);
+
+		TableLamp tableLamp1 = new TableLamp(redLightBulb);
+		tableLamp1.plugIn();
+		tableLamp1.switchOn();
+
+		numberOfTableLamps = TableLamp.getNumberOfTableLamps();
+		System.out.println("numberOfTableLamps: " + numberOfTableLamps);
+
+		TableLamp tableLamp2 = new TableLamp(redLightBulb);
+		tableLamp2.switchOn();
+
+		numberOfTableLamps = TableLamp.getNumberOfTableLamps();
+		System.out.println("numberOfTableLamps: " + numberOfTableLamps);
+
+		TableLamp tableLamp3 = new TableLamp(whiteLightBulb);
+		tableLamp3.plugIn();
+		tableLamp3.switchOn();
+
+		numberOfTableLamps = TableLamp.getNumberOfTableLamps();
+		System.out.println("numberOfTableLamps: " + numberOfTableLamps);
+
+	}
+
+}
