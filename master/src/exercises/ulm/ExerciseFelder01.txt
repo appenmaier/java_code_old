@@ -1,0 +1,14 @@
+https://studium.hs-ulm.de/de/org/I/vorkurse/Documents/java_aufgaben.pdf
+Aufgabe Felder-1
+
+one: [5 2 15]
+two: [2 4 6 8 10]
+
+Arrayzugriff 					Wert
+arrayOne.length					3
+arrayTwo.length					5
+arrayOne[1]						2
+arrayTwo[3]						8
+arrayTwo[arrayOne.length]		8
+arrayOne[arrayOne.length - 1]	15
+arrayTwo[10]					-
