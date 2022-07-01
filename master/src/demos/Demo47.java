@@ -1,14 +1,12 @@
 package demos;
 
-import java.util.ArrayList;
-import java.util.Random;
-import java.util.stream.Stream;
+import java.util.List;
 
 import helpers.Movies;
 import helpers.Movies.Movie;
 
 /**
- * Unendliche Stroeme
+ * Intermediaere und Terminale Operationen
  * 
  * @author Daniel Appenmaier
  * @version 1.0
@@ -18,18 +16,67 @@ public class Demo47 {
 
 	public static void main(String[] args) {
 
-		ArrayList<Movie> movies = Movies.getMovies();
+		List<Movie> movies = Movies.getMovies();
 
-		Stream.iterate(0, i -> ++i).limit(movies.size()).forEach(i -> System.out.println(movies.get(i)));
+		/*
+		 * Filtern (distinct, filter)
+		 */
+		System.out.println();
+		for (Movie movie : movies) {
+			if (movie.publishingYear().compareTo("1990") >= 0 && movie.publishingYear().compareTo("2000") < 0) {
+				System.out.println(movie);
+			}
+		}
 
 		System.out.println();
+		movies.stream().filter(
+				movie -> movie.publishingYear().compareTo("1990") >= 0 && movie.publishingYear().compareTo("2000") < 0)
+				.forEach(System.out::println);
 
-		Stream.iterate(0, i -> i < movies.size(), i -> ++i).forEach(i -> System.out.println(movies.get(i)));
+		/*
+		 * Abbilden (flatMap, map, mapMulti)
+		 */
+		System.out.println();
+		for (Movie movie : movies) {
+			String title = movie.title();
+			System.out.println(title.toUpperCase());
+		}
 
 		System.out.println();
+		movies.stream().map(movie -> movie.title().toUpperCase()).forEach(System.out::println);
 
-		Stream.generate(() -> new Random().nextInt(movies.size())).limit(50)
-				.forEach(i -> System.out.println(movies.get(i)));
+		/*
+		 * Suchen (allMatch, anyMatch, nonMatch, findAny, findFirst)
+		 */
+		System.out.println();
+		for (Movie movie : movies) {
+			if (movie.publishingYear().equals("1990")) {
+				System.out.println(true);
+			}
+		}
+
+		System.out.println();
+		System.out.println(movies.stream().anyMatch(movie -> movie.publishingYear().equals("1990")));
+
+		/*
+		 * Aggregieren (average, count, max, min, reduce, sum)
+		 */
+		System.out.println();
+		double total = 0;
+		for (Movie movie : movies) {
+			total += movie.rating();
+		}
+		System.out.println(total / movies.size());
+
+		System.out.println();
+		System.out.println(movies.stream().mapToDouble(movie -> movie.rating()).average().getAsDouble());
+
+		/*
+		 * Sammeln
+		 */
+		// Collectors
+
+		// Sortieren
 
 	}
 

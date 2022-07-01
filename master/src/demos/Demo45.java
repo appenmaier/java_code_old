@@ -1,12 +1,14 @@
 package demos;
 
-import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 import helpers.Movies;
 import helpers.Movies.Movie;
 
 /**
- * Intermediaere und Terminale Operationen
+ * Lokale Klassen, Anonyme Klassen, Lambda-Ausdruecke, Methodenreferenzen
  * 
  * @author Daniel Appenmaier
  * @version 1.0
@@ -16,68 +18,48 @@ public class Demo45 {
 
 	public static void main(String[] args) {
 
-		List<Movie> movies = Movies.getMovies();
+		ArrayList<Movie> movies = Movies.getMovies();
 
 		/*
-		 * Filtern (distinct, filter)
+		 * Top-Level-Klassen
 		 */
-		System.out.println();
-		for (Movie movie : movies) {
-			if (movie.publishingYear().compareTo("1990") >= 0 && movie.publishingYear().compareTo("2000") < 0) {
-				System.out.println(movie);
+		Collections.sort(movies, new Movies.MovieByTitleComparator());
+
+		/*
+		 * Lokale Klassen
+		 */
+		class MovieByTitleComparator implements Comparator<Movie> {
+			public int compare(Movie m1, Movie m2) {
+				return m1.title().compareTo(m2.title());
 			}
 		}
 
-		System.out.println();
-		movies.stream().filter(
-				movie -> movie.publishingYear().compareTo("1990") >= 0 && movie.publishingYear().compareTo("2000") < 0)
-				.forEach(System.out::println);
+		Collections.sort(movies, new MovieByTitleComparator());
 
 		/*
-		 * Abbilden (flatMap, map, mapMulti)
+		 * Anonyme Klassen
 		 */
-		System.out.println();
-		for (Movie movie : movies) {
-			String title = movie.title();
-			System.out.println(title.toUpperCase());
-		}
-
-		System.out.println();
-		movies.stream().map(movie -> movie.title().toUpperCase()).forEach(System.out::println);
-
-		/*
-		 * Suchen (allMatch, anyMatch, nonMatch, findAny, findFirst)
-		 */
-		System.out.println();
-		for (Movie movie : movies) {
-			if (movie.publishingYear().equals("1990")) {
-				System.out.println(true);
+		Collections.sort(movies, new Comparator<Movie>() {
+			public int compare(Movie m1, Movie m2) {
+				return m1.title().compareTo(m2.title());
 			}
-		}
-
-		System.out.println();
-		System.out.println(movies.stream().anyMatch(movie -> movie.publishingYear().equals("1990")));
+		});
 
 		/*
-		 * Aggregieren (average, count, max, min, reduce, sum)
+		 * Lambda-Ausdruecke
 		 */
-		System.out.println();
-		double total = 0;
-		for (Movie movie : movies) {
-			total += movie.rating();
-		}
-		System.out.println(total / movies.size());
-
-		System.out.println();
-		System.out.println(movies.stream().mapToDouble(movie -> movie.rating()).average().getAsDouble());
+		Collections.sort(movies, (m1, m2) -> m1.title().compareTo(m2.title()));
 
 		/*
-		 * Sammeln
+		 * Methodenreferenzen
 		 */
-		// Collectors
+		Collections.sort(movies, (m1, m2) -> Demo45.compareMoviesByTitle(m1, m2));
+		Collections.sort(movies, Demo45::compareMoviesByTitle);
 
-		// Sortieren
+	}
 
+	public static int compareMoviesByTitle(Movie m1, Movie m2) {
+		return m1.title().compareTo(m2.title());
 	}
 
 }

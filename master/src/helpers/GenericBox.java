@@ -1,27 +1,27 @@
 package helpers;
 
 /**
- * Box
+ * Generische Box
  * 
  * @author Daniel Appenmaier
  * @version 1.0
  *
  */
-public class Box {
+public class GenericBox<T> {
 
 	/*
 	 * Attribute
 	 */
-	private Object content;
+	private T content;
 
 	/*
 	 * Setter und Getter
 	 */
-	public void setContent(Object content) {
+	public void setContent(T content) {
 		this.content = content;
 	}
 
-	public Object getContent() {
+	public T getContent() {
 		return content;
 	}
 

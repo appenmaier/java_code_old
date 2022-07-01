@@ -1,10 +1,12 @@
 package demos;
 
-import helpers.Box;
-import helpers.Box.Element;
+import java.util.ArrayList;
+
+import javafx.scene.Node;
+import javafx.scene.Parent;
 
 /**
- * Elementklassen
+ * Varianz
  * 
  * @author Daniel Appenmaier
  * @version 1.0
@@ -12,14 +14,28 @@ import helpers.Box.Element;
  */
 public class Demo42 {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 
-		Box box = new Box(5);
+		ArrayList<?> bivariantList;
+		bivariantList = new ArrayList<Object>();
+		bivariantList = new ArrayList<Node>();
+		bivariantList = new ArrayList<Parent>();
 
-		// Element element = new Element("Hans");
-		Element element = box.new Element("Hans");
-		box.addElement(element);
-		System.out.println(box.getElement(0).getValue());
+		ArrayList<? extends Node> covariantList;
+//      covariantList = new ArrayList<Object>();
+		covariantList = new ArrayList<Node>();
+		covariantList = new ArrayList<Parent>();
+
+		ArrayList<? super Node> contravariantList;
+		contravariantList = new ArrayList<Object>();
+		contravariantList = new ArrayList<Node>();
+//		contravariantList = new ArrayList<Parent>();
+
+		ArrayList<Node> invariantList;
+//		invariantList = new ArrayList<Object>();
+		invariantList = new ArrayList<Node>();
+//		invariantList = new ArrayList<Parent>();
 
 	}
 
