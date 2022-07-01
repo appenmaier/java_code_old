@@ -69,7 +69,7 @@ public class Movies {
 	}
 
 	/**
-	 * MovieByDescription
+	 * MovieByTitleComparator
 	 * 
 	 * @author Daniel Appenmaier
 	 * @version 1.0

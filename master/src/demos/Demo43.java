@@ -30,7 +30,7 @@ public class Demo43 {
 		 */
 		class MovieByTitleComparator implements Comparator<Movie> {
 			public int compare(Movie m1, Movie m2) {
-				return Demo43.compareMoviesByTitle(m1, m2);
+				return m1.title().compareTo(m2.title());
 			}
 		}
 
@@ -41,18 +41,19 @@ public class Demo43 {
 		 */
 		Collections.sort(movies, new Comparator<Movie>() {
 			public int compare(Movie m1, Movie m2) {
-				return Demo43.compareMoviesByTitle(m1, m2);
+				return m1.title().compareTo(m2.title());
 			}
 		});
 
 		/*
 		 * Lambda-Ausdruecke
 		 */
-		Collections.sort(movies, (m1, m2) -> Demo43.compareMoviesByTitle(m1, m2));
+		Collections.sort(movies, (m1, m2) -> m1.title().compareTo(m2.title()));
 
 		/*
 		 * Methodenreferenzen
 		 */
+		Collections.sort(movies, (m1, m2) -> Demo43.compareMoviesByTitle(m1, m2));
 		Collections.sort(movies, Demo43::compareMoviesByTitle);
 
 	}
