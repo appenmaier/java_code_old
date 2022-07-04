@@ -6,7 +6,7 @@ import java.awt.Color;
  * Gluehbirne
  * 
  * @author Daniel Appenmaier
- * @version 3.0
+ * @version 4.0
  */
 public record LightBulb(Color color) {
 
