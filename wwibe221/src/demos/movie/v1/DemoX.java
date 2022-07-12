@@ -22,6 +22,7 @@ public class DemoX {
 		movies.add(movie3);
 
 		addMoviesByConsole();
+		
 
 		compareMovies();
 
