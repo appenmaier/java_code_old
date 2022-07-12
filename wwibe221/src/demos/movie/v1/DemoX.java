@@ -1,5 +1,7 @@
 package demos.movie.v1;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -12,7 +14,7 @@ public class DemoX {
 //	private static Movie[] movies = new Movie[5];
 	private static ArrayList<Movie> movies = new ArrayList<>();
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 
 //		movies[0] = movie1;
 //		movies[1] = movie2;
@@ -22,15 +24,19 @@ public class DemoX {
 		movies.add(movie3);
 
 		addMoviesByConsole();
-		
+		addMoviesByFile();
 
 		compareMovies();
 
 //		for (int i = 0; i < movies.length; i++) {
 //			System.out.println(movies[i].getTitle());
 //		}
-		for (int i = 0; i < movies.size(); i++) {
-			System.out.println(movies.get(i).toString());
+//		for (int i = 0; i < movies.size(); i++) {
+//			System.out.println(movies.get(i).toString());
+//		}
+
+		for (Movie m : movies) {
+			System.out.println(m);
 		}
 
 	}
@@ -77,6 +83,28 @@ public class DemoX {
 		if (movie1.equals(movie2)) {
 			System.out.println("Die beiden Objekte sind gleich");
 		}
+
+	}
+
+	private static void addMoviesByFile() throws FileNotFoundException {
+
+		File file = new File("C:\\Users\\D054906\\git\\dhbw-java3\\wwibe221\\src\\resources\\movies.csv");
+
+		Scanner scanner = new Scanner(file);
+
+		while (scanner.hasNextLine()) {
+			String line = scanner.nextLine();
+			String[] tokens = line.split(";");
+			String title = tokens[0];
+			Genre genre = Genre.valueOf(tokens[1]);
+			String publishingYear = tokens[2];
+			double rating = Double.valueOf(tokens[3]);
+
+			Movie movie = new Movie(title, genre, publishingYear, rating);
+			movies.add(movie);
+		}
+
+		scanner.close();
 
 	}
 

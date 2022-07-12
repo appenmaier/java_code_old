@@ -5,7 +5,10 @@ public enum Genre {
 	/*
 	 * Aufzählungskonstanten
 	 */
-	FANTASY("Fantasy"), SCIENCE_FICTION("Science-Fiction"), DRAMA("Drama"), HORROR("Horror");
+	ADVENTURE("Abenteuer"), ACTION("Action"), DOCUMENTATION("Dokumentation"), DRAMA("Drama"), EROTIC("Erotik"),
+	FANTASY("Fantasy"), BIOGRAPHY("Biographie"), COMEDY("Komödie"), HORROR("Horror"), WAR("Kriegsfilm"),
+	LOVE("Liebsfilm"), MARTIAL_ARTS("Martial Arts"), MUSIC("Musikfilm"), PORNO("Porno"), ROAD("Roadmovie"),
+	SCIENCE_FICTION("Science-Fiction"), SPORTS("Sportfilm"), THRILLER("Thriller"), WESTERN("Western");
 
 	/*
 	 * Attribute
