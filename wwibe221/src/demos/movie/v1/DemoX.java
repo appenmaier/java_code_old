@@ -88,7 +88,8 @@ public class DemoX {
 
 	private static void addMoviesByFile() throws FileNotFoundException {
 
-		File file = new File("C:\\Users\\D054906\\git\\dhbw-java3\\wwibe221\\src\\resources\\movies.csv");
+//		File file = new File("C:\\Users\\D054906\\git\\dhbw-java3\\wwibe221\\src\\resources\\movies.csv");
+		File file = new File("src/resources/movies.csv");
 
 		Scanner scanner = new Scanner(file);
 
