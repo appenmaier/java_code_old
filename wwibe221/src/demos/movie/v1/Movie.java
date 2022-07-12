@@ -1,6 +1,11 @@
 package demos.movie.v1;
 
-public record Movie(String title, Genre genre, String publishingYear, double rating) {
+public record Movie(String title, Genre genre, String publishingYear, double rating) implements Comparable<Movie> {
+
+	@Override
+	public int compareTo(Movie o) {
+		return this.title().compareTo(o.title());
+	}
 
 }
 

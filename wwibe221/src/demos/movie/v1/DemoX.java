@@ -3,6 +3,7 @@ package demos.movie.v1;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class DemoX {
@@ -19,12 +20,14 @@ public class DemoX {
 //		movies[0] = movie1;
 //		movies[1] = movie2;
 //		movies[2] = movie3;
-		movies.add(movie1);
-		movies.add(movie2);
-		movies.add(movie3);
-
+//		movies.add(movie1);
+//		movies.add(movie2);
+//		movies.add(movie3);
+		addMovies(movie1, movie2, movie3);
 		addMoviesByConsole();
 		addMoviesByFile();
+
+		Collections.sort(movies);
 
 		compareMovies();
 
@@ -39,6 +42,12 @@ public class DemoX {
 			System.out.println(m);
 		}
 
+	}
+
+	private static void addMovies(Movie... movies) {
+		for (Movie m : movies) {
+			DemoX.movies.add(m);
+		}
 	}
 
 	private static void addMoviesByConsole() {
