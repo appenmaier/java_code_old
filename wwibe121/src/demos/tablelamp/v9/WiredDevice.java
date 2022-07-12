@@ -1,4 +1,4 @@
-package demos.tablelamp.v8;
+package demos.tablelamp.v9;
 
 /**
  * Kabelgebundenes Gerät
