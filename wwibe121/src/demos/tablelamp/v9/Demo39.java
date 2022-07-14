@@ -1,11 +1,6 @@
-package demos;
+package demos.tablelamp.v9;
 
 import java.util.Scanner;
-
-import demos.tablelamp.v9.FlashLight;
-import demos.tablelamp.v9.Light;
-import demos.tablelamp.v9.PlugType;
-import demos.tablelamp.v9.TableLamp;
 
 /**
  * Programmfehler
