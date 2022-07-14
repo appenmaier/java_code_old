@@ -1,5 +1,6 @@
 package demos.tablelamp.v9;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -30,8 +31,17 @@ public class Demo39 {
 		 */
 		// InputMismatchException
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("Gibt bitte eine Zahl ein: ");
-		int i = scanner.nextInt();
+		boolean loop = true;
+		while (loop) {
+			try {
+				System.out.print("Gibt bitte eine Zahl ein: ");
+				int i = scanner.nextInt();
+				loop = false;
+			} catch (InputMismatchException e) {
+				System.err.println("Das war keine Zahl");
+				scanner.nextLine();
+			}
+		}
 
 		// ArrayIndexOutOfBoundsException
 		int[] numbers = { 5, 3, 2, 9 };
