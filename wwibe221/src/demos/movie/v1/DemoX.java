@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
 import java.util.Scanner;
 
 public class DemoX {
@@ -27,7 +28,10 @@ public class DemoX {
 		addMoviesByConsole();
 		addMoviesByFile();
 
-		Collections.sort(movies);
+//		Collections.sort(movies);
+		Collections.sort(movies, new MovieByRatingDescendingComparator());
+
+		printRandomMovie();
 
 		compareMovies();
 
@@ -116,6 +120,12 @@ public class DemoX {
 
 		scanner.close();
 
+	}
+
+	private static void printRandomMovie() {
+		Random random = new Random();
+		int index = random.nextInt(movies.size());
+		System.out.println(movies.get(index));
 	}
 
 }
