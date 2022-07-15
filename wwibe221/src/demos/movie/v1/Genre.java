@@ -1,5 +1,12 @@
 package demos.movie.v1;
 
+/**
+ * Genre
+ * 
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public enum Genre {
 
 	/*

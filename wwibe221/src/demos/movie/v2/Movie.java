@@ -4,16 +4,27 @@ import java.util.Comparator;
 
 import demos.movie.v2.Movie.Genre;
 
+/**
+ * Film
+ * 
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 @SuppressWarnings("unused")
 public record Movie(String title, Genre genre, String publishingYear, double rating) implements Comparable<Movie> {
 
-	/* Methoden */
+	/*
+	 * Methoden
+	 */
 	@Override
 	public int compareTo(Movie o) {
 		return this.title().compareTo(o.title());
 	}
 
-	/* Innere Klassen */
+	/*
+	 * Innere Klassen
+	 */
 	public static class MovieByRatingDescendingComparator implements Comparator<Movie> {
 
 		@Override
@@ -23,6 +34,13 @@ public record Movie(String title, Genre genre, String publishingYear, double rat
 
 	}
 
+	/**
+	 * Genre
+	 * 
+	 * @author Daniel Appenmaier
+	 * @version 1.0
+	 *
+	 */
 	public static enum Genre {
 
 		/*

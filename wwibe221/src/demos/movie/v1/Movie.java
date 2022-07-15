@@ -1,7 +1,17 @@
 package demos.movie.v1;
 
+/**
+ * Film
+ * 
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public record Movie(String title, Genre genre, String publishingYear, double rating) implements Comparable<Movie> {
 
+	/*
+	 * Methoden
+	 */
 	@Override
 	public int compareTo(Movie o) {
 		return this.title().compareTo(o.title());
