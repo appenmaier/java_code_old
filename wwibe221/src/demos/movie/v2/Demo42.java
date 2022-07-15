@@ -8,7 +8,7 @@ import demos.movie.v2.Movie.MovieByRatingDescendingComparator;
 import helpers.Movies;
 
 /**
- * Geschachtelte Klassen
+ * Geschachtelte Klassen (Nested Classes)
  * 
  * @author Daniel Appenmaier
  * @version 1.0
