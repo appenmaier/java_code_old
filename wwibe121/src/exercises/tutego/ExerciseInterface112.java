@@ -1,4 +1,9 @@
-package exercises.tutego.radio.v11;
+package exercises.tutego;
+
+import exercises.tutego.radio.v11.ElectronicDevice;
+import exercises.tutego.radio.v11.IceMachine;
+import exercises.tutego.radio.v11.Radio;
+import exercises.tutego.radio.v11.Ship;
 
 /**
  * https://tutego.de/javabuch/aufgaben/interface_enum_sealed_classes_record.html

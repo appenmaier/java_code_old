@@ -1,4 +1,6 @@
-package exercises.tutego.candy.v3;
+package exercises.tutego;
+
+import exercises.tutego.candy.v3.CandyType;
 
 /**
   * https://tutego.de/javabuch/aufgaben/interface_enum_sealed_classes_record.html

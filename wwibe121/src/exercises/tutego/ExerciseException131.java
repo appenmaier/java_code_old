@@ -1,4 +1,7 @@
-package exercises.tutego.radio.v11;
+package exercises.tutego;
+
+import exercises.tutego.radio.v11.IllegalWattException;
+import exercises.tutego.radio.v11.TV;
 
 /**
  * https://tutego.de/javabuch/aufgaben/exception.html Aufgabe Exception-1.3.1

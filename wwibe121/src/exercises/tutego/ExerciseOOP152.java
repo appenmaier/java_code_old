@@ -1,4 +1,7 @@
-package exercises.tutego.radio.v9;
+package exercises.tutego;
+
+import exercises.tutego.radio.v9.Radio;
+import exercises.tutego.radio.v9.Ship;
 
 /**
  * https://tutego.de/javabuch/aufgaben/oop_classes.html Aufgabe OOP-1.5.2

@@ -1,4 +1,7 @@
-package exercises.tutego.radio.v8;
+package exercises.tutego;
+
+import exercises.tutego.radio.v8.Modulation;
+import exercises.tutego.radio.v8.Radio;
 
 /**
  * https://tutego.de/javabuch/aufgaben/oop_classes.html Aufgabe OOP-1.3.1

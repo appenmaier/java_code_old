@@ -1,7 +1,7 @@
 package helpers;
 
 /**
- * Box
+ * Generische Box
  * 
  * @author Daniel Appenmaier
  * @version 1.0

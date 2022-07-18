@@ -1,4 +1,6 @@
-package exercises.tutego.radio.v10;
+package exercises.tutego;
+
+import exercises.tutego.radio.v10.Firebox;
 
 /**
  * https://tutego.de/javabuch/aufgaben/oop_classes.html Aufgabe OOP-1.6.6

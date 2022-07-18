@@ -8,28 +8,28 @@ package exercises.tutego.radio.v2;
  */
 public class Radio {
 
-	boolean isOn;
-	int volume;
+	public boolean isOn;
+	public int volume;
 
-	void volumeUp() {
+	public void volumeUp() {
 		volume++;
 	}
 
-	void volumeDown() {
+	public void volumeDown() {
 		volume--;
 	}
 
-	void on() {
+	public void on() {
 		isOn = true;
 		System.out.println("an");
 	}
 
-	void off() {
+	public void off() {
 		isOn = false;
 		System.out.println("aus");
 	}
 
-	boolean isOn() {
+	public boolean isOn() {
 		return isOn;
 	}
 

@@ -8,7 +8,7 @@ package exercises.tutego.radio.v1;
  */
 public class Radio {
 
-	boolean isOn;
-	int volume;
+	public boolean isOn;
+	public int volume;
 
 }

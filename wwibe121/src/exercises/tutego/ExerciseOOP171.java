@@ -1,4 +1,10 @@
-package exercises.tutego.radio.v10;
+package exercises.tutego;
+
+import exercises.tutego.radio.v10.Firebox;
+import exercises.tutego.radio.v10.IceMachine;
+import exercises.tutego.radio.v10.Radio;
+import exercises.tutego.radio.v10.Ship;
+import exercises.tutego.radio.v10.TV;
 
 /**
  * https://tutego.de/javabuch/aufgaben/oop_classes.html Aufgabe OOP-1.7.1

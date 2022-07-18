@@ -1,4 +1,6 @@
-package exercises.tutego.toaster.v1;
+package exercises.tutego;
+
+import exercises.tutego.toaster.v1.Toaster;
 
 /**
  * https://tutego.de/javabuch/aufgaben/oop_classes.html Aufgabe OOP-1.6.5
