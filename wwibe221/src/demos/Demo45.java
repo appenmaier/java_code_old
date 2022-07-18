@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import demos.movie.v2.Movie;
+import demos.movie.v2.Movie.Genre;
 import helpers.Movies;
-import helpers.Movies.Genre;
-import helpers.Movies.Movie;
 
 /**
  * Die Java Stream API
@@ -16,7 +16,7 @@ import helpers.Movies.Movie;
  * @version 1.0
  *
  */
-public class Demo46 {
+public class Demo45 {
 
 	public static void main(String[] args) throws FileNotFoundException {
 
