@@ -47,7 +47,6 @@ public class Movies {
 	/*
 	 * Innere Klassen
 	 */
-	@SuppressWarnings("unused")
 	public record Movie(String title, Genre genre, String publishingYear, double rating) implements Comparable<Movie> {
 
 		/*
