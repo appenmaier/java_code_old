@@ -6,9 +6,9 @@ import java.util.ArrayList;
  * Fahrzeugvermietung
  * 
  * @author Daniel Appenmaier
- * @version 1.0
+ * @version 2.0
  */
-public class Rental {
+public class Rental implements Partner{
 
 	/*
 	 * Attribute
