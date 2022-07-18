@@ -1,6 +1,9 @@
 package demos;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 import helpers.Movies;
 import helpers.Movies.Genre;
@@ -31,6 +34,10 @@ public class Demo47 {
 		// Überspringen, Begrenzen und Unterscheiden (skip, limit, distinct)
 		skipAndLimitAndDistinct();
 
+		// Sammeln (collect)
+		collect();
+		collectAndGroup();
+
 		// Finden (findAny, findFirst)
 		find();
 
@@ -51,8 +58,9 @@ public class Demo47 {
 //			}
 //		}
 
-		movies.stream().filter(
-				movie -> movie.publishingYear().compareTo("1990") >= 0 && movie.publishingYear().compareTo("2000") < 0)
+		movies.stream()
+				.filter(movie -> movie.publishingYear().compareTo("1990") >= 0
+						&& movie.publishingYear().compareTo("2000") < 0)
 				.forEach(System.out::println);
 
 		System.out.println();
@@ -79,7 +87,8 @@ public class Demo47 {
 //			System.out.println(movie);
 //		}
 
-		movies.stream().sorted((movie1, movie2) -> movie1.title().compareTo(movie2.title()))
+		movies.stream()
+				.sorted((movie1, movie2) -> movie1.title().compareTo(movie2.title()))
 				.forEach(System.out::println);
 
 		System.out.println();
@@ -143,8 +152,52 @@ public class Demo47 {
 //		}
 //		System.out.println(total / count);
 
-		System.out.println(movies.stream().filter(movie -> movie.genre().equals(Genre.COMEDY))
-				.mapToDouble(movie -> movie.rating()).average().getAsDouble());
+		System.out.println(movies.stream()
+				.filter(movie -> movie.genre().equals(Genre.COMEDY))
+				.mapToDouble(movie -> movie.rating())
+				.average()
+				.getAsDouble());
+
+		System.out.println();
+	}
+
+	private static void collect() {
+		System.out.println("Sammeln (alle Filme nach 1999 aufsteigend sortiert nach Filmtitel):");
+
+		List<Movie> filteredAndSortedMovies = new ArrayList<>();
+
+//		for (Movie movie : movies) {
+//			if (movie.publishingYear().compareTo("1999") > 0) {
+//				filteredAndSortedMovies.add(movie);
+//			}
+//		}
+//		Collections.sort(filteredAndSortedMovies, ((movie1, movie2) -> movie1.title().compareTo(movie2.title())));
+
+		filteredAndSortedMovies = movies.stream()
+				.filter(movie -> movie.publishingYear().compareTo("1999") > 0)
+				.sorted((movie1, movie2) -> movie1.title().compareTo(movie2.title()))
+				.collect(Collectors.toList());
+
+		filteredAndSortedMovies.forEach(System.out::println);
+
+		System.out.println();
+	}
+
+	private static void collectAndGroup() {
+		System.out.println("Sammeln (alle Filme gruppiert nach Genre):");
+
+		Map<Genre, List<Movie>> moviesByGenre;
+
+//		for (Movie movie : movies) {
+//
+//		}
+
+		moviesByGenre = movies.stream()
+				.filter(movie -> movie.publishingYear().compareTo("1999") > 0)
+				.sorted((movie1, movie2) -> movie1.title().compareTo(movie2.title()))
+				.collect(Collectors.groupingBy(movie -> movie.genre()));
+
+		System.out.println(moviesByGenre);
 
 		System.out.println();
 	}
