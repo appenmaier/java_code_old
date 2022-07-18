@@ -15,7 +15,7 @@ public class Exercise40 {
 
 	public static void main(String[] args) throws FileNotFoundException {
 
-		File file = new File("../documents/vehicles.txt");
+		File file = new File("src/resources/vehicles.txt");
 
 		ArrayList<Vehicle> vehicles = new ArrayList<>();
 

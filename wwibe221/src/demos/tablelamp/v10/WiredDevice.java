@@ -1,10 +1,10 @@
-package demos.tablelamp.v9;
+package demos.tablelamp.v10;
 
 /**
  * Kabelgebundenes Geraet
  * 
  * @author Daniel appenmaier
- * @version 1.0
+ * @version 2.0
  */
 public interface WiredDevice {
 
@@ -14,7 +14,7 @@ public interface WiredDevice {
 	/**
 	 * Steckt das kabelgebundene Geraet ein
 	 */
-	void plugIn();
+	void plugIn() throws AlreadyPluggedInException;
 
 	/**
 	 * Steckt das kabelgebundene Geraet aus

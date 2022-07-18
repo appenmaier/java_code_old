@@ -18,7 +18,7 @@ public class Files01 {
 
 	public static void main(String[] args) throws FileNotFoundException {
 
-		File file = new File("src/resources/vehicles.csv");
+		File file = new File("src/resources/vehicles.txt");
 
 		ArrayList<Vehicle> vehicles = new ArrayList<>();
 

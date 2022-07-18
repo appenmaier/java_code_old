@@ -1,4 +1,4 @@
-package demos.tablelamp.v9;
+package demos.tablelamp.v10;
 
 import java.util.Objects;
 
@@ -6,7 +6,7 @@ import java.util.Objects;
  * Tischleuchte
  * 
  * @author Daniel Appenmaier
- * @version 9.0
+ * @version 10.0
  */
 public final class TableLamp extends Light implements WiredDevice, Comparable<TableLamp> {
 
@@ -73,8 +73,14 @@ public final class TableLamp extends Light implements WiredDevice, Comparable<Ta
 	 */
 	/**
 	 * Steckt die Tischleuchte ein
+	 * 
+	 * @throws AlreadyPluggedInException
 	 */
-	public void plugIn() {
+	public void plugIn() throws AlreadyPluggedInException {
+		if (isConnected) {
+			throw new AlreadyPluggedInException();
+		}
+
 		isConnected = true;
 
 		if (isOn == true) {

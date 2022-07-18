@@ -8,7 +8,7 @@ import java.util.Objects;
  * @author Daniel Appenmaier
  * @version 8.0
  */
-public final class TableLamp extends Light implements WiredDevice, Comparable<TableLamp> {
+public final class TableLamp extends Light implements WiredDevice {
 
 	/*
 	 * Attribute
@@ -142,27 +142,6 @@ public final class TableLamp extends Light implements WiredDevice, Comparable<Ta
 		TableLamp other = (TableLamp) obj;
 		return isConnected == other.isConnected && Objects.equals(lightBulb, other.lightBulb)
 				&& plugType == other.plugType;
-	}
-
-	/**
-	 * Vergleicht die Tischleuchte mit der eingehenden Tischleuchte anhand der
-	 * Helligkeit der Gluehbirnen
-	 * 
-	 * @param t Tischleuchte
-	 * @return Vergleichswert (Vergleichswert groesser Null: Tischleuchte 1 ist
-	 *         heller; Vergleichswert kleiner Null: Tischleuchte 2 ist heller;
-	 *         Vergleichswert gleich Null: die Tischleuchten sind gleich hell)
-	 */
-	public int compareTo(TableLamp t) {
-		if (lightBulb != null && t.getLightBulb() != null) {
-			return Double.compare(lightBulb.getBrightness(), t.getLightBulb().getBrightness());
-		} else if (lightBulb != null) {
-			return 1;
-		} else if (t.getLightBulb() != null) {
-			return -1;
-		} else {
-			return 0;
-		}
 	}
 
 }

@@ -1,10 +1,10 @@
-package demos.tablelamp.v9;
+package demos.tablelamp.v10;
 
 /**
  * Toaster
  * 
  * @author Daniel Appenmaier
- * @version 1.0
+ * @version 2.0
  */
 public class Toaster implements WiredDevice {
 
@@ -25,8 +25,14 @@ public class Toaster implements WiredDevice {
 	 */
 	/**
 	 * Steckt den Toaster ein
+	 * 
+	 * @throws AlreadyPluggedInException
 	 */
-	public void plugIn() {
+	public void plugIn() throws AlreadyPluggedInException {
+		if (isPlugged) {
+			throw new AlreadyPluggedInException();
+		}
+		
 		isPlugged = true;
 	}
 

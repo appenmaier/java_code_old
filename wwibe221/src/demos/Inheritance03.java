@@ -1,0 +1,17 @@
+package demos;
+
+/**
+ * Abstrakte und finale Methoden und Klassen
+ * 
+ * @author Daniel Appenmaier
+ * @version 1.0
+ */
+public class Inheritance03 {
+
+	public static void main(String[] args) {
+
+		// Light light = new Light();
+
+	}
+
+}
