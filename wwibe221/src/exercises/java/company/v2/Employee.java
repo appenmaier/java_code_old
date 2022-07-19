@@ -39,12 +39,12 @@ public class Employee {
 		if (salary < this.salary) {
 			throw new SalaryDecreaseException();
 		}
-		
-		int percentageChange = salary * 100 / this.salary;
-		if (percentageChange > 110) {
+
+		double increase = (double) (salary - this.salary) / this.salary;
+		if (increase > 0.1) {
 			throw new SalaryIncreaseTooHighException();
 		}
-		
+
 		this.salary = salary;
 	}
 
