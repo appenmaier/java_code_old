@@ -1,10 +1,10 @@
-package exercises.java.company.v1;
+package exercises.java.company.v2;
 
 /**
  * Mitarbeiter
  * 
  * @author Daniel Appenmaier
- * @version 1.0
+ * @version 2.0
  */
 public class Employee {
 
@@ -35,8 +35,17 @@ public class Employee {
 		return person.getName();
 	}
 
-	public int getSalary() {
-		return salary;
+	public void setSalary(int salary) throws SalaryDecreaseException, SalaryIncreaseTooHighException {
+		if (salary < this.salary) {
+			throw new SalaryDecreaseException();
+		}
+		
+		int percentageChange = salary * 100 / this.salary;
+		if (percentageChange > 110) {
+			throw new SalaryIncreaseTooHighException();
+		}
+		
+		this.salary = salary;
 	}
 
 	/*
