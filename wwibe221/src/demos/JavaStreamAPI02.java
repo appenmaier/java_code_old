@@ -2,9 +2,11 @@ package demos;
 
 import java.io.FileNotFoundException;
 import java.util.List;
+import java.util.Optional;
 
 import helpers.Movies;
 import helpers.Movies.Movie;
+import helpers.Movies.Movie.Genre;
 
 /**
  * Intermediaere und Terminale Operationen
@@ -32,6 +34,15 @@ public class JavaStreamAPI02 {
 
 		// Sortieren (sorted)
 		sort();
+
+		// Ueberspringen, Begrenzen und Unterscheiden (skip, limit, distinct)
+		skipAndLimitAndDistinct();
+
+		/*
+		 * Terminale Operationen
+		 */
+		// Finden (findAny, findFirst)
+		find();
 
 	}
 
@@ -84,6 +95,45 @@ public class JavaStreamAPI02 {
 //		}
 
 		movies.stream().sorted((m1, m2) -> m1.title().compareTo(m2.title())).forEach(System.out::println);
+
+		System.out.println();
+
+	}
+
+	private static void skipAndLimitAndDistinct() {
+		System.out.println("Ueberspringen, Begrenzen und Unterscheiden (Filme 6-10 ohne Duplikate):");
+
+		movies.add(7, new Movie("Pulp Fiction", Genre.ACTION, "1994", 8.9));
+
+//		HashSet<Movie> distinctMovies = new HashSet<>(movies);
+//		System.out.println(movies.size());
+//		System.out.println(distinctMovies.size());
+//
+//		for (int i = 5; i < 10; i++) {
+//			System.out.println(movies.get(i));
+//		}
+
+		movies.stream().distinct().skip(5).limit(5).forEach(System.out::println);
+
+		System.out.println();
+
+	}
+
+	private static void find() {
+		System.out.println("Finden (ein beliebiger Thriller):");
+
+//		ArrayList<Movie> thrillers = new ArrayList<>();
+//		for (Movie m : movies) {
+//			if (m.genre().equals(Genre.THRILLER)) {
+//				thrillers.add(m);
+//			}
+//		}
+//
+//		Random random = new Random();
+//		System.out.println(thrillers.get(random.nextInt(thrillers.size())));
+
+		Optional<Movie> thriller = movies.stream().filter(m -> m.genre().equals(Genre.THRILLER)).findAny();
+		System.out.println(thriller);
 
 		System.out.println();
 
