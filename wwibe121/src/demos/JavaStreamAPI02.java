@@ -2,6 +2,8 @@ package demos;
 
 import java.io.FileNotFoundException;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Optional;
 import java.util.OptionalDouble;
 import java.util.stream.Collectors;
@@ -42,6 +44,9 @@ public class JavaStreamAPI02 {
 
 		// Duplikate entfernen (distinct)
 		distinct();
+
+		// Spaehen (peek)
+		peek();
 
 		/*
 		 * Terminale Operationen
@@ -137,6 +142,19 @@ public class JavaStreamAPI02 {
 		System.out.println();
 	}
 
+	private static void peek() {
+		System.out.println("Spaehen");
+
+		List<Movie> moviesWithMin8Rating = movies.stream()
+				.filter(m -> m.rating() > 8)
+				.peek(System.out::println)
+				.collect(Collectors.toList());
+
+		moviesWithMin8Rating.forEach(System.out::println);
+
+		System.out.println();
+	}
+
 	private static void execute() {
 		System.out.println("Ausfuehren (gib alle Filme auf der Konsole aus)");
 
@@ -228,6 +246,12 @@ public class JavaStreamAPI02 {
 
 	private static void collectAndGroup() {
 		System.out.println("Sammlen (alle Filme gruppiert nach dem Genre)");
+
+		Map<Genre, List<Movie>> moviesByGenre = movies.stream().collect(Collectors.groupingBy(m -> m.genre()));
+
+		for (Entry<Genre, List<Movie>> entry : moviesByGenre.entrySet()) {
+			System.out.println(entry.getKey() + ": " + entry.getValue());
+		}
 	}
 
 }
