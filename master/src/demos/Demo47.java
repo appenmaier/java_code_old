@@ -31,7 +31,7 @@ public class Demo47 {
 		// Sortieren (sorted)
 		sort();
 
-		// Überspringen, Begrenzen und Unterscheiden (skip, limit, distinct)
+		// Ueberspringen, Begrenzen und Unterscheiden (skip, limit, distinct)
 		skipAndLimitAndDistinct();
 
 		// Sammeln (collect)
@@ -41,11 +41,14 @@ public class Demo47 {
 		// Finden (findAny, findFirst)
 		find();
 
-		// Prüfen (allMatch, anyMatch, nonMatch)
+		// Pruefen (allMatch, anyMatch, nonMatch)
 		check();
 
 		// Aggregieren (average, count, max, min, reduce, sum)
 		aggregate();
+
+		// Spaehen (peek)
+		peek();
 
 	}
 
@@ -126,7 +129,7 @@ public class Demo47 {
 	}
 
 	private static void check() {
-		System.out.println("Prüfen (gibt es einen Film aus dem Jahr 1990?)");
+		System.out.println("Pruefen (gibt es einen Film aus dem Jahr 1990?)");
 
 //		for (Movie movie : movies) {
 //			if (movie.publishingYear().equals("1990")) {
@@ -200,6 +203,12 @@ public class Demo47 {
 		System.out.println(moviesByGenre);
 
 		System.out.println();
+	}
+
+	private static void peek() {
+		System.out.println("Spaehen");
+
+		movies.stream().peek(System.out::println).collect(Collectors.toList());
 	}
 
 }

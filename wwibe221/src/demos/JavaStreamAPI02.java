@@ -60,7 +60,10 @@ public class JavaStreamAPI02 {
 		// Sammeln (collect)
 		collect();
 		collectAndGroup();
-		
+
+		// Spaehen (peek)
+		peek();
+
 	}
 
 	private static void filter() {
@@ -226,6 +229,18 @@ public class JavaStreamAPI02 {
 		for (Entry<Genre, List<Movie>> entry : moviesByGenre.entrySet()) {
 			System.out.println(entry.getKey() + ": " + entry.getValue());
 		}
+		
+		System.out.println();
+	}
+
+	private static void peek() {
+		System.out.println("Spaehen");
+
+		movies.stream()
+				.filter(m -> m.rating() > 8.5)
+				.peek(System.out::println)
+				.map(m -> m.title())
+				.forEach(System.out::println);
 	}
 
 }
