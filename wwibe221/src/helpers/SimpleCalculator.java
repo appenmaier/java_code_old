@@ -10,7 +10,7 @@ package helpers;
 public class SimpleCalculator {
 
 	public int abs(int a) {
-		return 0;
+		return Math.abs(a);
 	}
 
 	public int multiply(int a, int b) {
@@ -18,7 +18,7 @@ public class SimpleCalculator {
 	}
 
 	public int divide(int a, int b) {
-		return 0;
+		return a / b;
 	}
 
 }

@@ -163,6 +163,10 @@ public class JavaStreamAPI02 {
 		Optional<Movie> thriller = movies.stream().filter(m -> m.genre().equals(Genre.THRILLER)).findAny();
 		thriller.ifPresent(System.out::println);
 
+//		if (thriller.isPresent()) {
+//			System.out.println(thriller.get());
+//		}
+
 		System.out.println();
 	}
 
@@ -229,7 +233,7 @@ public class JavaStreamAPI02 {
 		for (Entry<Genre, List<Movie>> entry : moviesByGenre.entrySet()) {
 			System.out.println(entry.getKey() + ": " + entry.getValue());
 		}
-		
+
 		System.out.println();
 	}
 
