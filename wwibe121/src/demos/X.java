@@ -17,7 +17,7 @@ public class X {
 		System.out.println(0.0 / 0.0); // NaN
 		System.out.println(0.0 / -0.0); // NaN
 		
-		System.out.println(1 / 0); // ArithemticException
+		System.out.println(1 / 0); // ArithmeticException
 
 	}
 

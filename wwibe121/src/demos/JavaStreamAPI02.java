@@ -184,6 +184,10 @@ public class JavaStreamAPI02 {
 		Optional<Movie> thriller = movies.stream().filter(m -> m.genre().equals(Genre.THRILLER)).findAny();
 		thriller.ifPresent(System.out::println);
 
+//		if (thriller.isPresent()) {
+//			System.out.println(thriller.get());
+//		}
+
 		System.out.println();
 	}
 
