@@ -22,6 +22,7 @@ public class InfiniteStreams01 {
 		Stream.generate(() -> videoGameConsoles.get(new Random().nextInt(videoGameConsoles.size())))
 				.distinct()
 				.limit(10)
+				.sorted((c1, c2) -> c1.title().compareTo(c2.title()))
 				.forEach(System.out::println);
 
 	}
