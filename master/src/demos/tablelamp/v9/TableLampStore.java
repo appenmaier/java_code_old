@@ -1,9 +1,7 @@
-package demos.tablelamp;
+package demos.tablelamp.v9;
 
 import java.util.ArrayList;
 import java.util.Optional;
-
-import demos.tablelamp.v9.TableLamp;
 
 public record TableLampStore(String name, ArrayList<TableLamp> tableLamps) {
 

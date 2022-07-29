@@ -2,6 +2,13 @@ package helpers;
 
 import java.util.ArrayList;
 
+/**
+ * Konsolen
+ * 
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class VideoGameConsoles {
 
 	private final static VideoGameConsole PS2 = new VideoGameConsole("PlayStation 2", Maker.SONY, 12, 158.70);

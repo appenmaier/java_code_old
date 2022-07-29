@@ -16,11 +16,11 @@ public class Maps01 {
 
 		TelephoneBook telephoneBook = new TelephoneBook();
 
-		telephoneBook.addEntry(new Person("Hans Maier"), new TelephoneNumber(new int[] { 82736452 }));
-		telephoneBook.addEntry(new Person("Peter Mueller"), new TelephoneNumber(new int[] { 82736452 }));
-		telephoneBook.addEntry(new Person("Lisa Schmidt"), new TelephoneNumber(new int[] { 82736452 }));
-		
-		System.out.println(telephoneBook.getTelephoneNumberByName("Hansi Maier"));
+		telephoneBook.addEntry(new Person("Hans Maier"), new TelephoneNumber("+49 67234 887261"));
+		telephoneBook.addEntry(new Person("Peter Mueller"), new TelephoneNumber("+49 7529 87612"));
+		telephoneBook.addEntry(new Person("Lisa Schmidt"), new TelephoneNumber("+49 8762 52081"));
+
+		System.out.println(telephoneBook.getTelephoneNumberByName("Hans Maier"));
 
 	}
 

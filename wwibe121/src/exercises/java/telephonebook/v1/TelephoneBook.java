@@ -38,7 +38,7 @@ public class TelephoneBook {
 	public record Person(String name) {
 	}
 
-	public record TelephoneNumber(int[] digits) {
+	public record TelephoneNumber(String value) {
 	}
 
 }

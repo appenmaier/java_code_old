@@ -34,6 +34,10 @@ public class Employee {
 	public String getName() {
 		return person.getName();
 	}
+	
+	public int getSalary() {
+		return salary;
+	}
 
 	public void setSalary(int salary) throws SalaryDecreaseException, SalaryIncreaseTooHighException {
 		if (salary < this.salary) {

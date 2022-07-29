@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * @author Daniel Appenmaier
  * @version 2.0
  */
-public class Rental implements Partner{
+public class Rental implements Partner {
 
 	/*
 	 * Attribute
@@ -65,6 +65,25 @@ public class Rental implements Partner{
 				t.transform();
 			}
 		}
+	}
+
+	/**
+	 * Beschleunigt alle Fahrzeuge um den eingehenden Wert
+	 * 
+	 * @param value Wert
+	 * @throws InvalidValueException
+	 */
+	public void accelerateAllVehicles(int value) throws InvalidValueException {
+		for (Vehicle c : vehicles) {
+			c.accelerate(value);
+		}
+	}
+
+	/**
+	 * Gibt alle Fahrzeuge als Liste zurueck
+	 */
+	public ArrayList<Vehicle> getVehicles() {
+		return vehicles;
 	}
 
 	/**

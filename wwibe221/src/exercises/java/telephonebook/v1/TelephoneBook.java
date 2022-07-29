@@ -39,7 +39,7 @@ public class TelephoneBook {
 	public record Person(String name) {
 	}
 
-	public record TelephoneNumber(int[] countryCode, int[] areaCode, int[] number, int[] extension) {
+	public record TelephoneNumber(String value) {
 	}
 
 }

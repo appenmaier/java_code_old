@@ -16,12 +16,9 @@ public class Maps01 {
 
 		TelephoneBook telephoneBook = new TelephoneBook();
 
-		telephoneBook.addEntry(new Person("Max Maier"),
-				new TelephoneNumber(new int[] { 49 }, new int[] { 751 }, new int[] { 7832 }, new int[] { 45 }));
-		telephoneBook.addEntry(new Person("Peter Mueller"),
-				new TelephoneNumber(new int[] { 49 }, new int[] { 543 }, new int[] { 9972 }, new int[] { 0 }));
-		telephoneBook.addEntry(new Person("Heidi Schmidt"),
-				new TelephoneNumber(new int[] { 49 }, new int[] { 2091 }, new int[] { 1456 }, new int[] { 99 }));
+		telephoneBook.addEntry(new Person("Hans Maier"), new TelephoneNumber("+49 67234 887261"));
+		telephoneBook.addEntry(new Person("Peter Mueller"), new TelephoneNumber("+49 7529 87612"));
+		telephoneBook.addEntry(new Person("Lisa Schmidt"), new TelephoneNumber("+49 8762 52081"));
 
 		System.out.println(telephoneBook.getTelephoneNumberByName("Max Maier"));
 
