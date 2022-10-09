@@ -1,0 +1,15 @@
+name: format and commit all java files
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'exercises/**'
+      - 'solutions/**'
+
+jobs:
+  formatting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: axel-op/googlejavaformat-action@v3
