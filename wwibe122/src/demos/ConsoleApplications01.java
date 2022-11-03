@@ -8,7 +8,7 @@ import java.util.Scanner;
  * @author Daniel Appenmaier
  *
  */
-public class ConsoleApplications {
+public class ConsoleApplications01 {
 
   public static void main(String[] args) {
 
