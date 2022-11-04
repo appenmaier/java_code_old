@@ -2,6 +2,8 @@ package cashiersystem;
 
 /**
  * Kassensystem
+ * 
+ * @author Daniel Appenmaier
  */
 public class MainClass {
 

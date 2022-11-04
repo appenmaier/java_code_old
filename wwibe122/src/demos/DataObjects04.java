@@ -4,7 +4,6 @@ package demos;
  * Zeichenketten
  *
  * @author Daniel Appenmaier
- * @version 1.0
  */
 public class DataObjects04 {
 

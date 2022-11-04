@@ -6,7 +6,6 @@ import java.util.Scanner;
  * Konsoleingaben mit Hilfe der Klasse Scanner
  * 
  * @author Daniel Appenmaier
- *
  */
 public class ConsoleApplications01 {
 

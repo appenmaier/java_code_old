@@ -6,7 +6,6 @@ import java.math.BigDecimal;
  * Primitive Datentypen
  *
  * @author Daniel Appenmaier
- * @version 1.0
  */
 public class DataObjects02 {
 

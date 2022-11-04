@@ -4,7 +4,6 @@ package demos;
  * Variable Datenobjekte
  *
  * @author Daniel Appenmaier
- * @version 1.0
  */
 public class DataObjects01 {
 
