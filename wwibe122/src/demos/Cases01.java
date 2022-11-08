@@ -12,6 +12,7 @@ public class Cases01 {
 
   public static void main(String[] args) {
 
+    @SuppressWarnings("resource")
     Scanner sc = new Scanner(System.in);
 
     int age;
@@ -41,6 +42,15 @@ public class Cases01 {
       System.out.println("Du bist ein:e Jugendliche:r");
     } else {
       System.out.println("Du bist ein:e Erwachsene:r");
+    }
+
+    /* Vergleich von Zeichenketten */
+    System.out.print("Bitte gib \"true\" ein: ");
+    String text = sc.next();
+    if (text.equals("true")) {
+      System.out.println("Du hast \"true\" eingegeben");
+    } else {
+      System.out.println("Du hast nicht \"true\" eingegeben");
     }
 
   }
