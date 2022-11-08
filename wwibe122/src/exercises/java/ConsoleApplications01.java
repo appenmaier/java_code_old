@@ -1,8 +1,8 @@
-package exercises;
+package exercises.java;
 
 import java.util.Scanner;
 
-public class ConsoleApplications02 {
+public class ConsoleApplications01 {
 
   public static void main(String[] args) {
 
@@ -14,10 +14,10 @@ public class ConsoleApplications02 {
     System.out.print("Gib bitte eine weitere ganze Zahl ein: ");
     int b = sc.nextInt();
 
-    double result = 100 * ((double) a / b);
+    int result = a + b;
 
-    System.out.println("Ergebnis: " + a + " von " + b + " sind " + result + "%");
-    System.out.printf("Ergebnis: %d von %d sind %.2f%%", a, b, result);
+    System.out.println("Ergebnis: " + a + " + " + b + " = " + result);
+    System.out.printf("Ergebnis: %d + %d = %d", a, b, result);
 
   }
 

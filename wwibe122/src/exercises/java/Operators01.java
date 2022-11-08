@@ -1,4 +1,4 @@
-package exercises;
+package exercises.java;
 
 public class Operators01 {
 
