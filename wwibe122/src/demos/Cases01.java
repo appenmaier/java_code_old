@@ -3,7 +3,7 @@ package demos;
 import java.util.Scanner;
 
 /**
- * Verzweigungen
+ * Einfachverzweigungen
  * 
  * @author Daniel Appenmaier
  *
