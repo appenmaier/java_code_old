@@ -1,5 +1,7 @@
 package cashiersystem;
 
+import java.util.Scanner;
+
 /**
  * Kassensystem
  * 
@@ -9,21 +11,33 @@ public class MainClass {
 
   public static void main(String[] args) {
 
+    @SuppressWarnings("resource")
+    Scanner sc = new Scanner(System.in);
+
     String nameOfArticle1, nameOfArticle2, nameOfArticle3;
     int amountOfArticle1, amountOfArticle2, amountOfArticle3;
     double priceOfArticle1, priceOfArticle2, priceOfArticle3;
 
-    nameOfArticle1 = "Brot";
-    nameOfArticle2 = "Milch";
-    nameOfArticle3 = "Butter";
+    System.out.print("Artikelbezeichner (Artikel 1): ");
+    nameOfArticle1 = sc.nextLine();
+    System.out.print("Artikelbezeichner (Artikel 2): ");
+    nameOfArticle2 = sc.nextLine();
+    System.out.print("Artikelbezeichner (Artikel 3): ");
+    nameOfArticle3 = sc.nextLine();
 
-    amountOfArticle1 = 2;
-    amountOfArticle2 = 6;
-    amountOfArticle3 = 3;
+    System.out.print("Menge (Artikel 1): ");
+    amountOfArticle1 = sc.nextInt();
+    System.out.print("Menge (Artikel 2): ");
+    amountOfArticle2 = sc.nextInt();
+    System.out.print("Menge (Artikel 3): ");
+    amountOfArticle3 = sc.nextInt();
 
-    priceOfArticle1 = 2.49;
-    priceOfArticle2 = 1.19;
-    priceOfArticle3 = 2.29;
+    System.out.print("Peis (Artikel 1): ");
+    priceOfArticle1 = sc.nextDouble();
+    System.out.print("Peis (Artikel 2): ");
+    priceOfArticle2 = sc.nextDouble();
+    System.out.print("Peis (Artikel 3): ");
+    priceOfArticle3 = sc.nextDouble();
 
     double totalPriceOfArticle1, totalPriceOfArticle2, totalPriceOfArticle3;
 
