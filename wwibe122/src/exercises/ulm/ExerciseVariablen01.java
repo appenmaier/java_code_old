@@ -6,6 +6,7 @@ package exercises.ulm;
  * Hinweis: ohne Einlesen
  *
  * @author Daniel Appenmaier
+ * @version 1.0
  */
 public class ExerciseVariablen01 {
 
