@@ -6,6 +6,7 @@ import helpers.Printer;
  * Statische Methoden
  *
  * @author Daniel Appenmaier
+ * 
  */
 public class ClassStructure02 {
 

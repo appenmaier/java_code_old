@@ -4,6 +4,7 @@ package demos;
  * Grundlegende Syntax und Kommentare
  *
  * @author Daniel Appenmaier
+ * 
  */
 public class ClassStructure01 {
 

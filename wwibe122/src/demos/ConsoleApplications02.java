@@ -6,6 +6,7 @@ import java.util.Locale;
  * Konsolenausgaben mit Hilfe der print-Methoden
  * 
  * @author Daniel Appenmaier
+ * 
  */
 public class ConsoleApplications02 {
 

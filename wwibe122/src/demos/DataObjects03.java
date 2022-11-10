@@ -4,6 +4,7 @@ package demos;
  * Fixe Datenobjekte
  *
  * @author Daniel Appenmaier
+ * 
  */
 public class DataObjects03 {
 

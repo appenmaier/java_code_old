@@ -4,6 +4,7 @@ package demos;
  * Arithmetische Operatoren
  *
  * @author Daniel Appenmaier
+ * 
  */
 public class Operators01 {
 
