@@ -6,6 +6,7 @@ public class Loops03 {
 
   public static void main(String[] args) {
 
+    @SuppressWarnings("resource")
     Scanner sc = new Scanner(System.in);
 
     System.out.print("Gib bitte eine Zeichenkette ein: ");
@@ -15,18 +16,18 @@ public class Loops03 {
     char token = sc.next().charAt(0);
 
     int count = 0;
-    // for (int i = 0; i < text.length(); i++) {
-    // if (text.charAt(i) == token) {
-    // count++;
-    // }
-    // }
-    int i = 0;
-    while (i < text.length()) {
+    for (int i = 0; i < text.length(); i++) {
       if (text.charAt(i) == token) {
         count++;
       }
-      i++;
     }
+    // int i = 0;
+    // while (i < text.length()) {
+    // if (text.charAt(i) == token) {
+    // count++;
+    // }
+    // i++;
+    // }
 
     double percentage = count * 100.0 / text.length();
 

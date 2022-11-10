@@ -29,7 +29,8 @@ public class Cases06 {
     // form = "";
     // }
 
-    System.out.printf("Hallo %s %s", form, name);
+    String tmp = form.length() == 0 ? "" : " " + form;
+    System.out.printf("Hallo %s%s", tmp, name);
 
   }
 
