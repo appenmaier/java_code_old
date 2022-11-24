@@ -19,7 +19,7 @@ public class ShoppingCartItem {
 
   void printShoppingCartItem() {
     product.printProduct();
-    System.out.print(amount + ", " + getSubTotalPrice() + " Euro");
+    System.out.print(", " + amount + ", " + getSubTotalPrice() + " Euro");
   }
 
 }

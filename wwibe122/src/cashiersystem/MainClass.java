@@ -14,43 +14,69 @@ public class MainClass {
     @SuppressWarnings("resource")
     Scanner sc = new Scanner(System.in);
 
-    String[] namesOfArticles;
-    int[] amountsOfArticles;
-    double[] pricesOfArticles;
-    double[] totalPricesOfArticles;
-    double totalPrice = 0.0;
+    /* Daten: Kasse */
+    CashierSystem cashierSystem = new CashierSystem();
+    cashierSystem.nameOfSuperMarket = "Tante Emma Laden Ravensburg";
+    cashierSystem.purchaseDate = "24.11.2022";
 
-    System.out.print("Wie viele Artikel moechtest Du eingeben?: ");
-    int numberOfArticles = sc.nextInt();
+    /* Daten: Kassierer:innen */
+    Cashier cashier = new Cashier();
+    cashier.cashierId = 1;
+    cashier.fullName = "Herr Hans Maier";
+    cashierSystem.cashiers.add(cashier);
 
-    namesOfArticles = new String[numberOfArticles];
-    amountsOfArticles = new int[numberOfArticles];
-    pricesOfArticles = new double[numberOfArticles];
-    totalPricesOfArticles = new double[numberOfArticles];
+    Cashier cashier2 = new Cashier();
+    cashier2.cashierId = 2;
+    cashier2.fullName = "Herr Peter Mueller";
+    cashierSystem.cashiers.add(cashier2);
 
-    for (int i = 0; i < numberOfArticles; i++) {
-      System.out.print("Artikel: ");
-      sc.nextLine();
-      namesOfArticles[i] = sc.nextLine();
+    Cashier cashier3 = new Cashier();
+    cashier3.cashierId = 3;
+    cashier3.fullName = "Frau Lisa Schmidt";
+    cashierSystem.cashiers.add(cashier3);
+
+    /* Daten: Produkte */
+    Product product = new Product();
+    product.productId = 101;
+    product.description = "Brot";
+    product.price = 2.49;
+    cashierSystem.products.add(product);
+
+    Product product2 = new Product();
+    product2.productId = 389;
+    product2.description = "Butter";
+    product2.price = 1.79;
+    cashierSystem.products.add(product2);
+
+    Product product3 = new Product();
+    product3.productId = 740;
+    product3.description = "Milch";
+    product3.price = 1.19;
+    cashierSystem.products.add(product3);
+
+    /* Anmeldung */
+    System.out.print("Gib bitte Deine Nummer ein: ");
+    int cashierId = sc.nextInt();
+
+    cashierSystem.login(cashierId);
+
+    /* Einkaufe registrieren */
+    cashierSystem.createShoppingCart();
+
+    boolean loop = true;
+    while (loop) {
+      System.out.print("Produktnummer: ");
+      int productId = sc.nextInt();
       System.out.print("Menge: ");
-      amountsOfArticles[i] = sc.nextInt();
-      System.out.print("Peis: ");
-      pricesOfArticles[i] = sc.nextDouble();
-      totalPricesOfArticles[i] = pricesOfArticles[i] * amountsOfArticles[i];
-      totalPrice += totalPricesOfArticles[i];
+      int amount = sc.nextInt();
+      cashierSystem.addShoppingCartItem(productId, amount);
+
+      System.out.print("Weitermachen (true, false)?: ");
+      loop = sc.nextBoolean();
     }
 
-    /* Bon */
-    System.out.println("Tante-Emma-Laden");
-    System.out.println("03.11.2022");
-    System.out.println();
-    System.out.println("Artikel:");
-    for (int i = 0; i < numberOfArticles; i++) {
-      System.out.println(i + ": " + namesOfArticles[i] + ", " + amountsOfArticles[i] + ", "
-          + pricesOfArticles[i] + ", " + totalPricesOfArticles[i]);
-    }
-    System.out.println("-----------------------------------------");
-    System.out.println("Gesamtbetrag: " + totalPrice);
+    /* Bon ausdrucken */
+    cashierSystem.printBon();
 
   }
 
