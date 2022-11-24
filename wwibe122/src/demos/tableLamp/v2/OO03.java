@@ -1,22 +1,27 @@
-package demos.tableLamp.v1;
+package demos.tableLamp.v2;
 
 /**
- * Klassen, Attribute und Methoden
+ * Datenkapselung
  * 
  * @author Daniel Appenmaier
  *
  */
-public class OO02 {
+public class OO03 {
 
   public static void main(String[] args) {
 
     LightBulb redLightBulb = new LightBulb();
-    redLightBulb.color = "rot";
+    redLightBulb.setColor("rot");
+    // redLightBulb.color = "rot";
 
     LightBulb blueLightBulb = new LightBulb();
-    blueLightBulb.color = "blau";
+    blueLightBulb.setColor("blau");
+    // blueLightBulb.color = "blau";
 
     TableLamp tableLamp1 = new TableLamp();
+
+    // tableLamp1.isConnected = false;
+    // tableLamp1.isShining = true;
 
     tableLamp1.plugIn();
     tableLamp1.switchOn();
