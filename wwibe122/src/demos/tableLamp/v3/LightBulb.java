@@ -1,10 +1,10 @@
-package demos.tableLamp.v2;
+package demos.tableLamp.v3;
 
 /**
  * Gluehbirne
  * 
  * @author Daniel Appenmaier
- * @version 2.0
+ * @version 3.0
  *
  */
 public class LightBulb {
@@ -17,8 +17,12 @@ public class LightBulb {
   /*
    * Methode
    */
-  public void setColor(String c) {
-    color = c;
+  public LightBulb(String color) {
+    this.color = color;
+  }
+
+  public LightBulb() {
+    this.color = "weiss";
   }
 
   public String getColor() {
