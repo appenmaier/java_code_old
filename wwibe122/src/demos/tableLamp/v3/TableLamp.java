@@ -4,7 +4,7 @@ package demos.tableLamp.v3;
  * Tischleuchte
  * 
  * @author Daniel Appenmaier
- * @version 2.0
+ * @version 3.0
  *
  */
 public class TableLamp {
@@ -17,9 +17,16 @@ public class TableLamp {
   private boolean isShining;
   private LightBulb lightBulb;
 
+  private final static String TYPE = "Tischleuchte";
+  private static int numberOfTableLamps;
+
   /*
    * Methoden
    */
+  public TableLamp() {
+    numberOfTableLamps++;
+  }
+
   public void plugIn() {
     isConnected = true;
     if (isOn && lightBulb != null) {
@@ -54,8 +61,12 @@ public class TableLamp {
   }
 
   public String toString() {
-    return "TableLamp [isConnected=" + isConnected + " isOn=" + isOn + " isShining=" + isShining
+    return TYPE + " [isConnected=" + isConnected + " isOn=" + isOn + " isShining=" + isShining
         + " lightBulb=" + lightBulb.toString() + "]";
+  }
+
+  public static int getNumberOfTableLamps() {
+    return numberOfTableLamps;
   }
 
 }

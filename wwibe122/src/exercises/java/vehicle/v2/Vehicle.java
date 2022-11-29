@@ -1,10 +1,10 @@
-package exercises.java.vehicle.v1;
+package exercises.java.vehicle.v2;
 
 /**
  * Fahrzeug
  * 
  * @author Daniel Appenmaier
- * @version 1.0
+ * @version 2.0
  *
  */
 public class Vehicle {
@@ -15,16 +15,13 @@ public class Vehicle {
   private int speed;
 
   /* Methoden */
-  public void setMake(String make) {
+  public Vehicle(String make, String model) {
     this.make = make;
+    this.model = model;
   }
 
   public String getMake() {
     return make;
-  }
-
-  public void setModel(String model) {
-    this.model = model;
   }
 
   public String getModel() {
