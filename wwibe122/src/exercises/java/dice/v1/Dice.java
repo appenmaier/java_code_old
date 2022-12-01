@@ -18,6 +18,7 @@ public class Dice {
   /* Methoden */
   public Dice(int id) {
     this.id = id;
+    rollTheDice();
   }
 
   public int getId() {

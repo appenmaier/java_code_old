@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 /**
- * Wichtige Klassen der Java API
+ * Zeichenkettenverarbeitung, Wrapper-Klassen und Datums- und Zeitangaben
  * 
  * @author Daniel Appenmaier
  *
@@ -21,7 +21,7 @@ public class JavaAPI02 {
     }
 
     /* Wrapper-Klassen */
-    String numberText = "4";
+    String numberText = "42";
     int number = Integer.valueOf(numberText);
     ArrayList<Integer> numbers = new ArrayList<>();
     numbers.add(number);
