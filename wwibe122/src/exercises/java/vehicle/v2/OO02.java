@@ -2,7 +2,7 @@ package exercises.java.vehicle.v2;
 
 import java.util.ArrayList;
 
-public class OO01 {
+public class OO02 {
 
   public static void main(String[] args) {
 

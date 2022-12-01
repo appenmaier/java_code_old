@@ -1,10 +1,12 @@
 package demos.tableLamp.v4;
 
+import java.awt.Color;
+
 /**
  * Gluehbirne
  * 
  * @author Daniel Appenmaier
- * @version 3.0
+ * @version 4.0
  *
  */
 public class LightBulb {
@@ -12,25 +14,25 @@ public class LightBulb {
   /*
    * Attribute
    */
-  private String color;
+  private final Color color;
 
   /*
    * Methode
    */
-  public LightBulb(String color) {
+  public LightBulb(Color color) {
     this.color = color;
   }
 
   public LightBulb() {
-    this.color = "weiss";
+    this.color = Color.WHITE;
   }
 
-  public String getColor() {
+  public Color color() {
     return color;
   }
 
   public String toString() {
-    return "LightBulb [color=" + color + "]";
+    return "LightBulb [color=" + color.toString() + "]";
   }
 
   public boolean equals(LightBulb lightBulb) {
