@@ -58,8 +58,13 @@ public class Inheritance01 {
       Light light = lights.get(i);
       light.switchOn(); // Polymorphie
       System.out.println(light);// Polymorphie
-      if (light instanceof TableLamp tableLamp) {
-        // TableLamp tableLamp = (TableLamp) light; // Downcast
+      // bis Java 16
+      if (light instanceof TableLamp) {
+        TableLamp tableLamp = (TableLamp) light; // Downcast
+        tableLamp.plugIn();
+      }
+      // seit java 16
+      if (light instanceof TableLamp tableLamp) { // Downcast
         tableLamp.plugIn();
       }
       System.out.println(light);
