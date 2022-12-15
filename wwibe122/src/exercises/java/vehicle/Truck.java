@@ -1,6 +1,6 @@
 package exercises.java.vehicle;
 
-public class Truck extends Vehicle_v5 {
+public class Truck extends Vehicle05 {
 
   /* Attribute */
   private int cargo;

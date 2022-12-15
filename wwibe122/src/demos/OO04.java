@@ -1,7 +1,7 @@
 package demos;
 
-import demos.tableLamp.LightBulb_v2;
-import demos.tableLamp.TableLamp_v2;
+import demos.tableLamp.LightBulb02;
+import demos.tableLamp.TableLamp02;
 
 /**
  * Referenzvariablen und Objekte
@@ -14,16 +14,16 @@ public class OO04 {
   public static void main(String[] args) {
 
     int i = 0;
-    TableLamp_v2 tableLamp1 = null;
+    TableLamp02 tableLamp1 = null;
 
     i = 5;
-    LightBulb_v2 redLightBulb = new LightBulb_v2();
+    LightBulb02 redLightBulb = new LightBulb02();
     redLightBulb.setColor("rot");
-    tableLamp1 = new TableLamp_v2();
+    tableLamp1 = new TableLamp02();
     tableLamp1.changeLightBulb(redLightBulb);
 
     int x = i;
-    TableLamp_v2 tableLamp2 = tableLamp1;
+    TableLamp02 tableLamp2 = tableLamp1;
 
     i = 7;
     tableLamp1.plugIn();

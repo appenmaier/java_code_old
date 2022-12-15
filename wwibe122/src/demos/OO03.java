@@ -1,7 +1,7 @@
 package demos;
 
-import demos.tableLamp.LightBulb_v2;
-import demos.tableLamp.TableLamp_v2;
+import demos.tableLamp.LightBulb02;
+import demos.tableLamp.TableLamp02;
 
 /**
  * Datenkapselung
@@ -13,15 +13,15 @@ public class OO03 {
 
   public static void main(String[] args) {
 
-    LightBulb_v2 redLightBulb = new LightBulb_v2();
+    LightBulb02 redLightBulb = new LightBulb02();
     redLightBulb.setColor("rot");
     // redLightBulb.color = "rot";
 
-    LightBulb_v2 blueLightBulb = new LightBulb_v2();
+    LightBulb02 blueLightBulb = new LightBulb02();
     blueLightBulb.setColor("blau");
     // blueLightBulb.color = "blau";
 
-    TableLamp_v2 tableLamp1 = new TableLamp_v2();
+    TableLamp02 tableLamp1 = new TableLamp02();
 
     // tableLamp1.isConnected = false;
     // tableLamp1.isShining = true;

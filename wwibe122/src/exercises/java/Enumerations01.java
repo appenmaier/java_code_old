@@ -1,21 +1,21 @@
 package exercises.java;
 
 import exercises.java.vehicle.Engine;
-import exercises.java.vehicle.Vehicle_v4;
+import exercises.java.vehicle.Vehicle04;
 
 public class Enumerations01 {
 
   public static void main(String[] args) {
 
     int numberOfVehicles;
-    numberOfVehicles = Vehicle_v4.getNumberOfVehicles();
+    numberOfVehicles = Vehicle04.getNumberOfVehicles();
     System.out.println("Anzahl Fahrzeuge: " + numberOfVehicles);
 
-    Vehicle_v4 vehicle1 = new Vehicle_v4("Porsche", "911", Engine.ELECTRO);
-    Vehicle_v4 vehicle2 = new Vehicle_v4("MAN", "TGX", Engine.DIESEL);
-    Vehicle_v4 vehicle3 = new Vehicle_v4("Opel", "Zafira Life", Engine.DIESEL);
+    Vehicle04 vehicle1 = new Vehicle04("Porsche", "911", Engine.ELECTRO);
+    Vehicle04 vehicle2 = new Vehicle04("MAN", "TGX", Engine.DIESEL);
+    Vehicle04 vehicle3 = new Vehicle04("Opel", "Zafira Life", Engine.DIESEL);
 
-    numberOfVehicles = Vehicle_v4.getNumberOfVehicles();
+    numberOfVehicles = Vehicle04.getNumberOfVehicles();
     System.out.println("Anzahl Fahrzeuge: " + numberOfVehicles);
 
     vehicle1.print();

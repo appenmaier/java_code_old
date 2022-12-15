@@ -9,7 +9,7 @@ import java.util.Random;
  * @version 1.0
  * 
  */
-public class HighValueDice extends Dice_v2 {
+public class HighValueDice extends Dice02 {
 
   /* Methoden */
   public HighValueDice(int id) {

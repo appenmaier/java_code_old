@@ -7,7 +7,7 @@ package exercises.java.vehicle;
  * @version 1.0
  *
  */
-public class Car extends Vehicle_v5 {
+public class Car extends Vehicle05 {
 
   /* Attribute */
   private int seats;

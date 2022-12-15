@@ -1,6 +1,6 @@
 package demos;
 
-import demos.tableLamp.LightBulb_v2;
+import demos.tableLamp.LightBulb02;
 
 /**
  * Vergleichen von Objekten
@@ -12,10 +12,10 @@ public class OO05 {
 
   public static void main(String[] args) {
 
-    LightBulb_v2 redLightBulb1 = new LightBulb_v2();
+    LightBulb02 redLightBulb1 = new LightBulb02();
     redLightBulb1.setColor("rot");
 
-    LightBulb_v2 redLightBulb2 = new LightBulb_v2();
+    LightBulb02 redLightBulb2 = new LightBulb02();
     redLightBulb2.setColor("rot");
 
     /*

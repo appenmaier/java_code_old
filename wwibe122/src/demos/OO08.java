@@ -1,9 +1,9 @@
 package demos;
 
 import java.awt.Color;
-import demos.tableLamp.LightBulb_v4;
-import demos.tableLamp.PlugType_v2;
-import demos.tableLamp.TableLamp_v4;
+import demos.tableLamp.LightBulb04;
+import demos.tableLamp.PlugType02;
+import demos.tableLamp.TableLamp04;
 
 /**
  * Aufzaehlungen (Enumerations)
@@ -15,22 +15,22 @@ public class OO08 {
 
   public static void main(String[] args) {
 
-    LightBulb_v4 redLightBulb = new LightBulb_v4(Color.RED);
-    TableLamp_v4 tableLamp = new TableLamp_v4(PlugType_v2.TYPE_F);
+    LightBulb04 redLightBulb = new LightBulb04(Color.RED);
+    TableLamp04 tableLamp = new TableLamp04(PlugType02.TYPE_F);
     tableLamp.changeLightBulb(redLightBulb);
     System.out.println(tableLamp.toString());
     System.out.println(tableLamp.plugType().region());
 
-    System.out.println(PlugType_v2.TYPE_I.norm());
+    System.out.println(PlugType02.TYPE_I.norm());
 
-    PlugType_v2[] plugTypeEnums = PlugType_v2.values();
+    PlugType02[] plugTypeEnums = PlugType02.values();
     for (int i = 0; i < plugTypeEnums.length; i++) {
-      PlugType_v2 plugTypeEnum = plugTypeEnums[i];
+      PlugType02 plugTypeEnum = plugTypeEnums[i];
       System.out.println(plugTypeEnum.description());
     }
 
     String plugType = "TYPE_F";
-    PlugType_v2 plugTypeEnum = PlugType_v2.valueOf(plugType);
+    PlugType02 plugTypeEnum = PlugType02.valueOf(plugType);
     System.out.println(plugTypeEnum.norm());
 
   }

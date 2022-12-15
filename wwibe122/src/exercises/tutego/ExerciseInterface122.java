@@ -1,6 +1,6 @@
 package exercises.tutego;
 
-import exercises.tutego.candy.CandyType_v2;
+import exercises.tutego.candy.CandyType02;
 
 /**
  * https://tutego.de/javabuch/aufgaben/interface_enum_sealed_classes_record.html Aufgabe
@@ -13,7 +13,7 @@ public class ExerciseInterface122 {
 
   public static void main(String[] args) {
 
-    CandyType_v2 candyType = CandyType_v2.random();
+    CandyType02 candyType = CandyType02.random();
     System.out.println("candyType: " + candyType);
 
   }

@@ -3,7 +3,7 @@ package exercises.tutego;
 import java.util.ArrayList;
 import exercises.tutego.radio.ElectronicDevice;
 import exercises.tutego.radio.IceMachine;
-import exercises.tutego.radio.Radio_v10;
+import exercises.tutego.radio.Radio10;
 
 /**
  * https://tutego.de/javabuch/aufgaben/oop_classes.html Aufgabe OOP-1.6.1
@@ -17,7 +17,7 @@ public class ExerciseOOP161 {
 
     ArrayList<ElectronicDevice> electronicDevices = new ArrayList<>();
 
-    Radio_v10 radio = new Radio_v10();
+    Radio10 radio = new Radio10();
     IceMachine iceMachine = new IceMachine();
 
     electronicDevices.add(radio);
