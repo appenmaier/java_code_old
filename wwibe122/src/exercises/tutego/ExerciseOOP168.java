@@ -1,6 +1,6 @@
 package exercises.tutego;
 
-import exercises.tutego.radio.v10.TV;
+import exercises.tutego.radio.TV_v2;
 
 /**
  * https://tutego.de/javabuch/aufgaben/oop_classes.html Aufgabe OOP-1.6.8
@@ -12,7 +12,7 @@ public class ExerciseOOP168 {
 
   public static void main(String[] args) {
 
-    TV tv = new TV();
+    TV_v2 tv = new TV_v2();
 
     tv.on();
 

@@ -1,6 +1,6 @@
 package exercises.tutego;
 
-import exercises.tutego.radio.v9.TV;
+import exercises.tutego.radio.TV;
 
 /**
  * https://tutego.de/javabuch/aufgaben/oop_classes.html Aufgabe OOP-1.5.1

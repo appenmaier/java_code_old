@@ -1,6 +1,6 @@
 package exercises.tutego;
 
-import exercises.tutego.radio.v5.Radio;
+import exercises.tutego.radio.Radio_v5;
 
 /**
  * https://tutego.de/javabuch/aufgaben/oop_classes.html Aufgabe OOP-1.2.1
@@ -12,7 +12,7 @@ public class ExerciseOOP121 {
 
   public static void main(String[] args) {
 
-    Radio radio = new Radio();
+    Radio_v5 radio = new Radio_v5();
 
     System.out.println(radio.toString());
 
@@ -20,7 +20,7 @@ public class ExerciseOOP121 {
     radio.volumeUp();
     radio.volumeUp();
     radio.volumeUp();
-    double frequency = Radio.senderToFrequency("DASDING");
+    double frequency = Radio_v5.senderToFrequency("DASDING");
     radio.setFrequency(frequency);
 
     System.out.println(radio.toString());
