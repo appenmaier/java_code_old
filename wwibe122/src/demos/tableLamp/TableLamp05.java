@@ -1,7 +1,5 @@
 package demos.tableLamp;
 
-import demos.Light;
-
 /**
  * Tischleuchte
  * 

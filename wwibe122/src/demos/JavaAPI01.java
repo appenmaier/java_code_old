@@ -1,9 +1,9 @@
 package demos;
 
-import java.util.Random;
+import java.util.ArrayList;
 
 /**
- * Pseudozufallszahlen und Mathematische Berechnungen
+ * Die Klasse ArrayList<E>
  * 
  * @author Daniel Appenmaier
  *
@@ -12,19 +12,24 @@ public class JavaAPI01 {
 
   public static void main(String[] args) {
 
-    /* Mathematische Berechnungen mit Hilfe der Klasse Math */
-    double result = Math.sqrt(64);
-    System.out.println("result: " + result);
+    ArrayList<String> names = new ArrayList<>();
 
-    /* Pseudozufallszahlen */
-    int randomNumber;
+    /* Elemente anfügen */
+    names.add("Hans");
+    names.add("Peter");
 
-    randomNumber = (int) (Math.random() * 100) + 1;
-    System.out.println("randomNumber: " + randomNumber);
+    /* Elemente einfügen */
+    names.add(1, "Lisa");
+    names.add(1, "Heidi");
 
-    Random rd = new Random();
-    randomNumber = rd.nextInt(100) + 1;
-    System.out.println("randomNumber: " + randomNumber);
+    /* Elemente auslesen */
+    for (int i = 0; i < names.size(); i++) {
+      String name = names.get(i);
+      System.out.println(name);
+    }
+
+    /* Elemente ausgeben */
+    System.out.println(names.toString());
 
   }
 

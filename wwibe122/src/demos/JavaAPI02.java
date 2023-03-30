@@ -1,10 +1,9 @@
 package demos;
 
-import java.time.LocalDateTime;
-import java.util.ArrayList;
+import java.util.Random;
 
 /**
- * Zeichenkettenverarbeitung, Wrapper-Klassen und Datums- und Zeitangaben
+ * Pseudozufallszahlen und Mathematische Berechnungen
  * 
  * @author Daniel Appenmaier
  *
@@ -13,26 +12,20 @@ public class JavaAPI02 {
 
   public static void main(String[] args) {
 
-    /* Zeichenkettenverarbeitung */
-    String text = "Hans;Peter;Lisa";
-    String[] names = text.split(";");
-    for (int i = 0; i < names.length; i++) {
-      System.out.println(names[i]);
-    }
+    /* Mathematische Berechnungen mit Hilfe der Klasse Math */
+    double result = Math.sqrt(64);
+    System.out.println("result: " + result);
 
-    /* Wrapper-Klassen */
-    String numberText = "42";
-    int number = Integer.valueOf(numberText);
-    ArrayList<Integer> numbers = new ArrayList<>();
-    numbers.add(number);
+    /* Pseudozufallszahlen */
+    int randomNumber;
 
-    /* Datums- und Zeitangaben */
-    long timeInMillis = System.currentTimeMillis();
-    System.out.println("timeInMillis: " + timeInMillis);
+    randomNumber = (int) (Math.random() * 100) + 1;
+    System.out.println("randomNumber: " + randomNumber);
 
-    LocalDateTime now = LocalDateTime.now();
-    System.out.println("now: " + now);
-    System.out.println("dayOfYear: " + now.getDayOfYear());
+    Random rd = new Random();
+    randomNumber = rd.nextInt(100) + 1;
+    System.out.println("randomNumber: " + randomNumber);
+
   }
 
 }

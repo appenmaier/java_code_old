@@ -2,6 +2,8 @@ package demos;
 
 import java.awt.Color;
 import java.util.ArrayList;
+import demos.tableLamp.FlashLight;
+import demos.tableLamp.Light;
 import demos.tableLamp.LightBulb04;
 import demos.tableLamp.PlugType02;
 import demos.tableLamp.TableLamp05;
@@ -12,7 +14,6 @@ import demos.tableLamp.TableLamp05;
  * @author Daniel Appenmaier
  *
  */
-
 public class Inheritance01 {
 
   public static void main(String[] args) {

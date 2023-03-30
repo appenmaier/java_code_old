@@ -11,7 +11,7 @@ import demos.tableLamp.TableLamp04;
  * @author Daniel Appenmaier
  *
  */
-public class OO08 {
+public class JavaAPI05 {
 
   public static void main(String[] args) {
 
