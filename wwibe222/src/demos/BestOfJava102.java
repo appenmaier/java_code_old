@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 import java.util.Random;
 
 /**
- * Switch-Ausdrücke, die Klasse Random und die Klasse LocalDateTime
+ * Switch-AusdrÃ¼cke, die Klasse Random und die Klasse LocalDateTime
  * 
  * @author Daniel Appenmaier
  *
@@ -40,7 +40,7 @@ public class BestOfJava102 {
 			case 3:
 			case 4:
 			case 5:
-				season = "Frühling";
+				season = "FrÃ¼hling";
 				break;
 			case 6:
 			case 7:
@@ -58,7 +58,7 @@ public class BestOfJava102 {
 
 			season = switch (month) {
 			case 12, 1, 2 -> "Winter";
-			case 3, 4, 5 -> "Frühling";
+			case 3, 4, 5 -> "FrÃ¼hling";
 			case 6, 7, 8 -> "Sommer";
 			case 9, 10, 11 -> "Herbst";
 			default -> "";
