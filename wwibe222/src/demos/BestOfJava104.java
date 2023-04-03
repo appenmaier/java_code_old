@@ -6,7 +6,7 @@ import demos.movie.Genre02;
 import demos.movie.Movie03;
 
 /**
- * Aufz‰hlungen (Enumerations)
+ * Aufz√§hlungen (Enumerations)
  * 
  * @author Daniel Appenmaier
  *
