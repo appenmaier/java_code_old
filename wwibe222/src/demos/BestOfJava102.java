@@ -5,68 +5,66 @@ import java.time.LocalDateTime;
 import java.util.Random;
 
 /**
- * Switch-Ausdrücke, die Klasse Random und die Klasse LocalDateTime
+ * Switch-Ausdruecke, die Klasse Random und die Klasse LocalDateTime
  * 
  * @author Daniel Appenmaier
  *
  */
 public class BestOfJava102 {
 
-	public static void main(String[] args) {
+  public static void main(String[] args) {
 
-		LocalDateTime now = LocalDateTime.now();
+    LocalDateTime now = LocalDateTime.now();
 
-		System.out.println("Jahr: " + now.getYear());
-		System.out.println("Monat: " + now.getMonthValue());
-		System.out.println("Tag: " + now.getDayOfMonth());
-		System.out.println("Tag im Jahr: " + now.getDayOfYear());
+    System.out.println("Jahr: " + now.getYear());
+    System.out.println("Monat: " + now.getMonthValue());
+    System.out.println("Tag: " + now.getDayOfMonth());
+    System.out.println("Tag im Jahr: " + now.getDayOfYear());
 
-		Random random = new Random();
+    Random random = new Random();
 
-		for (int i = 0; i < 100; i++) {
-			int month = random.nextInt(12) + 1;
-			System.out.println(month);
+    for (int i = 0; i < 100; i++) {
+      int month = random.nextInt(12) + 1;
+      LocalDate date = LocalDate.of(2023, month, 1);
 
-			LocalDate date = LocalDate.of(2023, month, 1);
+      String season;
+      // switch (month) {
+      // case 12:
+      // case 1:
+      // case 2:
+      // season = "Winter";
+      // break;
+      // case 3:
+      // case 4:
+      // case 5:
+      // season = "Fruehling";
+      // break;
+      // case 6:
+      // case 7:
+      // case 8:
+      // season = "Sommer";
+      // case 9:
+      // case 10:
+      // case 11:
+      // season = "Herbst";
+      // break;
+      // default:
+      // season = "";
+      // break;
+      // }
 
-			String season;
+      season = switch (month) {
+        case 12, 1, 2 -> "Winter";
+        case 3, 4, 5 -> "Fruehling";
+        case 6, 7, 8 -> "Sommer";
+        case 9, 10, 11 -> "Herbst";
+        default -> "";
+      };
 
-			switch (month) {
-			case 12:
-			case 1:
-			case 2:
-				season = "Winter";
-				break;
-			case 3:
-			case 4:
-			case 5:
-				season = "Frühling";
-				break;
-			case 6:
-			case 7:
-			case 8:
-				season = "Sommer";
-			case 9:
-			case 10:
-			case 11:
-				season = "Herbst";
-				break;
-			default:
-				season = "";
-				break;
-			}
+      System.out.println(date.getMonth() + ": " + season);
 
-			season = switch (month) {
-			case 12, 1, 2 -> "Winter";
-			case 3, 4, 5 -> "Frühling";
-			case 6, 7, 8 -> "Sommer";
-			case 9, 10, 11 -> "Herbst";
-			default -> "";
-			};
+    }
 
-			System.out.println(date.getMonth() + ": " + season);
-
-		}
-	}
+  }
 
 }

@@ -1,5 +1,11 @@
 package demos.movie;
 
+/**
+ * Genre
+ * 
+ * @author Daniel Appenmaier
+ *
+ */
 public enum Genre02 {
 
   DRAMA("Drama"), ANIMATION("Animation"), CRIME("Crime"), FILM_NOIR("Film Noir"), FAMILY(

@@ -10,45 +10,46 @@ import java.util.ArrayList;
  */
 public class Movie {
 
-	private final String title;
-	private final ArrayList<String> genres;
-	private final String year;
-	private final int runtimeInMinutes;
-	private final double rating;
-	private final int votes;
+  private final String title;
+  private final ArrayList<String> genres;
+  private final String year;
+  private final int runtimeInMinutes;
+  private final double rating;
+  private final int votes;
 
-	public Movie(String title, ArrayList<String> genres, String year, int runtimeInMinutes, double rating, int votes) {
-		super();
-		this.title = title;
-		this.genres = genres;
-		this.year = year;
-		this.runtimeInMinutes = runtimeInMinutes;
-		this.rating = rating;
-		this.votes = votes;
-	}
+  public Movie(String title, ArrayList<String> genres, String year, int runtimeInMinutes,
+      double rating, int votes) {
+    super();
+    this.title = title;
+    this.genres = genres;
+    this.year = year;
+    this.runtimeInMinutes = runtimeInMinutes;
+    this.rating = rating;
+    this.votes = votes;
+  }
 
-	public String getTitle() {
-		return title;
-	}
+  public ArrayList<String> getGenres() {
+    return genres;
+  }
 
-	public ArrayList<String> getGenres() {
-		return genres;
-	}
+  public double getRating() {
+    return rating;
+  }
 
-	public String getYear() {
-		return year;
-	}
+  public int getRuntimeInMinutes() {
+    return runtimeInMinutes;
+  }
 
-	public int getRuntimeInMinutes() {
-		return runtimeInMinutes;
-	}
+  public String getTitle() {
+    return title;
+  }
 
-	public double getRating() {
-		return rating;
-	}
+  public int getVotes() {
+    return votes;
+  }
 
-	public int getVotes() {
-		return votes;
-	}
+  public String getYear() {
+    return year;
+  }
 
 }
