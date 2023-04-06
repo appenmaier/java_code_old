@@ -61,6 +61,18 @@ public class BestOfJava102 {
         default -> "";
       };
 
+      if (month == 12 || month == 1 || month == 2) {
+        season = "Winter";
+      } else if (month == 3 || month == 4 || month == 5) {
+        season = "Fruehling";
+      } else if (month == 6 || month == 7 || month == 8) {
+        season = "Sommer";
+      } else {
+        season = "Herbst";
+      }
+
+      season = (month == 12 || month == 1 || month == 2) ? "Winter" : "Nicht Winter";
+
       System.out.println(date.getMonth() + ": " + season);
 
     }

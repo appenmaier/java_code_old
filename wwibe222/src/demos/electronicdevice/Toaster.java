@@ -1,5 +1,10 @@
 package demos.electronicdevice;
 
-public class Toaster extends AbstractWiredElectronicDevice {
+public final class Toaster extends AbstractWiredElectronicDevice {
+
+  @Override
+  public boolean isWorking() {
+    return isPlugged && isOn;
+  }
 
 }
