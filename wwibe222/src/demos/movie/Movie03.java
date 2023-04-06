@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * @author Daniel Appenmaier
  *
  */
-public class Movie03 {
+public class Movie03 implements Comparable<Movie03> {
 
   private final String title;
   private final ArrayList<Genre02> genres;
@@ -26,6 +26,11 @@ public class Movie03 {
     this.runtimeInMinutes = runtimeInMinutes;
     this.rating = rating;
     this.votes = votes;
+  }
+
+  @Override
+  public int compareTo(Movie03 o) {
+    return title.compareTo(o.title);
   }
 
   @Override

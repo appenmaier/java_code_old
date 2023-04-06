@@ -3,9 +3,11 @@ package demos;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 import demos.movie.Genre02;
 import demos.movie.Movie03;
+import demos.movie.MovieByRatingDescendingComparator;
 
 /**
  * Lesen von Dateien
@@ -42,6 +44,8 @@ public class BestOfJava105 {
     }
 
     scanner.close();
+
+    Collections.sort(movies, new MovieByRatingDescendingComparator());
 
     for (Movie03 m : movies) {
       System.out.println(m);
