@@ -4,7 +4,7 @@ import demos.order.Order;
 import demos.order.Order.OrderItem;
 
 /**
- * Mitgliedsklassen
+ * Elementklassen
  * 
  * @author Daniel Appenmaier
  *
