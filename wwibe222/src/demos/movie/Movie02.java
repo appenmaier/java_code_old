@@ -6,6 +6,7 @@ import java.util.ArrayList;
  * Film
  * 
  * @author Daniel Appenmaier
+ * @version 2.0
  *
  */
 public class Movie02 {

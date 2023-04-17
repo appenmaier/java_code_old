@@ -6,6 +6,7 @@ import java.util.ArrayList;
  * Film
  * 
  * @author Daniel Appenmaier
+ * @version 3.0
  *
  */
 public class Movie03 implements Comparable<Movie03> {
@@ -30,7 +31,11 @@ public class Movie03 implements Comparable<Movie03> {
 
   @Override
   public int compareTo(Movie03 o) {
-    return title.compareTo(o.title);
+    if (o.year.compareTo(year) == 0) {
+      return title.compareTo(o.title);
+    } else {
+      return o.year.compareTo(year);
+    }
   }
 
   @Override

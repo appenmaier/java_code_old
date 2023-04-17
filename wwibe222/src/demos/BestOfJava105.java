@@ -45,6 +45,7 @@ public class BestOfJava105 {
 
     scanner.close();
 
+    Collections.sort(movies);
     Collections.sort(movies, new MovieByRatingDescendingComparator());
 
     for (Movie03 m : movies) {
