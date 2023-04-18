@@ -16,17 +16,10 @@ public final class TableLamp07 extends Light02 implements WiredDevice {
     return numberOfTableLamps;
   }
 
-  /*
-   * Attribute
-   */
   private boolean isConnected;
   private LightBulb04 lightBulb;
-
   private final PlugType02 plugType;
 
-  /*
-   * Methoden
-   */
   public TableLamp07(PlugType02 plugType) {
     this.plugType = plugType;
     numberOfTableLamps++;

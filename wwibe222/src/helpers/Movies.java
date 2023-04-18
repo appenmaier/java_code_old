@@ -3,17 +3,16 @@ package helpers;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 import demos.movie.Movie05;
 import demos.movie.Movie05.Genre02;
 
 public class Movies {
 
-  public static ArrayList<Movie05> getMovies() throws FileNotFoundException {
+  public static ArrayList<Movie05> getMovies(int entries) throws FileNotFoundException {
     ArrayList<Movie05> movies = new ArrayList<>();
-
     File file = new File("src/resources/movies.csv");
-
     Scanner scanner = new Scanner(file);
 
     while (scanner.hasNextLine()) {
@@ -35,6 +34,15 @@ public class Movies {
     }
 
     scanner.close();
+
+    ArrayList<Movie05> tmp = new ArrayList<>();
+    for (int i = 0; i < entries; i++) {
+      Random random = new Random();
+      int index = random.nextInt(movies.size());
+      tmp.add(movies.get(index));
+      movies.remove(index);
+    }
+    movies = tmp;
 
     return movies;
   }

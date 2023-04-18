@@ -16,19 +16,19 @@ public record Movie05(String title, ArrayList<Genre02> genres, String year, int 
     double rating, int votes) implements Comparable<Movie05> {
 
   @Override
-  public int compareTo(Movie05 o) {
-    if (o.year.compareTo(year) == 0) {
-      return title.compareTo(o.title);
+  public int compareTo(Movie05 other) {
+    if (other.year.compareTo(year) == 0) {
+      return title.compareTo(other.title);
     } else {
-      return o.year.compareTo(year);
+      return other.year.compareTo(year);
     }
   }
 
   public static class MovieByRatingDescendingComparator implements Comparator<Movie05> {
 
     @Override
-    public int compare(Movie05 o1, Movie05 o2) {
-      return Double.valueOf(o2.rating()).compareTo(o1.rating());
+    public int compare(Movie05 movie1, Movie05 movie2) {
+      return Double.valueOf(movie2.rating()).compareTo(movie1.rating());
     }
 
   }

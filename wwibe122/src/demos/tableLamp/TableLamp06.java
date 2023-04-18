@@ -16,17 +16,10 @@ public final class TableLamp06 extends Light02 {
     return numberOfTableLamps;
   }
 
-  /*
-   * Attribute
-   */
   private boolean isConnected;
   private LightBulb04 lightBulb;
-
   private final PlugType02 plugType;
 
-  /*
-   * Methoden
-   */
   public TableLamp06(PlugType02 plugType) {
     this.plugType = plugType;
     numberOfTableLamps++;

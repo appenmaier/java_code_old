@@ -5,8 +5,8 @@ import java.util.Comparator;
 public class MovieByRatingDescendingComparator implements Comparator<Movie03> {
 
   @Override
-  public int compare(Movie03 o1, Movie03 o2) {
-    return Double.valueOf(o2.getRating()).compareTo(o1.getRating());
+  public int compare(Movie03 movie1, Movie03 movie2) {
+    return Double.valueOf(movie2.getRating()).compareTo(movie1.getRating());
   }
 
 }

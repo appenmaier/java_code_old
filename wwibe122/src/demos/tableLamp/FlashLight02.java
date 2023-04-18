@@ -9,10 +9,8 @@ package demos.tableLamp;
  */
 public final class FlashLight02 extends Light02 {
 
-  /* Attribute */
   private double energyLevel;
 
-  /* Methoden */
   public FlashLight02() {
     energyLevel = 1.0;
   }

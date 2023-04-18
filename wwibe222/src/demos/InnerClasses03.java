@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.function.Consumer;
 import demos.movie.Movie05;
 import helpers.Movies;
 
@@ -15,59 +16,76 @@ import helpers.Movies;
  */
 public class InnerClasses03 {
 
+  private static ArrayList<Movie05> movies;
+
   public static void main(String[] args) throws FileNotFoundException {
 
-    ArrayList<Movie05> movies = Movies.getMovies();
+    movies = Movies.getMovies(5);
+    sortMovies();
+    printMovies();
 
-    /* Geschachtelte Klassen */
-    Collections.sort(movies, new Movie05.MovieByRatingDescendingComparator());
+  }
 
-    /* Lokale Klassen */
-    class MovieByTitleDescendingComparator implements Comparator<Movie05> {
+  public static void printMovies() {
+    /* klassische for-Schleife */
+    for (int i = 0; i < movies.size(); i++) {
+      System.out.println(movies.get(i));
+    }
+    System.out.println();
+
+    /* for-Each-Schleife */
+    for (Movie05 movie : movies) {
+      System.out.println(movie);
+    }
+    System.out.println();
+
+    /* forEach-Methode: Lokale Klasse */
+    class MoviePrinter implements Consumer<Movie05> {
       @Override
-      public int compare(Movie05 o1, Movie05 o2) {
-        return o2.title().compareTo(o1.title());
+      public void accept(Movie05 movie) {
+        System.out.println(movie);
       }
     }
+    movies.forEach(new MoviePrinter());
+    System.out.println();
 
+    /* forEach-Methode: Anonyme Klasse */
+    movies.forEach(new Consumer<Movie05>() {
+      @Override
+      public void accept(Movie05 movie) {
+        System.out.println(movie);
+      }
+    });
+    System.out.println();
+
+    /* forEach-Methode: Lambda-Ausdruck */
+    movies.forEach(movie -> System.out.println(movie));
+    System.out.println();
+
+    /* forEach-Methode: Methodenreferenz */
+    movies.forEach(System.out::println);
+  }
+
+  public static void sortMovies() {
+    /* Lokale Klasse */
+    class MovieByTitleDescendingComparator implements Comparator<Movie05> {
+      @Override
+      public int compare(Movie05 movie1, Movie05 movie2) {
+        return movie2.title().compareTo(movie1.title());
+      }
+    }
     Collections.sort(movies, new MovieByTitleDescendingComparator());
 
-    /* Anonyme Klassen */
+    /* Anonyme Klasse */
     Collections.sort(movies, new Comparator<Movie05>() {
       @Override
-      public int compare(Movie05 o1, Movie05 o2) {
-        return o1.year().compareTo(o2.year());
+      public int compare(Movie05 movie1, Movie05 movie2) {
+        return movie1.year().compareTo(movie2.year());
       }
     });
 
-    /* Lamba-Ausdruecke */
-    Collections.sort(movies, (o1, o2) -> o2.year().compareTo(o1.year()));
-
-    // for (Movie05 movie : movies) {
-    // System.out.println(movie);
-    // }
-
-    // class MoviePrinter implements Consumer<Movie05> {
-    // @Override
-    // public void accept(Movie05 movie) {
-    // System.out.println(movie);
-    // }
-    // }
-
-    // movies.forEach(new MoviePrinter());
-
-    // movies.forEach(new Consumer<Movie05>() {
-    // @Override
-    // public void accept(Movie05 movie) {
-    // System.out.println(movie);
-    // }
-    // });
-
-    // movies.forEach(movie -> System.out.println(movie));
-
-    /* Methodenreferenzen */
-    movies.forEach(System.out::println);
-
+    /* Lamba-Ausdruck */
+    Collections.sort(movies, (movie1, movie2) -> movie2.year().compareTo(movie1.year()));
   }
 
 }

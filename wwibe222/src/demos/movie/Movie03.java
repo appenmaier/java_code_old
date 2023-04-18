@@ -30,11 +30,11 @@ public class Movie03 implements Comparable<Movie03> {
   }
 
   @Override
-  public int compareTo(Movie03 o) {
-    if (o.year.compareTo(year) == 0) {
-      return title.compareTo(o.title);
+  public int compareTo(Movie03 other) {
+    if (other.year.compareTo(year) == 0) {
+      return title.compareTo(other.title);
     } else {
-      return o.year.compareTo(year);
+      return other.year.compareTo(year);
     }
   }
 
