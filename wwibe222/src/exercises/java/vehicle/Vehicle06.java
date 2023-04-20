@@ -31,12 +31,20 @@ public abstract class Vehicle06 {
     numberOfVehicles++;
   }
 
-  public final void accelerate(int value) {
+  public final void accelerate(int value) throws InvalidValueException {
+    if (value <= 0) {
+      throw new InvalidValueException("Invalid Value: " + value);
+    }
+
     speed += value;
     System.out.println(make + " " + model + " beschleunigt auf " + speed + " km/h");
   }
 
-  public final void brake(int value) {
+  public final void brake(int value) throws InvalidValueException {
+    if (value <= 0) {
+      throw new InvalidValueException("Invalid Value: " + value);
+    }
+
     speed -= value;
     System.out.println(make + " " + model + " bremst auf " + speed + " km/h ab");
   }
