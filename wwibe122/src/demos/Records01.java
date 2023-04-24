@@ -3,6 +3,12 @@ package demos;
 import demos.movie.Movie;
 import demos.movie.Movie02;
 
+/**
+ * Datenklassen (Records)
+ * 
+ * @author Daniel Appenmaier
+ *
+ */
 public class Records01 {
 
   public static void main(String[] args) {
