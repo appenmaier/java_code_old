@@ -39,7 +39,7 @@ public class Exceptions01 {
       int number = sc.nextInt();
       System.out.println(number);
     } catch (InputMismatchException e) {
-      System.out.println("InputMismachtException");
+      System.out.println("Eine InputMismatchException ist aufgetreten");
     }
 
     /* ClassCastException */
