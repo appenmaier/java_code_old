@@ -1,8 +1,8 @@
 package demos;
 
 import java.util.ArrayList;
-import demos.movie.Genre02;
-import demos.movie.Movie03;
+import demos.movie.Movie;
+import demos.movie.Movie.Genre;
 
 /**
  * Aufzaehlungen (Enumerations)
@@ -14,19 +14,19 @@ public class BestOfJava104 {
 
   public static void main(String[] args) {
 
-    Movie03 movie1 = new Movie03("John Wick 4", new ArrayList<>(), "2023", 169, 8.4, 61087);
-    Movie03 movie2 = new Movie03("John Wick 4", new ArrayList<>(), "2023", 169, 8.4, 61087);
+    Movie movie1 = new Movie("John Wick 4", new ArrayList<>(), "2023", 169, 8.4, 61087);
+    Movie movie2 = new Movie("John Wick 4", new ArrayList<>(), "2023", 169, 8.4, 61087);
 
-    movie1.getGenres().add(Genre02.ACTION);
-    movie1.getGenres().add(Genre02.CRIME);
-    movie1.getGenres().add(Genre02.THRILLER);
-    movie2.getGenres().add(Genre02.ACTION);
-    movie2.getGenres().add(Genre02.CRIME);
-    movie2.getGenres().add(Genre02.THRILLER);
+    movie1.genres().add(Genre.ACTION);
+    movie1.genres().add(Genre.CRIME);
+    movie1.genres().add(Genre.THRILLER);
+    movie2.genres().add(Genre.ACTION);
+    movie2.genres().add(Genre.CRIME);
+    movie2.genres().add(Genre.THRILLER);
 
     System.out.println(movie1.equals(movie2));
 
-    for (Genre02 g : Genre02.values()) {
+    for (Genre g : Genre.values()) {
       System.out.println(g.getName());
     }
 

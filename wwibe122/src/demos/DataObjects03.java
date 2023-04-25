@@ -8,6 +8,7 @@ package demos;
  */
 public class DataObjects03 {
 
+  @SuppressWarnings("unused")
   public static void main(String[] args) {
 
     /* Variablen */
@@ -15,7 +16,6 @@ public class DataObjects03 {
     name = "Hans";
     System.out.println("name: " + name);
 
-    @SuppressWarnings("unused")
     String oldName = name;
     name = "Lisa";
     System.out.println("name: " + name);

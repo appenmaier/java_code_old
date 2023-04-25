@@ -10,9 +10,9 @@ import java.util.Scanner;
  */
 public class Cases03 {
 
+  @SuppressWarnings("resource")
   public static void main(String[] args) {
 
-    @SuppressWarnings("resource")
     Scanner sc = new Scanner(System.in);
 
     System.out.print("Gibt bitte \"R/r\", \"G/g\" oder \"B/b\": ");

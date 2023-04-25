@@ -6,10 +6,10 @@ public class MovieByYearDescendingAndTitleAscendingComparator implements Compara
 
   @Override
   public int compare(Movie o1, Movie o2) {
-    if (o2.getYear() == o1.getYear()) {
-      return o1.getTitle().compareTo(o2.getTitle());
+    if (o2.year() == o1.year()) {
+      return o1.title().compareTo(o2.title());
     }
-    return o2.getYear().compareTo(o1.getYear());
+    return o2.year().compareTo(o1.year());
   }
 
 }

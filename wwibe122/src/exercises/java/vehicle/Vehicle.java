@@ -4,49 +4,55 @@ package exercises.java.vehicle;
  * Fahrzeug
  * 
  * @author Daniel Appenmaier
- * @version 1.0
- *
+ * @version 6.0
+ * 
  */
-public class Vehicle {
+public abstract class Vehicle {
 
-  /* Attribute */
+  private static int numberOfVehicles;
+
+  public static int getNumberOfVehicles() {
+    return numberOfVehicles;
+  }
+
   private String make;
   private String model;
-  private int speed;
+  private Engine engine;
+  protected int speed;
 
-  /* Methoden */
-  public void setMake(String make) {
+  public Vehicle(String make, String model, Engine engine) {
     this.make = make;
+    this.model = model;
+    this.engine = engine;
+    numberOfVehicles++;
+  }
+
+  public final void accelerate(int value) {
+    speed += value;
+    System.out.println(make + " " + model + " beschleunigt auf " + speed + " km/h");
+  }
+
+  public final void brake(int value) {
+    speed -= value;
+    System.out.println(make + " " + model + " bremst auf " + speed + " km/h ab");
+  }
+
+  public Engine getEngine() {
+    return engine;
   }
 
   public String getMake() {
     return make;
   }
 
-  public void setModel(String model) {
-    this.model = model;
-  }
-
   public String getModel() {
     return model;
-  }
-
-  public void accelerate(int value) {
-    speed += value;
-    System.out.println(make + " " + model + " beschleunigt auf " + speed + " km/h");
-  }
-
-  public void brake(int value) {
-    speed -= value;
-    System.out.println(make + " " + model + " bremst auf " + speed + " km/h ab");
   }
 
   public int getSpeed() {
     return speed;
   }
 
-  public void print() {
-    System.out.println(make + " " + model);
-  }
+  public abstract void print();
 
 }

@@ -10,9 +10,9 @@ import java.util.Scanner;
  */
 public class Cases02 {
 
+  @SuppressWarnings("resource")
   public static void main(String[] args) {
 
-    @SuppressWarnings("resource")
     Scanner sc = new Scanner(System.in);
 
     String ageText;

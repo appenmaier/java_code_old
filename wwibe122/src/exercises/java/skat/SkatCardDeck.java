@@ -12,10 +12,8 @@ import java.util.Random;
  */
 public class SkatCardDeck {
 
-  /* Attribute */
   private ArrayList<SkatCard> skatCards;
 
-  /* Methoden */
   public SkatCardDeck() {
     skatCards = new ArrayList<>();
     for (SkatCardColor color : SkatCardColor.values()) {

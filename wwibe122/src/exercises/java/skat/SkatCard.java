@@ -9,14 +9,16 @@ package exercises.java.skat;
  */
 public class SkatCard {
 
-  /* Attribute */
   private SkatCardColor color;
   private SkatCardValue value;
 
-  /* Methoden */
   public SkatCard(SkatCardColor color, SkatCardValue value) {
     this.color = color;
     this.value = value;
+  }
+
+  public String getCardDescription() {
+    return color.getDescription() + " " + value.getDescription();
   }
 
   public SkatCardColor getColor() {
@@ -25,10 +27,6 @@ public class SkatCard {
 
   public SkatCardValue getValue() {
     return value;
-  }
-
-  public String getCardDescription() {
-    return color.getDescription() + " " + value.getDescription();
   }
 
 }

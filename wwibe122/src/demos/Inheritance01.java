@@ -4,9 +4,9 @@ import java.awt.Color;
 import java.util.ArrayList;
 import demos.tableLamp.FlashLight;
 import demos.tableLamp.Light;
-import demos.tableLamp.LightBulb04;
-import demos.tableLamp.PlugType02;
-import demos.tableLamp.TableLamp05;
+import demos.tableLamp.LightBulb;
+import demos.tableLamp.PlugType;
+import demos.tableLamp.TableLamp;
 
 /**
  * Vererbung und Polymorphie
@@ -16,27 +16,28 @@ import demos.tableLamp.TableLamp05;
  */
 public class Inheritance01 {
 
+  @SuppressWarnings("unused")
   public static void main(String[] args) {
 
     /* Objekterzeugungen */
-    LightBulb04 redLightBulb = new LightBulb04(Color.RED);
-    TableLamp05 tableLamp1 = new TableLamp05(PlugType02.TYPE_F);
+    LightBulb redLightBulb = new LightBulb(Color.RED);
+    TableLamp tableLamp1 = new TableLamp(PlugType.TYPE_F);
     tableLamp1.changeLightBulb(redLightBulb);
 
-    LightBulb04 whiteLightBulb = new LightBulb04();
-    TableLamp05 tableLamp2 = new TableLamp05(PlugType02.TYPE_B);
+    LightBulb whiteLightBulb = new LightBulb();
+    TableLamp tableLamp2 = new TableLamp(PlugType.TYPE_B);
     tableLamp2.changeLightBulb(whiteLightBulb);
 
     FlashLight flashLight1 = new FlashLight();
     FlashLight flashLight2 = new FlashLight();
 
     /* Ansatz ohne Vererbung */
-    ArrayList<TableLamp05> tableLamps = new ArrayList<>();
+    ArrayList<TableLamp> tableLamps = new ArrayList<>();
     tableLamps.add(tableLamp1);
     tableLamps.add(tableLamp2);
 
     for (int i = 0; i < tableLamps.size(); i++) {
-      TableLamp05 tableLamp = tableLamps.get(i);
+      TableLamp tableLamp = tableLamps.get(i);
       tableLamp.switchOn();
       System.out.println(tableLamp.toString());
     }
@@ -62,13 +63,15 @@ public class Inheritance01 {
       Light light = lights.get(i);
       light.switchOn(); // Polymorphie
       // bis Java 16
-      if (light instanceof TableLamp05) {
-        TableLamp05 tableLamp = (TableLamp05) light; // Downcast
-        tableLamp.plugIn();
+      if (light instanceof TableLamp) {
+        TableLamp tableLamp = (TableLamp) light; // Downcast
+        /* Outdated */
+        // tableLamp.plugIn();
       }
       // seit Java 16
-      if (light instanceof TableLamp05 tableLamp) { // Downcast
-        tableLamp.plugIn();
+      if (light instanceof TableLamp tableLamp) { // Downcast
+        /* Outdated */
+        // tableLamp.plugIn();
       }
       System.out.println(light); // Polymorphie
       light.switchOff(); // Polymorphie

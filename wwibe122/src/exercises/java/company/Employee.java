@@ -9,12 +9,10 @@ package exercises.java.company;
  */
 public class Employee {
 
-  /* Attribute */
   private int employeeId;
   private Person person;
   private int salary;
 
-  /* Methoden */
   public Employee(int employeeId, Person person, int salary) {
     this.employeeId = employeeId;
     this.person = person;

@@ -1,9 +1,9 @@
 package demos.electronicdevice;
 
 public interface WiredDevice {
-	
-	void plugIn();
-	
-	void pullThePlug();
+
+  void plugIn();
+
+  void pullThePlug();
 
 }

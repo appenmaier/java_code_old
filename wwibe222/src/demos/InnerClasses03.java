@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.function.Consumer;
-import demos.movie.Movie05;
+import demos.movie.Movie;
 import helpers.Movies;
 
 /**
@@ -16,7 +16,7 @@ import helpers.Movies;
  */
 public class InnerClasses03 {
 
-  private static ArrayList<Movie05> movies;
+  private static ArrayList<Movie> movies;
 
   public static void main(String[] args) throws FileNotFoundException {
 
@@ -34,15 +34,15 @@ public class InnerClasses03 {
     System.out.println();
 
     /* for-Each-Schleife */
-    for (Movie05 movie : movies) {
+    for (Movie movie : movies) {
       System.out.println(movie);
     }
     System.out.println();
 
     /* forEach-Methode: Lokale Klasse */
-    class MoviePrinter implements Consumer<Movie05> {
+    class MoviePrinter implements Consumer<Movie> {
       @Override
-      public void accept(Movie05 movie) {
+      public void accept(Movie movie) {
         System.out.println(movie);
       }
     }
@@ -50,9 +50,9 @@ public class InnerClasses03 {
     System.out.println();
 
     /* forEach-Methode: Anonyme Klasse */
-    movies.forEach(new Consumer<Movie05>() {
+    movies.forEach(new Consumer<Movie>() {
       @Override
-      public void accept(Movie05 movie) {
+      public void accept(Movie movie) {
         System.out.println(movie);
       }
     });
@@ -68,18 +68,18 @@ public class InnerClasses03 {
 
   public static void sortMovies() {
     /* Lokale Klasse */
-    class MovieByTitleDescendingComparator implements Comparator<Movie05> {
+    class MovieByTitleDescendingComparator implements Comparator<Movie> {
       @Override
-      public int compare(Movie05 movie1, Movie05 movie2) {
+      public int compare(Movie movie1, Movie movie2) {
         return movie2.title().compareTo(movie1.title());
       }
     }
     Collections.sort(movies, new MovieByTitleDescendingComparator());
 
     /* Anonyme Klasse */
-    Collections.sort(movies, new Comparator<Movie05>() {
+    Collections.sort(movies, new Comparator<Movie>() {
       @Override
-      public int compare(Movie05 movie1, Movie05 movie2) {
+      public int compare(Movie movie1, Movie movie2) {
         return movie1.year().compareTo(movie2.year());
       }
     });

@@ -11,12 +11,10 @@ import java.util.ArrayList;
  */
 public class Company {
 
-  /* Attribute */
   private String name;
   private ArrayList<Employee> employees;
   private int numberOfEmployees;
 
-  /* Methoden */
   public Company(String name) {
     this.name = name;
     employees = new ArrayList<>();

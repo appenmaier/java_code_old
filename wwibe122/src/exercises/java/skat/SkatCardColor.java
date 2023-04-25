@@ -9,13 +9,10 @@ package exercises.java.skat;
  */
 public enum SkatCardColor {
 
-  /* Aufzaehlungskonstanten */
   DIAMONDS("Karo"), HEARTS("Herz"), SPADE("Pik"), CLUBS("Kreuz");
 
-  /* Attribute */
   private String description;
 
-  /* Methoden */
   SkatCardColor(String description) {
     this.description = description;
   }

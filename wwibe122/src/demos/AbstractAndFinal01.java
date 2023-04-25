@@ -1,6 +1,6 @@
 package demos;
 
-import demos.tableLamp.Light02;
+import demos.tableLamp.Light;
 
 /**
  * Abstrakte und finale Klassen und Methoden
@@ -10,10 +10,10 @@ import demos.tableLamp.Light02;
  */
 public class AbstractAndFinal01 {
 
+  @SuppressWarnings("unused")
   public static void main(String[] args) {
 
-    @SuppressWarnings("unused")
-    Light02 light;
+    Light light;
     // light = new Light02();
 
   }

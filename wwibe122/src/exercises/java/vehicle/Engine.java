@@ -9,13 +9,10 @@ package exercises.java.vehicle;
  */
 public enum Engine {
 
-  /* Aufzaehlungskonstanten */
   DIESEL("Diesel"), PETROL("Benzin"), GAS("Gas"), ELECTRO("Elektro");
 
-  /* Attribute */
   private String description;
 
-  /* Methoden */
   Engine(String description) {
     this.description = description;
   }

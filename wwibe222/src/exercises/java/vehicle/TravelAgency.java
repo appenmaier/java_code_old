@@ -6,7 +6,6 @@ import java.util.ArrayList;
  * Reisebuero
  * 
  * @author Daniel Appenmaier
- * @version 1.0
  *
  */
 public class TravelAgency {

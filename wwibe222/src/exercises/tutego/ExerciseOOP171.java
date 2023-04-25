@@ -2,9 +2,9 @@ package exercises.tutego;
 
 import exercises.tutego.radio.Firebox;
 import exercises.tutego.radio.IceMachine;
-import exercises.tutego.radio.Radio10;
-import exercises.tutego.radio.Ship02;
-import exercises.tutego.radio.TV02;
+import exercises.tutego.radio.Radio;
+import exercises.tutego.radio.Ship;
+import exercises.tutego.radio.TV;
 
 /**
  * https://tutego.de/javabuch/aufgaben/oop_classes.html Aufgabe OOP-1.7.1
@@ -16,11 +16,11 @@ public class ExerciseOOP171 {
 
   public static void main(String[] args) {
 
-    Ship02 ship = new Ship02();
-    Radio10 radio1 = new Radio10();
-    Radio10 radio2 = new Radio10();
+    Ship ship = new Ship();
+    Radio radio1 = new Radio();
+    Radio radio2 = new Radio();
     IceMachine iceMachine = new IceMachine();
-    TV02 tv = new TV02();
+    TV tv = new TV();
     Firebox firebox1 = new Firebox();
     Firebox firebox2 = new Firebox();
 

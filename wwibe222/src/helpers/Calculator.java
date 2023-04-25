@@ -4,7 +4,6 @@ package helpers;
  * Rechner
  * 
  * @author Daniel Appenmaier
- * @version 1.0
  * 
  */
 public class Calculator {
@@ -18,6 +17,59 @@ public class Calculator {
    * Ermaessigter Mehrwertsteuersatz
    */
   final static double REDUCED_VAT = 0.07;
+
+  /**
+   * Umrechnung: Netto in Brutto
+   * 
+   * @param netAmountInDM Nettobetrag
+   * @param isReducedVAT Ermaessigter Mehrwertsteuersatz
+   * @return Bruttobetrag
+   */
+  public static double addVAT(double netAmount, boolean isReducedVAT) {
+    double totalAmount;
+
+    if (isReducedVAT) {
+      totalAmount = netAmount + netAmount * REDUCED_VAT;
+    } else {
+      totalAmount = netAmount + netAmount * VAT;
+    }
+
+    return totalAmount;
+  }
+
+  public static int calculateSumWithDoWile(int start, int end) {
+    int i = start;
+    int total = 0;
+
+    do {
+      total += i;
+      i++;
+    } while (i <= end);
+
+    return total;
+  }
+
+  public static int calculateSumWithFor(int start, int end) {
+    int total = 0;
+
+    for (int i = start; i <= end; i++) {
+      total += i;
+    }
+
+    return total;
+  }
+
+  public static int calculateSumWithWile(int start, int end) {
+    int i = start;
+    int total = 0;
+
+    while (i <= end) {
+      total += i;
+      i++;
+    }
+
+    return total;
+  }
 
   /**
    * Umrechnung: DM in Euro
@@ -47,59 +99,6 @@ public class Calculator {
     amountInDM = amountInEuro * exchangeRateFromEURToDM;
 
     return amountInDM;
-  }
-
-  /**
-   * Umrechnung: Netto in Brutto
-   * 
-   * @param netAmountInDM Nettobetrag
-   * @param isReducedVAT Ermaessigter Mehrwertsteuersatz
-   * @return Bruttobetrag
-   */
-  public static double addVAT(double netAmount, boolean isReducedVAT) {
-    double totalAmount;
-
-    if (isReducedVAT) {
-      totalAmount = netAmount + netAmount * REDUCED_VAT;
-    } else {
-      totalAmount = netAmount + netAmount * VAT;
-    }
-
-    return totalAmount;
-  }
-
-  public static int calculateSumWithWile(int start, int end) {
-    int i = start;
-    int total = 0;
-
-    while (i <= end) {
-      total += i;
-      i++;
-    }
-
-    return total;
-  }
-
-  public static int calculateSumWithDoWile(int start, int end) {
-    int i = start;
-    int total = 0;
-
-    do {
-      total += i;
-      i++;
-    } while (i <= end);
-
-    return total;
-  }
-
-  public static int calculateSumWithFor(int start, int end) {
-    int total = 0;
-
-    for (int i = start; i <= end; i++) {
-      total += i;
-    }
-
-    return total;
   }
 
   /**

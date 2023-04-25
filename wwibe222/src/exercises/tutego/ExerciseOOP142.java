@@ -1,6 +1,6 @@
 package exercises.tutego;
 
-import exercises.tutego.radio.Radio07;
+import exercises.tutego.radio.Radio;
 
 /**
  * https://tutego.de/javabuch/aufgaben/oop_classes.html Aufgabe OOP-1.4.2
@@ -12,12 +12,12 @@ public class ExerciseOOP142 {
 
   public static void main(String[] args) {
 
-    Radio07 radio1 = new Radio07("DASDING");
+    Radio radio1 = new Radio("DASDING");
     radio1.on();
     radio1.volumeUp();
     radio1.volumeUp();
 
-    Radio07 radio2 = new Radio07(radio1);
+    Radio radio2 = new Radio(radio1);
 
     System.out.println(radio1.toString());
     System.out.println(radio2.toString());

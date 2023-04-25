@@ -10,10 +10,10 @@ import java.util.Scanner;
  */
 public class ConsoleApplications01 {
 
+  @SuppressWarnings("resource")
   public static void main(String[] args) {
 
     /* Scanner initialisieren */
-    @SuppressWarnings("resource")
     Scanner sc = new Scanner(System.in);
 
     /* Werte auslesen und zurückgeben */

@@ -4,33 +4,32 @@ package demos.tableLamp;
  * Taschenlampe
  * 
  * @author Daniel Appenmaier
- * @version 1.0
+ * @version 2.0
  *
  */
-public class FlashLight extends Light {
+public final class FlashLight extends Light {
 
-  /* Attribute */
   private double energyLevel;
 
-  /* Methoden */
   public FlashLight() {
     energyLevel = 1.0;
   }
 
-  public void switchOn() {
-    isOn = true;
-    energyLevel -= 0.1;
-    if (energyLevel > 0) {
-      isShining = true;
-    }
+  public double getEnergyLevel() {
+    return energyLevel;
   }
 
   public void recharge() {
     energyLevel = 1.0;
   }
 
-  public double getEnergyLevel() {
-    return energyLevel;
+  @Override
+  public void switchOn() {
+    isOn = true;
+    energyLevel -= 0.1;
+    if (energyLevel > 0) {
+      isShining = true;
+    }
   }
 
   @Override

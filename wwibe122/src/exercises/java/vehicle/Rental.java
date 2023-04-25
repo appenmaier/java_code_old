@@ -6,45 +6,44 @@ import java.util.ArrayList;
  * Fahrzeugvermietung
  * 
  * @author Daniel Appenmaier
- * @version 1.0
+ * @version 3.0
  * 
  */
-public class Rental {
+public class Rental implements Partner {
 
-  /* Attribute */
   private String name;
-  private ArrayList<Vehicle05> vehicles;
+  private ArrayList<Vehicle> vehicles;
 
-  /* Methoden */
   public Rental(String name) {
     this.name = name;
     vehicles = new ArrayList<>();
   }
 
-  public void addVehicle(Vehicle05 vehicle) {
-    vehicles.add(vehicle);
-  }
-
-  public void addAllVehicles(Vehicle05... vehicles) {
-    for (Vehicle05 v : vehicles) {
+  public void addAllVehicles(Vehicle... vehicles) {
+    for (Vehicle v : vehicles) {
       this.vehicles.add(v);
     }
   }
 
+  public void addVehicle(Vehicle vehicle) {
+    vehicles.add(vehicle);
+  }
+
+  @Override
+  public void print() {
+    System.out.println(name);
+    System.out.println("Unsere Fahrzeuge: ");
+    for (Vehicle v : vehicles) {
+      v.print();
+    }
+  }
+
   public void transformAllTrucks() {
-    for (Vehicle05 v : vehicles) {
+    for (Vehicle v : vehicles) {
       if (v instanceof Truck) {
         Truck t = (Truck) v;
         t.transform();
       }
-    }
-  }
-
-  public void print() {
-    System.out.println(name);
-    System.out.println("Unsere Fahrzeuge: ");
-    for (Vehicle05 v : vehicles) {
-      v.print();
     }
   }
 

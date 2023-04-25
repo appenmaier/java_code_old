@@ -1,6 +1,6 @@
 package exercises.tutego;
 
-import exercises.tutego.radio.Radio09;
+import exercises.tutego.radio.Radio;
 import exercises.tutego.radio.Ship;
 
 /**
@@ -11,18 +11,20 @@ import exercises.tutego.radio.Ship;
  */
 public class ExerciseOOP152 {
 
+  @SuppressWarnings("unused")
   public static void main(String[] args) {
 
     Ship ship = new Ship();
 
-    Radio09 radio1 = new Radio09();
-    Radio09 radio2 = new Radio09(107.2);
-    Radio09 radio3 = new Radio09("DASDING");
+    Radio radio1 = new Radio();
+    Radio radio2 = new Radio(107.2);
+    Radio radio3 = new Radio("DASDING");
 
     radio1.on();
     radio3.on();
 
-    ship.addAllRadios(radio1, radio2, radio3);
+    /* Outdated */
+    // ship.addAllRadios(radio1, radio2, radio3);
 
     System.out.println(ship.toString());
 

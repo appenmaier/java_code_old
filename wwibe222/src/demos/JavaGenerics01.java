@@ -1,9 +1,8 @@
 package demos;
 
+import java.util.ArrayList;
 import demos.box.Box;
-import demos.box.GenericBox;
-import exercises.java.vehicle.Car02;
-import exercises.java.vehicle.Engine;
+import demos.movie.Movie;
 
 /**
  * Java Generics
@@ -15,25 +14,31 @@ public class JavaGenerics01 {
 
   public static void main(String[] args) {
 
-    Box box = new Box();
+    /* Outdated */
+    // Box box = new Box();
+    // box.setContent(42);
+    // box.setContent(new Movie("John Wick 4", new ArrayList<>(), "2023", 169, 8.4, 61087));
+    // box.setContent("Hallo Welt");
+    //
+    // if (box.getContent() instanceof Movie) {
+    // Movie movie = (Movie) box.getContent();
+    // System.out.println(movie);
+    // }
+
+    Box<Integer> box = new Box<>();
     box.setContent(42);
-    box.setContent(new Car02("Porsche", "911", Engine.ELECTRO, 2));
-    box.setContent("Fuenf");
+    int content = box.getContent();
+    System.out.println(content);
 
-    if (box.getContent() instanceof Car02) {
-      Car02 car = (Car02) box.getContent();
-      car.getMake();
-    }
+    Box<Movie> box2 = new Box<>();
+    box2.setContent(new Movie("John Wick 4", new ArrayList<>(), "2023", 169, 8.4, 61087));
+    Movie movie = box2.getContent();
+    System.out.println(movie);
 
-    GenericBox<Integer> integerBox = new GenericBox<>();
-    integerBox.setContent(42);
-    int number = integerBox.getContent();
-    System.out.println(number);
-
-    GenericBox<Car02> carBox = new GenericBox<>();
-    carBox.setContent(new Car02("Porsche", "911", Engine.ELECTRO, 2));
-    Car02 car = carBox.getContent();
-    car.getMake();
+    Box<String> box3 = new Box<>();
+    box3.setContent("Hallo Welt");
+    String text = box3.getContent();
+    System.out.println(text);
 
   }
 

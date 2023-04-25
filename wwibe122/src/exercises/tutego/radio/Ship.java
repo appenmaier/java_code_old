@@ -1,37 +1,69 @@
 package exercises.tutego.radio;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Schiff
  * 
  * @author Daniel Appenmaier
- * @version 1.0
+ * @version 3.0
  * 
  */
 public class Ship {
 
-  private ArrayList<Radio09> radios;
+  public final static int MAXIMUM_POWER_CONSUMPTION = 100;
+
+  private ArrayList<ElectronicDevice> electronicDevices;
 
   public Ship() {
-    radios = new ArrayList<>();
+    electronicDevices = new ArrayList<>();
   }
 
-  public void addRadio(Radio09 radio) {
-    radios.add(radio);
-  }
-
-  public void addAllRadios(Radio09... radios) {
-    for (Radio09 r : radios) {
-      addRadio(r);
+  public void addAllElectronicDevices(ElectronicDevice... electronicDevices) {
+    for (ElectronicDevice e : electronicDevices) {
+      addElectronicDevice(e);
     }
   }
 
-  public int numberOfRadiosSwitchedOn() {
+  public void addAndCheckAllElectronicDevices(ElectronicDevice... electronicDevices) {
+    for (ElectronicDevice e : electronicDevices) {
+      addAndCheckElectronicDevice(e);
+    }
+  }
+
+  public void addAndCheckElectronicDevice(ElectronicDevice electronicDevice) {
+    if (electronicDevice instanceof Radio) {
+      Radio radio = (Radio) electronicDevice;
+      if (radio.getVolume() == 0) {
+        return;
+      }
+    }
+
+    addElectronicDevice(electronicDevice);
+    System.out.println("GEZ-Gebuehren nicht vergessen");
+  }
+
+  public void addElectronicDevice(ElectronicDevice electronicDevice) {
+    electronicDevices.add(electronicDevice);
+    Collections.sort(electronicDevices, new ElectronicDeviceWattComparator());
+  }
+
+  public ElectronicDevice findMostPowerConsumingElectronicDevice() {
+    return Collections.max(electronicDevices, new ElectronicDeviceWattComparator());
+  }
+
+  public void holiday() {
+    for (ElectronicDevice e : electronicDevices) {
+      e.off();
+    }
+  }
+
+  public int numberOfElectronicDevicesSwitchedOn() {
     int count = 0;
 
-    for (Radio09 r : radios) {
-      if (r.isOn()) {
+    for (ElectronicDevice e : electronicDevices) {
+      if (e.isOn()) {
         count++;
       }
     }
@@ -39,12 +71,20 @@ public class Ship {
     return count;
   }
 
+  public void removePowerConsumingElectronicDevices() {
+    MaximumPowerConsumptionOfElectronicDevicePredicate predicate =
+        new MaximumPowerConsumptionOfElectronicDevicePredicate(MAXIMUM_POWER_CONSUMPTION);
+
+    electronicDevices.removeIf(predicate);
+  }
+
+  @Override
   public String toString() {
     String text = "";
-    for (Radio09 r : radios) {
-      text += r.toString() + "\n";
+    for (ElectronicDevice e : electronicDevices) {
+      text += e.toString() + "\n";
     }
-    text += "Anzahl eingeschalteter Radios: " + numberOfRadiosSwitchedOn() + "\n";
+    text += "Anzahl eingeschalteter Geraete: " + numberOfElectronicDevicesSwitchedOn() + "\n";
     return text;
   }
 

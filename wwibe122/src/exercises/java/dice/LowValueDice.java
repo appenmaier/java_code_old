@@ -9,13 +9,13 @@ import java.util.Random;
  * @version 1.0
  * 
  */
-public class LowValueDice extends Dice02 {
+public class LowValueDice extends Dice {
 
-  /* Methoden */
   public LowValueDice(int id) {
     super(id);
   }
 
+  @Override
   public void rollTheDice() {
     Random random = new Random();
     value = random.nextInt(3) + 1;

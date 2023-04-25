@@ -1,6 +1,6 @@
 package demos;
 
-import demos.tableLamp.LightBulb03;
+import demos.tableLamp.LightBulb;
 
 /**
  * Konstruktoren und ueberladene Methoden
@@ -10,13 +10,12 @@ import demos.tableLamp.LightBulb03;
  */
 public class OO06 {
 
+  @SuppressWarnings("unused")
   public static void main(String[] args) {
 
-    @SuppressWarnings("unused")
-    LightBulb03 redLightBulb = new LightBulb03("rot");
-
-    @SuppressWarnings("unused")
-    LightBulb03 whiteLightBulb = new LightBulb03();
+    /* Outdated */
+    // LightBulb redLightBulb = new LightBulb("rot");
+    LightBulb whiteLightBulb = new LightBulb();
 
   }
 

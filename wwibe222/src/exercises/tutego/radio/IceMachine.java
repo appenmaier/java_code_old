@@ -4,7 +4,7 @@ package exercises.tutego.radio;
  * Eismaschine
  * 
  * @author Daniel Appenmaier
- * @version 1.0
+ * @version 2.0
  * 
  */
 public class IceMachine extends ElectronicDevice {

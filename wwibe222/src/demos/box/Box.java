@@ -4,21 +4,22 @@ package demos.box;
  * Kiste
  * 
  * @author Daniel Appenmaier
+ * @version 2.0
  *
  */
-public class Box {
+public class Box<T> {
 
-  private Object content;
+  private T content;
 
   public Box() {
 
   }
 
-  public Object getContent() {
+  public T getContent() {
     return content;
   }
 
-  public void setContent(Object content) {
+  public void setContent(T content) {
     this.content = content;
   }
 

@@ -10,15 +10,17 @@ import exercises.tutego.radio.Radio;
  */
 public class ExerciseOOP111 {
 
+  @SuppressWarnings("unused")
   public static void main(String[] args) {
 
     Radio radio = new Radio();
 
-    radio.isOn = true;
-    radio.volume = 3;
-
-    System.out.println("radio.isOn: " + radio.isOn);
-    System.out.println("radio.volume: " + radio.volume);
+    /* Outdated */
+    // radio.isOn = true;
+    // radio.volume = 3;
+    //
+    // System.out.println("radio.isOn: " + radio.isOn);
+    // System.out.println("radio.volume: " + radio.volume);
 
   }
 

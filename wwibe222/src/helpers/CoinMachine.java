@@ -4,7 +4,6 @@ package helpers;
  * Muenzmaschine
  * 
  * @author Daniel Appenmaier
- * @version 1.0
  * 
  */
 public class CoinMachine {

@@ -10,12 +10,10 @@ import java.util.Objects;
  */
 public class Person {
 
-  /* Attribute */
   private String name;
   private int age;
   private char gender;
 
-  /* Methoden */
   public Person(String name, int age, char gender) {
     super();
     this.name = name;

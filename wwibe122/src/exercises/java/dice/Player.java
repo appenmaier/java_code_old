@@ -4,20 +4,20 @@ package exercises.java.dice;
  * Spieler
  * 
  * @author Daniel Appenmaier
- * @version 1.0
+ * @version 2.0
  * 
  */
 public class Player {
 
-  /* Attribute */
   private String name;
   private int score;
   private boolean isActive;
+  private boolean specialAvailable;
 
-  /* Methoden */
   public Player(String name) {
     this.name = name;
     isActive = true;
+    specialAvailable = true;
   }
 
   public String getName() {
@@ -28,8 +28,8 @@ public class Player {
     return score;
   }
 
-  public void setScore(int score) {
-    this.score = score;
+  public boolean getSpecialAvailable() {
+    return specialAvailable;
   }
 
   public boolean isActiv() {
@@ -38,6 +38,14 @@ public class Player {
 
   public void setActive(boolean isActive) {
     this.isActive = isActive;
+  }
+
+  public void setScore(int score) {
+    this.score = score;
+  }
+
+  public void setSpecialAvailable(boolean specialAvailable) {
+    this.specialAvailable = specialAvailable;
   }
 
 }

@@ -6,16 +6,14 @@ import java.util.Random;
  * Wuerfel
  * 
  * @author Daniel Appenmaier
- * @version 1.0
- *
+ * @version 2.0
+ * 
  */
 public class Dice {
 
-  /* Attribute */
   private int id;
-  private int value;
+  protected int value;
 
-  /* Methoden */
   public Dice(int id) {
     this.id = id;
     rollTheDice();

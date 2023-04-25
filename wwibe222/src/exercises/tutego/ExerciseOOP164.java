@@ -1,7 +1,7 @@
 package exercises.tutego;
 
-import exercises.tutego.radio.Radio10;
-import exercises.tutego.radio.Ship02;
+import exercises.tutego.radio.Radio;
+import exercises.tutego.radio.Ship;
 
 /**
  * https://tutego.de/javabuch/aufgaben/oop_classes.html Aufgabe OOP-1.6.4
@@ -13,10 +13,10 @@ public class ExerciseOOP164 {
 
   public static void main(String[] args) {
 
-    Ship02 ship = new Ship02();
-    Radio10 radio1 = new Radio10(107.2);
-    Radio10 radio2 = new Radio10();
-    Radio10 radio3 = new Radio10();
+    Ship ship = new Ship();
+    Radio radio1 = new Radio(107.2);
+    Radio radio2 = new Radio();
+    Radio radio3 = new Radio();
 
     radio1.on();
     radio1.volumeUp();

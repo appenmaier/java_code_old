@@ -1,7 +1,7 @@
 package exercises.tutego;
 
-import exercises.tutego.radio.Modulation;
-import exercises.tutego.radio.Radio08;
+import exercises.tutego.radio.Radio;
+import exercises.tutego.radio.Radio.Modulation;
 
 /**
  * https://tutego.de/javabuch/aufgaben/oop_classes.html Aufgabe OOP-1.3.1
@@ -13,13 +13,13 @@ public class ExerciseOOP131 {
 
   public static void main(String[] args) {
 
-    Radio08 radio1 = new Radio08("DASDING");
+    Radio radio1 = new Radio("DASDING");
     radio1.setModulation(Modulation.FM);
     radio1.on();
     radio1.volumeUp();
     radio1.volumeUp();
 
-    Radio08 radio2 = new Radio08(radio1);
+    Radio radio2 = new Radio(radio1);
 
     System.out.println(radio1.toString());
     System.out.println(radio2.toString());

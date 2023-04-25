@@ -10,12 +10,12 @@ package exercises.java.creature;
 public class CreatureGame {
 
   /* Attribute */
-  private Creature02 creature1;
-  private Creature02 creature2;
+  private Creature creature1;
+  private Creature creature2;
   private int noRounds;
 
   /* Methoden */
-  public CreatureGame(Creature02 creature1, Creature02 creature2) {
+  public CreatureGame(Creature creature1, Creature creature2) {
     this.creature1 = creature1;
     this.creature2 = creature2;
   }
@@ -28,7 +28,7 @@ public class CreatureGame {
     System.out.println();
   }
 
-  private boolean move(Creature02 creature1, Creature02 creature2) {
+  private boolean move(Creature creature1, Creature creature2) {
     return creature1.attackCreature(creature2);
   }
 

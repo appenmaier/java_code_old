@@ -8,12 +8,12 @@ package demos;
  */
 public class DataObjects01 {
 
+  @SuppressWarnings("unused")
   public static void main(String[] args) {
 
     /* Deklaration von variablen Datenobjekten */
     int i;
     String name;
-    @SuppressWarnings("unused")
     String firstName, familyName, fullName, firstNameAndFamilyName; // Kamelschreibweise
     boolean isHappy;
 

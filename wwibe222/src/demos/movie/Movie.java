@@ -1,56 +1,57 @@
 package demos.movie;
 
 import java.util.ArrayList;
+import java.util.Comparator;
+import demos.movie.Movie.Genre;
 
 /**
  * Film
  * 
  * @author Daniel Appenmaier
- * @version 1.0
+ * @version 5.0
  *
  */
-public class Movie {
+@SuppressWarnings("unused")
+public record Movie(String title, ArrayList<Genre> genres, String year, int runtimeInMinutes,
+    double rating, int votes) implements Comparable<Movie> {
 
-  private final String title;
-  private final ArrayList<String> genres;
-  private final String year;
-  private final int runtimeInMinutes;
-  private final double rating;
-  private final int votes;
-
-  public Movie(String title, ArrayList<String> genres, String year, int runtimeInMinutes,
-      double rating, int votes) {
-    super();
-    this.title = title;
-    this.genres = genres;
-    this.year = year;
-    this.runtimeInMinutes = runtimeInMinutes;
-    this.rating = rating;
-    this.votes = votes;
+  @Override
+  public int compareTo(Movie other) {
+    if (other.year.compareTo(year) == 0) {
+      return title.compareTo(other.title);
+    } else {
+      return other.year.compareTo(year);
+    }
   }
 
-  public ArrayList<String> getGenres() {
-    return genres;
+  public static class MovieByRatingDescendingComparator implements Comparator<Movie> {
+
+    @Override
+    public int compare(Movie movie1, Movie movie2) {
+      return Double.valueOf(movie2.rating()).compareTo(movie1.rating());
+    }
+
   }
 
-  public double getRating() {
-    return rating;
-  }
+  public static enum Genre {
 
-  public int getRuntimeInMinutes() {
-    return runtimeInMinutes;
-  }
+    DRAMA("Drama"), ANIMATION("Animation"), CRIME("Crime"), FILM_NOIR("Film Noir"), FAMILY(
+        "Family"), ADVENTURE("Adventure"), MYSTERY("Mystery"), DOCUMENTARY("Documentary"), FANTASY(
+            "Fantasy"), HISTORY("History"), NEWS("News"), MUSIC("Music"), BIOGRAPHY(
+                "Biography"), COMEDY("Comedy"), SCIENCE_FICTION("Science Fiction"), SPORT(
+                    "Sport"), ROMANCE("Romance"), ACTION("Action"), THRILLER("Thriller"), HORROR(
+                        "Horror"), WESTERN("Western"), WAR("War"), MUSICAL("Musical");
 
-  public String getTitle() {
-    return title;
-  }
+    private String name;
 
-  public int getVotes() {
-    return votes;
-  }
+    Genre(String name) {
+      this.name = name;
+    }
 
-  public String getYear() {
-    return year;
+    public String getName() {
+      return name;
+    }
+
   }
 
 }

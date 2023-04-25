@@ -1,9 +1,9 @@
 package demos;
 
 import java.util.ArrayList;
-import demos.tableLamp.LightBulb04;
-import demos.tableLamp.PlugType02;
-import demos.tableLamp.TableLamp07;
+import demos.tableLamp.LightBulb;
+import demos.tableLamp.PlugType;
+import demos.tableLamp.TableLamp;
 import demos.tableLamp.Toaster;
 import demos.tableLamp.WiredDevice;
 
@@ -21,13 +21,14 @@ public class Interfaces01 {
 
     // wiredDevices.add(new WiredDevice());
     wiredDevices.add(new Toaster()); // Upcast
-    wiredDevices.add(new TableLamp07(PlugType02.TYPE_F)); // Upcast
+    wiredDevices.add(new TableLamp(PlugType.TYPE_F)); // Upcast
 
     for (WiredDevice wiredDevice : wiredDevices) {
-      wiredDevice.plugIn(); // (Dynamische) Polymorphie
-      if (wiredDevice instanceof TableLamp07) {
-        TableLamp07 t = (TableLamp07) wiredDevice; // Downcast
-        t.changeLightBulb(new LightBulb04());
+      /* Outdated */
+      // wiredDevice.plugIn(); // (Dynamische) Polymorphie
+      if (wiredDevice instanceof TableLamp) {
+        TableLamp t = (TableLamp) wiredDevice; // Downcast
+        t.changeLightBulb(new LightBulb());
         t.switchOn();
       }
       System.out.println(wiredDevice); // (Dynamische) Polymorphie

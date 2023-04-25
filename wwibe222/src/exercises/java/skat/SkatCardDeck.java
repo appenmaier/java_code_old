@@ -7,15 +7,12 @@ import java.util.Random;
  * Kartendeck (Skat)
  * 
  * @author Daniel Appenmaier
- * @version 1.0
  * 
  */
 public class SkatCardDeck {
 
-  /* Attribute */
   private ArrayList<SkatCard> skatCards;
 
-  /* Methoden */
   public SkatCardDeck() {
     skatCards = new ArrayList<>();
     for (SkatCardColor color : SkatCardColor.values()) {

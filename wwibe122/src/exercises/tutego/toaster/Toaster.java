@@ -6,7 +6,7 @@ import java.util.Objects;
  * Toaster
  * 
  * @author Daniel Appenmaier
- * @version 1.0
+ * 
  * 
  */
 public class Toaster {
@@ -15,10 +15,8 @@ public class Toaster {
   private boolean stainless;
   private boolean extraLarge;
 
+  @Override
   public boolean equals(Object object) {
-    // if (!(object instanceof Toaster toaster)) {
-    // return false;
-    // }
     if (!(object instanceof Toaster)) {
       return false;
     }
@@ -28,6 +26,7 @@ public class Toaster {
         && extraLarge == toaster.extraLarge;
   }
 
+  @Override
   public int hashCode() {
     return Objects.hash(capacity, stainless, extraLarge);
   }

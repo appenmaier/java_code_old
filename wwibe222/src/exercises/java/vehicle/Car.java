@@ -4,22 +4,16 @@ package exercises.java.vehicle;
  * Auto
  * 
  * @author Daniel Appenmaier
- * @version 1.0
+ * @version 2.0
  *
  */
-public class Car extends Vehicle05 {
+public final class Car extends Vehicle {
 
-  /* Attribute */
   private int seats;
 
-  /* Methoden */
   public Car(String make, String model, Engine engine, int seats) {
     super(make, model, engine);
     this.seats = seats;
-  }
-
-  public int getSeats() {
-    return seats;
   }
 
   public void doATurboBoost() {
@@ -28,6 +22,11 @@ public class Car extends Vehicle05 {
         + " macht einen TurboBoost und beschleunigt auf " + speed + " km/h");
   }
 
+  public int getSeats() {
+    return seats;
+  }
+
+  @Override
   public void print() {
     System.out.println(getMake() + " " + getModel() + "(" + getEngine().getDescription() + ", "
         + seats + "Sitzplaetze)");

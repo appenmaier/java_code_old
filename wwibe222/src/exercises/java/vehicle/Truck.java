@@ -1,12 +1,17 @@
 package exercises.java.vehicle;
 
-public class Truck extends Vehicle05 {
+/**
+ * LKW
+ * 
+ * @author Daniel Appenmaier
+ * @version 2.0
+ *
+ */
+public final class Truck extends Vehicle {
 
-  /* Attribute */
   private int cargo;
   private boolean isTransformed;
 
-  /* Methoden */
   public Truck(String make, String model, Engine engine, int cargo) {
     super(make, model, engine);
     this.cargo = cargo;
@@ -20,6 +25,12 @@ public class Truck extends Vehicle05 {
     return isTransformed;
   }
 
+  @Override
+  public void print() {
+    System.out.println(
+        getMake() + " " + getModel() + "(" + getEngine().getDescription() + ", " + cargo + "t)");
+  }
+
   public void transform() {
     if (isTransformed) {
       isTransformed = false;
@@ -29,11 +40,6 @@ public class Truck extends Vehicle05 {
       isTransformed = true;
       System.out.println(getMake() + " " + getModel() + " verwandelt sich in einen Autobot");
     }
-  }
-
-  public void print() {
-    System.out.println(
-        getMake() + " " + getModel() + "(" + getEngine().getDescription() + ", " + cargo + "t)");
   }
 
 }

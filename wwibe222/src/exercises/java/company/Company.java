@@ -6,17 +6,65 @@ import java.util.ArrayList;
  * Unternehmen
  * 
  * @author Daniel Appenmaier
- * @version 1.0
- * 
+ * @version 3.0
  */
 public class Company {
 
-  /* Attribute */
+  /**
+   * Mitarbeiter
+   * 
+   * @author Daniel Appenmaier
+   * @version 2.0
+   */
+  public class Employee {
+
+    private int employeeId;
+    private Person person;
+    private int salary;
+
+    public Employee(int employeeId, Person person, int salary) {
+      this.employeeId = employeeId;
+      this.person = person;
+      this.salary = salary;
+    }
+
+    public int getEmployeeId() {
+      return employeeId;
+    }
+
+    public String getName() {
+      return person.getName();
+    }
+
+    public int getSalary() {
+      return salary;
+    }
+
+    public void print() {
+      System.out.println(employeeId + " - " + getName() + " - " + salary + " Euro");
+    }
+
+    public void setSalary(int salary)
+        throws SalaryDecreaseException, SalaryIncreaseTooHighException {
+      if (salary < this.salary) {
+        throw new SalaryDecreaseException();
+      }
+
+      double increase = (double) (salary - this.salary) / this.salary;
+      if (increase > 0.1) {
+        throw new SalaryIncreaseTooHighException();
+      }
+
+      this.salary = salary;
+    }
+
+  }
+
   private String name;
   private ArrayList<Employee> employees;
+
   private int numberOfEmployees;
 
-  /* Methoden */
   public Company(String name) {
     this.name = name;
     employees = new ArrayList<>();

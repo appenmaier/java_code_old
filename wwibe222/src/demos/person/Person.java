@@ -10,50 +10,14 @@ import java.util.Objects;
  */
 public class Person {
 
-  /* Attribute */
   private String name;
   private int age;
   private char gender;
 
-  /* Methoden */
   public Person(String name, int age, char gender) {
     this.name = name;
     this.age = age;
     this.gender = gender;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public int getAge() {
-    return age;
-  }
-
-  public void setAge(int age) {
-    this.age = age;
-  }
-
-  public char getGender() {
-    return gender;
-  }
-
-  public void setGender(char gender) {
-    this.gender = gender;
-  }
-
-  @Override
-  public String toString() {
-    return "Person [name=" + name + ", age=" + age + ", gender=" + gender + "]";
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(age, gender, name);
   }
 
   @Override
@@ -69,6 +33,40 @@ public class Person {
     }
     Person other = (Person) obj;
     return age == other.age && gender == other.gender && Objects.equals(name, other.name);
+  }
+
+  public int getAge() {
+    return age;
+  }
+
+  public char getGender() {
+    return gender;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(age, gender, name);
+  }
+
+  public void setAge(int age) {
+    this.age = age;
+  }
+
+  public void setGender(char gender) {
+    this.gender = gender;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  @Override
+  public String toString() {
+    return "Person [name=" + name + ", age=" + age + ", gender=" + gender + "]";
   }
 
 }

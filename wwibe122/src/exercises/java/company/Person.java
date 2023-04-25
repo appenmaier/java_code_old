@@ -9,10 +9,8 @@ package exercises.java.company;
  */
 public class Person {
 
-  /* Attribute */
   private String name;
 
-  /* Methoden */
   public Person(String name) {
     this.name = name;
   }

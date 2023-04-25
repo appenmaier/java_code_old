@@ -4,44 +4,26 @@ package demos.tableLamp;
  * Tischleuchte
  * 
  * @author Daniel Appenmaier
- * @version 1.0
+ * @version 5.0
  *
  */
-public class TableLamp {
+public class TableLamp extends Light {
 
-  /*
-   * Attribute
-   */
-  public boolean isConnected;
-  public boolean isOn;
-  public boolean isShining;
-  public LightBulb lightBulb;
+  private final static String TYPE = "Tischleuchte";
+  private static int numberOfTableLamps;
 
-  /*
-   * Methoden
-   */
-  public void plugIn() {
-    isConnected = true;
-    if (isOn && lightBulb != null) {
-      isShining = true;
-    }
+  public static int getNumberOfTableLamps() {
+    return numberOfTableLamps;
   }
 
-  public void pullThePlug() {
-    isConnected = false;
-    isShining = false;
-  }
+  private boolean isConnected;
+  private LightBulb lightBulb;
 
-  public void switchOn() {
-    isOn = true;
-    if (isConnected && lightBulb != null) {
-      isShining = true;
-    }
-  }
+  private final PlugType plugType;
 
-  public void switchOff() {
-    isOn = false;
-    isShining = false;
+  public TableLamp(PlugType plugType) {
+    this.plugType = plugType;
+    numberOfTableLamps++;
   }
 
   public LightBulb changeLightBulb(LightBulb newLightBulb) {
@@ -53,9 +35,34 @@ public class TableLamp {
     return oldLightBulb;
   }
 
+  public void plugIn() {
+    isConnected = true;
+    if (isOn && lightBulb != null) {
+      isShining = true;
+    }
+  }
+
+  public PlugType plugType() {
+    return plugType;
+  }
+
+  public void pullThePlug() {
+    isConnected = false;
+    isShining = false;
+  }
+
+  @Override
+  public void switchOn() {
+    isOn = true;
+    if (isConnected && lightBulb != null) {
+      isShining = true;
+    }
+  }
+
+  @Override
   public String toString() {
-    return "TableLamp [isConnected=" + isConnected + " isOn=" + isOn + " isShining=" + isShining
-        + " lightBulb=" + lightBulb.toString() + "]";
+    return TYPE + " [isConnected=" + isConnected + " isOn=" + isOn + " isShining=" + isShining
+        + " lightBulb=" + lightBulb.toString() + " plugType=" + plugType.toString() + "]";
   }
 
 }

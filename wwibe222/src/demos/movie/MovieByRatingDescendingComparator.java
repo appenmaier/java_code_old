@@ -2,11 +2,11 @@ package demos.movie;
 
 import java.util.Comparator;
 
-public class MovieByRatingDescendingComparator implements Comparator<Movie03> {
+public class MovieByRatingDescendingComparator implements Comparator<Movie> {
 
   @Override
-  public int compare(Movie03 movie1, Movie03 movie2) {
-    return Double.valueOf(movie2.getRating()).compareTo(movie1.getRating());
+  public int compare(Movie movie1, Movie movie2) {
+    return Double.valueOf(movie2.rating()).compareTo(movie1.rating());
   }
 
 }

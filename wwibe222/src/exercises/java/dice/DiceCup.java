@@ -6,12 +6,11 @@ import java.util.ArrayList;
  * Wuerfelbecher
  * 
  * @author Daniel Appenmaier
- * @version 1.0
+ * @version 2.0
  * 
  */
 public class DiceCup {
 
-  /* Methoden */
   public void rollTheDices(ArrayList<Dice> dices) {
     for (int i = 0; i < dices.size(); i++) {
       Dice dice = dices.get(i);

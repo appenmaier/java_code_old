@@ -2,10 +2,10 @@ package demos.electronicdevice;
 
 public interface ElectronicDevice {
 
-	void switchOn();
+  boolean isWorking();
 
-	void switchOff();
+  void switchOff();
 
-	boolean isWorking();
+  void switchOn();
 
 }

@@ -1,7 +1,7 @@
 package demos;
 
 import java.util.ArrayList;
-import demos.movie.Movie02;
+import demos.movie.Movie;
 
 /**
  * Die Mutter aller Klassen
@@ -13,8 +13,8 @@ public class BestOfJava103 {
 
   public static void main(String[] args) {
 
-    Movie02 movie1 = new Movie02("John Wick 4", new ArrayList<>(), "2023", 169, 8.4, 61087);
-    Movie02 movie2 = new Movie02("John Wick 4", new ArrayList<>(), "2023", 169, 8.4, 61087);
+    Movie movie1 = new Movie("John Wick 4", new ArrayList<>(), "2023", 169, 8.4, 61087);
+    Movie movie2 = new Movie("John Wick 4", new ArrayList<>(), "2023", 169, 8.4, 61087);
 
     System.out.println(movie1);
     System.out.println(movie2);

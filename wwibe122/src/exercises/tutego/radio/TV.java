@@ -4,10 +4,9 @@ package exercises.tutego.radio;
  * Fernseher
  * 
  * @author Daniel Appenmaier
- * @version 1.0
  * 
  */
-public class TV {
+public class TV extends ElectronicDevice {
 
   private MonitorTube monitorTube;
 
@@ -15,14 +14,21 @@ public class TV {
     monitorTube = new MonitorTube();
   }
 
+  @Override
+  public void off() {
+    super.off();
+    monitorTube.off();
+  }
+
+  @Override
   public void on() {
-    System.out.println("Fernseher an");
+    super.on();
     monitorTube.on();
   }
 
-  public void off() {
-    System.out.println("Fernseher aus");
-    monitorTube.off();
+  @Override
+  public String toString() {
+    return "Fernseher [Leistung=" + getWatt() + " W" + (isOn() ? ", ist an]" : ", ist aus]");
   }
 
 }

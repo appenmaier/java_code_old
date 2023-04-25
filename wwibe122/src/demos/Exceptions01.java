@@ -3,11 +3,10 @@ package demos;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import demos.tableLamp.AlreadyPluggedInException;
-import demos.tableLamp.FlashLight02;
-import demos.tableLamp.Light02;
-import demos.tableLamp.PlugType02;
-import demos.tableLamp.TableLamp07;
-import demos.tableLamp.TableLamp08;
+import demos.tableLamp.FlashLight;
+import demos.tableLamp.Light;
+import demos.tableLamp.PlugType;
+import demos.tableLamp.TableLamp;
 
 /**
  * Ausnahmen (Exceptions)
@@ -43,15 +42,15 @@ public class Exceptions01 {
     }
 
     /* ClassCastException */
-    Light02 light;
-    light = new TableLamp07(PlugType02.TYPE_F);
-    if (light instanceof FlashLight02) {
-      FlashLight02 flashLight = (FlashLight02) light;
+    Light light;
+    light = new TableLamp(PlugType.TYPE_F);
+    if (light instanceof FlashLight) {
+      FlashLight flashLight = (FlashLight) light;
       flashLight.recharge();
     }
 
     /* AlreadyPluggedInException */
-    TableLamp08 tableLamp = new TableLamp08(PlugType02.TYPE_F);
+    TableLamp tableLamp = new TableLamp(PlugType.TYPE_F);
     try {
       tableLamp.plugIn();
       tableLamp.plugIn();

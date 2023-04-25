@@ -1,6 +1,6 @@
 package demos;
 
-import demos.tableLamp.TableLamp03;
+import demos.tableLamp.TableLamp;
 
 /**
  * Statische und nicht-statische Elemente
@@ -10,16 +10,16 @@ import demos.tableLamp.TableLamp03;
  */
 public class OO07 {
 
-  @SuppressWarnings("unused")
   public static void main(String[] args) {
 
-    System.out.println(TableLamp03.getNumberOfTableLamps());
+    System.out.println(TableLamp.getNumberOfTableLamps());
 
-    TableLamp03 tableLamp1 = new TableLamp03();
-    TableLamp03 tableLamp2 = new TableLamp03();
-    TableLamp03 tableLamp3 = new TableLamp03();
+    /* Outdated */
+    // TableLamp tableLamp1 = new TableLamp();
+    // TableLamp tableLamp2 = new TableLamp();
+    // TableLamp tableLamp3 = new TableLamp();
 
-    System.out.println(TableLamp03.getNumberOfTableLamps());
+    System.out.println(TableLamp.getNumberOfTableLamps());
 
   }
 

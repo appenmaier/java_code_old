@@ -3,21 +3,21 @@ package exercises.java;
 import exercises.java.vehicle.Car;
 import exercises.java.vehicle.Engine;
 import exercises.java.vehicle.Truck;
-import exercises.java.vehicle.Vehicle05;
+import exercises.java.vehicle.Vehicle;
 
 public class Polymorphy01 {
 
   public static void main(String[] args) {
 
     int numberOfVehicles;
-    numberOfVehicles = Vehicle05.getNumberOfVehicles();
+    numberOfVehicles = Vehicle.getNumberOfVehicles();
     System.out.println("Anzahl Fahrzeuge: " + numberOfVehicles);
 
     Car car1 = new Car("Porsche", "911", Engine.ELECTRO, 2);
     Truck truck1 = new Truck("MAN", "TGX", Engine.DIESEL, 20);
     Car car2 = new Car("Opel", "Zafira Life", Engine.DIESEL, 7);
 
-    numberOfVehicles = Vehicle05.getNumberOfVehicles();
+    numberOfVehicles = Vehicle.getNumberOfVehicles();
     System.out.println("Anzahl Fahrzeuge: " + numberOfVehicles);
 
     car1.print();

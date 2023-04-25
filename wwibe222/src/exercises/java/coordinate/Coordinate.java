@@ -4,7 +4,6 @@ package exercises.java.coordinate;
  * Koordinate
  * 
  * @author Daniel Appenmaier
- * @version 1.0
  *
  */
 public class Coordinate implements Comparable<Coordinate> {
