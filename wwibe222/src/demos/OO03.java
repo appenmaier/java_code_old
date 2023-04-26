@@ -33,7 +33,8 @@ public class OO03 {
     // tableLamp1.plugIn();
     // tableLamp1.switchOn();
     // tableLamp1.changeLightBulb(redLightBulb);
-    //
+
+    /* Outdated */
     // System.out.println(tableLamp1.toString());
 
   }

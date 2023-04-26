@@ -18,7 +18,8 @@ public class ClassDiagrams04 {
     // Employee e1 = new Employee(1, p1, 50000);
     // Employee e2 = new Employee(2, p2, 75000);
     // Employee e3 = new Employee(3, p3, 40000);
-    //
+
+    /* Outdated */
     // company.addEmployee(e1);
     // company.addEmployee(e2);
     // company.addEmployee(e3);

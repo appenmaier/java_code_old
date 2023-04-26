@@ -35,14 +35,10 @@ public class ExerciseNested112 {
     TV tv = new TV();
     tv.setWatt(80);
 
-    /*
-     * Geschachtelte Klasse
-     */
+    /* Geschachtelte Klasse */
     // Comparator<ElectronicDevice> comparator = new ElectronicDeviceWattComparatorNested();
 
-    /*
-     * Lokale Klasse
-     */
+    /* Lokale Klasse */
     // class ElectronicDeviceWattComparatorLocal implements Comparator<ElectronicDevice> {
     // @Override
     // public int compare(ElectronicDevice o1, ElectronicDevice o2) {
@@ -54,9 +50,7 @@ public class ExerciseNested112 {
     // }
     // Comparator<ElectronicDevice> comparator = new ElectronicDeviceWattComparatorLocal();
 
-    /*
-     * Anonyme Klasse
-     */
+    /* Anonyme Klasse */
     // Comparator<ElectronicDevice> comparator = new Comparator<ElectronicDevice>() {
     // @Override
     // public int compare(ElectronicDevice o1, ElectronicDevice o2) {
@@ -67,9 +61,7 @@ public class ExerciseNested112 {
     // }
     // };
 
-    /*
-     * Lambda-Ausdruck
-     */
+    /* Lambda-Ausdruck */
     Comparator<ElectronicDevice> comparator = (o1, o2) -> {
       System.out.println("[compare] " + o1.toString() + ", " + o2.toString());
       Integer watt1 = o1.getWatt();

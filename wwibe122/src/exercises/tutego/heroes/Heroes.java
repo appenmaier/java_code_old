@@ -8,6 +8,7 @@ import java.util.stream.Stream;
  * Comic-Helden
  * 
  * @author Daniel Appenmaier
+ * @version 1.0
  *
  */
 public class Heroes {

@@ -12,32 +12,32 @@ import demos.movie.Movie;
  */
 public class JavaGenerics01 {
 
+  @SuppressWarnings({"rawtypes", "unchecked"})
   public static void main(String[] args) {
 
-    /* Outdated */
-    // Box box = new Box();
-    // box.setContent(42);
-    // box.setContent(new Movie("John Wick 4", new ArrayList<>(), "2023", 169, 8.4, 61087));
-    // box.setContent("Hallo Welt");
-    //
-    // if (box.getContent() instanceof Movie) {
-    // Movie movie = (Movie) box.getContent();
-    // System.out.println(movie);
-    // }
+    Box objectBox = new Box();
+    objectBox.setContent(42);
+    objectBox.setContent(new Movie("John Wick 4", new ArrayList<>(), "2023", 169, 8.4, 61087));
+    objectBox.setContent("Hallo Welt");
 
-    Box<Integer> box = new Box<>();
-    box.setContent(42);
-    int content = box.getContent();
+    if (objectBox.getContent() instanceof Movie) {
+      Movie movie = (Movie) objectBox.getContent();
+      System.out.println(movie);
+    }
+
+    Box<Integer> integerBox = new Box<>();
+    integerBox.setContent(42);
+    int content = integerBox.getContent();
     System.out.println(content);
 
-    Box<Movie> box2 = new Box<>();
-    box2.setContent(new Movie("John Wick 4", new ArrayList<>(), "2023", 169, 8.4, 61087));
-    Movie movie = box2.getContent();
+    Box<Movie> movieBox = new Box<>();
+    movieBox.setContent(new Movie("John Wick 4", new ArrayList<>(), "2023", 169, 8.4, 61087));
+    Movie movie = movieBox.getContent();
     System.out.println(movie);
 
-    Box<String> box3 = new Box<>();
-    box3.setContent("Hallo Welt");
-    String text = box3.getContent();
+    Box<String> stringBox = new Box<>();
+    stringBox.setContent("Hallo Welt");
+    String text = stringBox.getContent();
     System.out.println(text);
 
   }

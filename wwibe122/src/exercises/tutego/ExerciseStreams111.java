@@ -21,9 +21,7 @@ public class ExerciseStreams111 {
 
     List<Hero> heroes = new ArrayList<>(Heroes.ALL);
 
-    /*
-     * Terminale Operationen
-     */
+    /* Terminale Operationen */
     // 1
     System.out.print("Terminal 1: ");
     heroes.stream().forEach(t -> System.out.println(t.toString()));
@@ -68,9 +66,7 @@ public class ExerciseStreams111 {
 
     System.out.println();
 
-    /*
-     * Intermediaere Operationen
-     */
+    /* Intermediaere Operationen */
     // 1
     System.out.println("Intermediate 1: "
         + heroes.stream().filter(t -> t.sex == Sex.FEMALE ? true : false).count());
@@ -105,6 +101,7 @@ public class ExerciseStreams111 {
     System.out.println("Intermediate 4: ");
     Heroes.UNIVERSES.stream().flatMap(Heroes.Universe::heroes).map(t -> t.name)
         .forEach(System.out::println);
+
   }
 
 }

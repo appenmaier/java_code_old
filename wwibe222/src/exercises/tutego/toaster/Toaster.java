@@ -7,7 +7,6 @@ import java.util.Objects;
  * 
  * @author Daniel Appenmaier
  * 
- * 
  */
 public class Toaster {
 

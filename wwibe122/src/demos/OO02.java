@@ -23,11 +23,13 @@ public class OO02 {
 
     /* Outdated */
     // TableLamp tableLamp1 = new TableLamp();
-    //
+
+    /* Outdated */
     // tableLamp1.plugIn();
     // tableLamp1.switchOn();
     // tableLamp1.changeLightBulb(redLightBulb);
-    //
+
+    /* Outdated */
     // System.out.printl/n(tableLamp1.toString());
 
   }

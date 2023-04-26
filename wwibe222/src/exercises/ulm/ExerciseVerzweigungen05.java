@@ -4,9 +4,6 @@ import java.util.Scanner;
 
 /**
  * https://studium.hs-ulm.de/de/org/I/vorkurse/Documents/java_aufgaben.pdf Aufgabe Verzweigungen-5
- *
- * @author: Daniel Appenmaier
- * @version: 1.0
  */
 public class ExerciseVerzweigungen05 {
 

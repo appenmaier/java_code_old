@@ -9,11 +9,9 @@ package demos.tableLamp;
  */
 public abstract class Light {
 
-  /* Attribute */
   protected boolean isOn;
   protected boolean isShining;
 
-  /* Methoden */
   public final boolean isOn() {
     return isOn;
   }

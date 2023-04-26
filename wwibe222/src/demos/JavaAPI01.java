@@ -14,11 +14,11 @@ public class JavaAPI01 {
 
     ArrayList<String> names = new ArrayList<>();
 
-    /* Elemente anfügen */
+    /* Elemente anfuegen */
     names.add("Hans");
     names.add("Peter");
 
-    /* Elemente einfügen */
+    /* Elemente einfuegen */
     names.add(1, "Lisa");
     names.add(1, "Heidi");
 

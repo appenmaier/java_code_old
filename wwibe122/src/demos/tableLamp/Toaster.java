@@ -4,6 +4,7 @@ package demos.tableLamp;
  * Toaster
  * 
  * @author Daniel Appenmaier
+ * @version 1.0
  *
  */
 public class Toaster implements WiredDevice {

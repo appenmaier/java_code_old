@@ -4,6 +4,7 @@ package exercises.tutego.radio;
  * Feuermelder
  * 
  * @author Daniel Appenmaier
+ * @version 1.0
  * 
  */
 public class Firebox extends ElectronicDevice {

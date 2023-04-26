@@ -6,9 +6,6 @@ import helpers.Printer;
 /**
  * https://www.uni-koblenz-landau.de/de/koblenz/fb4/ist/rgebert/teaching/SS08/java-programming/programmieraufgaben.pdf/view
  * Aufgabe C4
- * 
- * @author Daniel Appenmaier
- * @version 1.0
  */
 public class ExerciseC04 {
 

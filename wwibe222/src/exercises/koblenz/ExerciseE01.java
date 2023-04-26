@@ -8,9 +8,6 @@ import helpers.IntegerArray;
  * Aufgabe E1
  * 
  * Hinweis: ohne Fehlerbehandlung
- * 
- * @author Daniel Appenmaier
- * @version 1.0
  */
 public class ExerciseE01 {
 

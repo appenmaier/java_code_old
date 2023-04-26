@@ -4,6 +4,7 @@ package exercises.tutego.radio;
  * Bildroehre
  * 
  * @author Daniel Appenmaier
+ * @version 1.0
  * 
  */
 public class MonitorTube {

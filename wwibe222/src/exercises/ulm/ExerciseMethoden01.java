@@ -5,9 +5,6 @@ import java.util.Scanner;
 
 /**
  * https://studium.hs-ulm.de/de/org/I/vorkurse/Documents/java_aufgaben.pdf Aufgabe Methoden-1
- * 
- * @author Daniel Appenmaier
- * @version 1.0
  */
 public class ExerciseMethoden01 {
 
@@ -38,14 +35,14 @@ public class ExerciseMethoden01 {
 
   }
 
-  public static double minimum(double[] numbers) {
-    double minimum = numbers[0];
+  public static double maximum(double[] numbers) {
+    double maximum = numbers[0];
     for (int i = 0; i < numbers.length; i++) {
-      if (numbers[i] < minimum) {
-        minimum = numbers[i];
+      if (numbers[i] > maximum) {
+        maximum = numbers[i];
       }
     }
-    return minimum;
+    return maximum;
   }
 
   public static double mean(double[] numbers) {
@@ -56,14 +53,14 @@ public class ExerciseMethoden01 {
     return total / numbers.length;
   }
 
-  public static double maximum(double[] numbers) {
-    double maximum = numbers[0];
+  public static double minimum(double[] numbers) {
+    double minimum = numbers[0];
     for (int i = 0; i < numbers.length; i++) {
-      if (numbers[i] > maximum) {
-        maximum = numbers[i];
+      if (numbers[i] < minimum) {
+        minimum = numbers[i];
       }
     }
-    return maximum;
+    return minimum;
   }
 
 }

@@ -17,6 +17,7 @@ import exercises.tutego.heroes.Heroes.Hero;
 public class ExerciseJavalib123 {
 
   public static void main(String[] args) {
+
     List<Hero> heroes = new ArrayList<>(Heroes.ALL);
 
     Comparator<Hero> yearFirstAppearanceComparator = new HeroByYearFirstAppearanceComparator();
@@ -26,6 +27,7 @@ public class ExerciseJavalib123 {
     heroes.sort(comparator);
 
     heroes.forEach(t -> System.out.println(t.toString()));
+
   }
 
 }

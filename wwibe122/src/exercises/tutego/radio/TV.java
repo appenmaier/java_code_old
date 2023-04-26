@@ -4,6 +4,7 @@ package exercises.tutego.radio;
  * Fernseher
  * 
  * @author Daniel Appenmaier
+ * @version 2.0
  * 
  */
 public class TV extends ElectronicDevice {

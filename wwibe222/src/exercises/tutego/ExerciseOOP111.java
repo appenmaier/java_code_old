@@ -18,7 +18,8 @@ public class ExerciseOOP111 {
     /* Outdated */
     // radio.isOn = true;
     // radio.volume = 3;
-    //
+
+    /* Outdated */
     // System.out.println("radio.isOn: " + radio.isOn);
     // System.out.println("radio.volume: " + radio.volume);
 

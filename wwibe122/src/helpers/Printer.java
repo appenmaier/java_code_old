@@ -4,104 +4,10 @@ package helpers;
  * Konsolendrucker
  *
  * @author Daniel Appenmaier
+ * @version 1.0
+ * 
  */
 public class Printer {
-
-  /**
-   * Gibt die Zeichenkette "Hello World" auf der Konsole aus
-   */
-  public static void printHelloWorld() {
-    System.out.print("Hello World");
-  }
-
-  /**
-   * Gibt eine eingehende Zeichenkette auf der Konsole aus
-   *
-   * @param text eingehender Text
-   */
-  public static void printText(String text) {
-    System.out.print(text);
-  }
-
-  /**
-   * Gibt einen Weihnachtsbaum auf der Konsole aus
-   *
-   * @param height Hoehe des Weihnachtsbaums
-   */
-  public static void printChristmasTree(int height) {
-    int width = height * 2 - 1;
-
-    // Krone
-    for (int i = 1; i <= width; i += 2) {
-      int blanks = width - i;
-      for (int j = 1; j <= blanks / 2; j++) {
-        System.out.print(" ");
-      }
-      for (int j = 1; j <= i; j++) {
-        System.out.print("*");
-      }
-      for (int j = 1; j <= blanks / 2; j++) {
-        System.out.print(" ");
-      }
-      System.out.println();
-    }
-
-    // Stamm
-    for (int i = 1; i <= width / 2; i++) {
-      System.out.print(" ");
-    }
-    System.out.print("#");
-  }
-
-  /**
-   * Gibt ein Rechteck aus Rauten auf der Konsole aus
-   * 
-   * @param width Breite
-   * @param height Hoehe
-   */
-  public static void printRectangle(int width, int height) {
-    for (int i = 0; i < height; i++) {
-      for (int j = 0; j < width; j++) {
-        System.out.print("#");
-      }
-      System.out.println();
-    }
-  }
-
-  /**
-   * Gibt ein Muster auf der Konsole aus
-   * 
-   * @param numberOfCharacters Anzahl Zeichen
-   */
-  public static void printPattern(int numberOfCharacters) {
-    for (int i = 0; i < numberOfCharacters / 4; i++) {
-      System.out.print(".:|:");
-    }
-    switch (numberOfCharacters % 4) {
-      case 1:
-        System.out.print(".");
-        break;
-      case 2:
-        System.out.print(".:");
-        break;
-      case 3:
-        System.out.print(".:|");
-        break;
-    }
-    System.out.println();
-  }
-
-  /**
-   * Gibt ein Muster mit Text auf der Konsole aus
-   * 
-   * @param text Zeichenkette
-   */
-  public static void printPatternWithText(String text) {
-    for (int i = 0; i < text.length(); i++) {
-      System.out.print(".:" + text.charAt(i) + ":");
-    }
-    System.out.println(".");
-  }
 
   /**
    * Gibt eine Fahne auf der Konsole aus
@@ -148,10 +54,75 @@ public class Printer {
   }
 
   /**
-   * Gibt eine Zeile von 10 Herzen auf der Konsole aus
+   * Gibt einen Weihnachtsbaum auf der Konsole aus
+   *
+   * @param height Hoehe des Weihnachtsbaums
    */
-  public static void printLineOfHearts() {
-    System.out.println("\u2764\u2764\u2764\u2764\u2764\u2764\u2764\u2764\u2764\u2764");
+  public static void printChristmasTree(int height) {
+    int width = height * 2 - 1;
+
+    // Krone
+    for (int i = 1; i <= width; i += 2) {
+      int blanks = width - i;
+      for (int j = 1; j <= blanks / 2; j++) {
+        System.out.print(" ");
+      }
+      for (int j = 1; j <= i; j++) {
+        System.out.print("*");
+      }
+      for (int j = 1; j <= blanks / 2; j++) {
+        System.out.print(" ");
+      }
+      System.out.println();
+    }
+
+    // Stamm
+    for (int i = 1; i <= width / 2; i++) {
+      System.out.print(" ");
+    }
+    System.out.print("#");
+  }
+
+  /**
+   * Gibt eine Weihnachtsbaumkrone auf der Konsole aus
+   *
+   * @param height Hoehe der Weihnachtsbaumkrone
+   */
+  public static void printChristmasTreeCrown(int height) {
+    int width = height * 2 - 1;
+
+    for (int i = 1; i <= width; i += 2) {
+      int blanks = width - i;
+      for (int j = 1; j <= blanks / 2; j++) {
+        System.out.print(" ");
+      }
+      for (int j = 1; j <= i; j++) {
+        System.out.print("#");
+      }
+      for (int j = 1; j <= blanks / 2; j++) {
+        System.out.print(" ");
+      }
+      System.out.println();
+    }
+  }
+
+  /**
+   * Gibt einen Weihnachtsbaumstamm auf der Konsole aus
+   *
+   * @param height Hoehe des Weihnachtsbaumstammes
+   * @param width Breites des Weihnachtsbaumstammes
+   * @param gap Abstand
+   */
+  public static void printChristmasTreeStem(int height, int width, int gap) {
+    for (int i = 1; i <= height; i++) {
+      for (int j = 1; j <= gap; j++) {
+        System.out.print(" ");
+      }
+      for (int j = 1; j <= width; j++) {
+        System.out.print("#");
+      }
+      System.out.println();
+    }
   }
 
   /**
@@ -198,6 +169,13 @@ public class Printer {
   }
 
   /**
+   * Gibt die Zeichenkette "Hello World" auf der Konsole aus
+   */
+  public static void printHelloWorld() {
+    System.out.print("Hello World");
+  }
+
+  /**
    * Gibt eine gestrichelte Linie auf der Konsole aus
    * 
    * @param length Laenge der gestrichelte Linie
@@ -234,45 +212,10 @@ public class Printer {
   }
 
   /**
-   * Gibt eine Weihnachtsbaumkrone auf der Konsole aus
-   *
-   * @param height Hoehe der Weihnachtsbaumkrone
+   * Gibt eine Zeile von 10 Herzen auf der Konsole aus
    */
-  public static void printChristmasTreeCrown(int height) {
-    int width = height * 2 - 1;
-
-    for (int i = 1; i <= width; i += 2) {
-      int blanks = width - i;
-      for (int j = 1; j <= blanks / 2; j++) {
-        System.out.print(" ");
-      }
-      for (int j = 1; j <= i; j++) {
-        System.out.print("#");
-      }
-      for (int j = 1; j <= blanks / 2; j++) {
-        System.out.print(" ");
-      }
-      System.out.println();
-    }
-  }
-
-  /**
-   * Gibt einen Weihnachtsbaumstamm auf der Konsole aus
-   *
-   * @param height Hoehe des Weihnachtsbaumstammes
-   * @param width Breites des Weihnachtsbaumstammes
-   * @param gap Abstand
-   */
-  public static void printChristmasTreeStem(int height, int width, int gap) {
-    for (int i = 1; i <= height; i++) {
-      for (int j = 1; j <= gap; j++) {
-        System.out.print(" ");
-      }
-      for (int j = 1; j <= width; j++) {
-        System.out.print("#");
-      }
-      System.out.println();
-    }
+  public static void printLineOfHearts() {
+    System.out.println("\u2764\u2764\u2764\u2764\u2764\u2764\u2764\u2764\u2764\u2764");
   }
 
   /**
@@ -295,6 +238,65 @@ public class Printer {
       }
       System.out.println();
     }
+  }
+
+  /**
+   * Gibt ein Muster auf der Konsole aus
+   * 
+   * @param numberOfCharacters Anzahl Zeichen
+   */
+  public static void printPattern(int numberOfCharacters) {
+    for (int i = 0; i < numberOfCharacters / 4; i++) {
+      System.out.print(".:|:");
+    }
+    switch (numberOfCharacters % 4) {
+      case 1:
+        System.out.print(".");
+        break;
+      case 2:
+        System.out.print(".:");
+        break;
+      case 3:
+        System.out.print(".:|");
+        break;
+    }
+    System.out.println();
+  }
+
+  /**
+   * Gibt ein Muster mit Text auf der Konsole aus
+   * 
+   * @param text Zeichenkette
+   */
+  public static void printPatternWithText(String text) {
+    for (int i = 0; i < text.length(); i++) {
+      System.out.print(".:" + text.charAt(i) + ":");
+    }
+    System.out.println(".");
+  }
+
+  /**
+   * Gibt ein Rechteck aus Rauten auf der Konsole aus
+   * 
+   * @param width Breite
+   * @param height Hoehe
+   */
+  public static void printRectangle(int width, int height) {
+    for (int i = 0; i < height; i++) {
+      for (int j = 0; j < width; j++) {
+        System.out.print("#");
+      }
+      System.out.println();
+    }
+  }
+
+  /**
+   * Gibt eine eingehende Zeichenkette auf der Konsole aus
+   *
+   * @param text eingehender Text
+   */
+  public static void printText(String text) {
+    System.out.print(text);
   }
 
 }

@@ -6,8 +6,6 @@ import java.util.Scanner;
 /**
  * https://www.uni-koblenz-landau.de/de/koblenz/fb4/ist/rgebert/teaching/SS08/java-programming/programmieraufgaben.pdf/view
  * Aufgabe A4
- *
- * @author Daniel Appenmaier
  */
 public class ExerciseA4 {
 

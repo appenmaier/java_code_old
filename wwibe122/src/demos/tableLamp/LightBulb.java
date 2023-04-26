@@ -11,33 +11,28 @@ import java.awt.Color;
  */
 public class LightBulb {
 
-  /*
-   * Attribute
-   */
   private final Color color;
-
-  /*
-   * Methode
-   */
-  public LightBulb(Color color) {
-    this.color = color;
-  }
 
   public LightBulb() {
     this.color = Color.WHITE;
+  }
+
+  public LightBulb(Color color) {
+    this.color = color;
   }
 
   public Color color() {
     return color;
   }
 
-  public String toString() {
-    return "LightBulb [color=" + color.toString() + "]";
-  }
-
   public boolean equals(LightBulb lightBulb) {
     boolean isEqual = this.color.equals(lightBulb.color);
     return isEqual;
+  }
+
+  @Override
+  public String toString() {
+    return "LightBulb [color=" + color.toString() + "]";
   }
 
 }

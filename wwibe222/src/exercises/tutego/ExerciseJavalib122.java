@@ -20,11 +20,10 @@ public class ExerciseJavalib122 {
   }
 
   public static void main(String[] args) {
+
     List<Hero> heroes = new ArrayList<>(Heroes.ALL);
 
-    /*
-     * Lokale Klasse
-     */
+    /* Lokale Klasse */
     class HeroesByYearFirstAppereanceComparator implements Comparator<Hero> {
       @Override
       public int compare(Hero o1, Hero o2) {
@@ -33,9 +32,7 @@ public class ExerciseJavalib122 {
     }
     heroes.sort(new HeroesByYearFirstAppereanceComparator());
 
-    /*
-     * Anonyme Klasse
-     */
+    /* Anonyme Klasse */
     heroes.sort(new Comparator<Hero>() {
       @Override
       public int compare(Hero o1, Hero o2) {
@@ -43,12 +40,11 @@ public class ExerciseJavalib122 {
       }
     });
 
-    /*
-     * Lambda Ausdruck
-     */
+    /* Lambda Ausdruck */
     heroes.sort((o1, o2) -> compareHeroes(o1, o2));
 
     heroes.forEach(t -> System.out.println(t.toString()));
+
   }
 
 }

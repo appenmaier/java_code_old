@@ -18,6 +18,7 @@ public class Enumerations01 {
     numberOfVehicles = Vehicle.getNumberOfVehicles();
     System.out.println("Anzahl Fahrzeuge: " + numberOfVehicles);
 
+    /* Outdated */
     // vehicle1.print();
     // vehicle2.print();
     // vehicle3.print();

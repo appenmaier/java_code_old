@@ -5,9 +5,6 @@ import helpers.Printer;
 
 /**
  * https://studium.hs-ulm.de/de/org/I/vorkurse/Documents/java_aufgaben.pdf Aufgabe Methoden-3
- * 
- * @author Daniel Appenmaier
- * @version 1.0
  */
 public class ExerciseMethoden03 {
 
