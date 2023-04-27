@@ -26,10 +26,11 @@ public class Comparators01 {
     names.add("Lisa");
 
     ArrayList<Movie> movies = new ArrayList<>();
-    movies.add(new Movie("John Wick 4", "2023", 8.4));
-    movies.add(new Movie("Disaster Movie", "2008", 2.1));
-    movies.add(new Movie("Der Pate", "1972", 9.2));
-    movies.add(new Movie("The Super Mario Bros. Movie", "2023", 7.2));
+    /* Outdated */
+    // movies.add(new Movie("John Wick 4", "2023", 8.4));
+    // movies.add(new Movie("Disaster Movie", "2008", 2.1));
+    // movies.add(new Movie("Der Pate", "1972", 9.2));
+    // movies.add(new Movie("The Super Mario Bros. Movie", "2023", 7.2));
 
     Collections.sort(numbers);
     Collections.sort(names);

@@ -1,7 +1,5 @@
 package demos;
 
-import demos.movie.Movie;
-
 /**
  * Datenklassen (Records)
  * 
@@ -12,14 +10,16 @@ public class Records01 {
 
   public static void main(String[] args) {
 
-    Movie movie = new Movie("John Wick 4", "2023", 8.4);
-    Movie copyOfMovie = new Movie("John Wick 4", "2023", 8.4);
+    /* Outdated */
+    // Movie movie = new Movie("John Wick 4", "2023", 8.4);
+    // Movie copyOfMovie = new Movie("John Wick 4", "2023", 8.4);
 
-    System.out.println(movie.title());
-    System.out.println(movie.hashCode());
-    System.out.println(copyOfMovie.hashCode());
-    System.out.println(movie.equals(copyOfMovie));
-    System.out.println(movie);
+    /* Outdated */
+    // System.out.println(movie.title());
+    // System.out.println(movie.hashCode());
+    // System.out.println(copyOfMovie.hashCode());
+    // System.out.println(movie.equals(copyOfMovie));
+    // System.out.println(movie);
 
   }
 
