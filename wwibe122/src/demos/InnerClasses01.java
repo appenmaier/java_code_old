@@ -9,7 +9,7 @@ import demos.movie.Movie.MovieGenre;
 import demos.movie.MovieByRatingDescendingComparator;
 
 /**
- * Lokale Klassen, Anonyme Klassen, Lambda-Ausdruecke und ?
+ * Lokale Klassen, Anonyme Klassen, Lambda-Ausdruecke und Methodenreferenzen
  *
  * @author Daniel Appenmaier
  * @version 1.0
