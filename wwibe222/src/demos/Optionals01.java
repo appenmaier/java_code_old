@@ -16,7 +16,9 @@ public class Optionals01 {
   }
 
   private static Optional<String> getTextAsOptional() {
-    return Optional.empty();
+    Optional<String> o = Optional.empty();
+    o = Optional.of("Winter is Coming");
+    return o;
   }
 
   public static void main(String[] args) {
