@@ -5,7 +5,6 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.function.Consumer;
 import demos.movie.Movie;
-import demos.movie.Movie.MovieGenre;
 import demos.movie.MovieByRatingDescendingComparator;
 
 /**
@@ -20,9 +19,10 @@ public class InnerClasses01 {
   public static void main(String[] args) {
 
     ArrayList<Movie> movies = new ArrayList<>();
-    movies.add(new Movie("John Wick 4", MovieGenre.ACTION, "2023", 8.4));
-    movies.add(new Movie("Der Pate", MovieGenre.ACTION, "1972", 9.2));
-    movies.add(new Movie("Disaster Movie", MovieGenre.COMEDY, "2008", 2.1));
+    /* Outdated */
+    // movies.add(new Movie("John Wick 4", MovieGenre.ACTION, "2023", 8.4));
+    // movies.add(new Movie("Der Pate", MovieGenre.ACTION, "1972", 9.2));
+    // movies.add(new Movie("Disaster Movie", MovieGenre.COMEDY, "2008", 2.1));
 
     /* Aussere Klasse */
     Collections.sort(movies, new MovieByRatingDescendingComparator());

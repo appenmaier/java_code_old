@@ -1,5 +1,6 @@
 package demos.movie;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import demos.movie.Movie.MovieGenre;
 
@@ -7,12 +8,12 @@ import demos.movie.Movie.MovieGenre;
  * Film
  * 
  * @author Daniel Appenmaier
- * @version 3.0
+ * @version 4.0
  *
  */
 @SuppressWarnings("unused")
-public record Movie(String title, MovieGenre genre, String year, double rating)
-    implements Comparable<Movie> {
+public record Movie(String title, ArrayList<MovieGenre> genres, String year, double rating,
+    int runtime, int numberOfVotes) implements Comparable<Movie> {
 
   @Override
   public int compareTo(Movie other) {
@@ -27,7 +28,24 @@ public record Movie(String title, MovieGenre genre, String year, double rating)
   }
 
   public static enum MovieGenre {
-    ACTION, HORROR, THRILLER, COMEDY, DRAMA;
+
+    DRAMA("Drama"), ANIMATION("Animation"), CRIME("Crime"), FILM_NOIR("Film Noir"), FAMILY(
+        "Family"), ADVENTURE("Adventure"), MYSTERY("Mystery"), DOCUMENTARY("Documentary"), FANTASY(
+            "Fantasy"), HISTORY("History"), NEWS("News"), MUSIC("Music"), BIOGRAPHY(
+                "Biography"), COMEDY("Comedy"), SCIENCE_FICTION("Science Fiction"), SPORT(
+                    "Sport"), ROMANCE("Romance"), ACTION("Action"), THRILLER("Thriller"), HORROR(
+                        "Horror"), WESTERN("Western"), WAR("War"), MUSICAL("Musical");
+
+    private String name;
+
+    MovieGenre(String name) {
+      this.name = name;
+    }
+
+    public String getName() {
+      return name;
+    }
+
   }
 
 }
