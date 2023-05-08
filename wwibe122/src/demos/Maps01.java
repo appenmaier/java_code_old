@@ -1,6 +1,7 @@
 package demos;
 
 import java.util.HashMap;
+import java.util.Map.Entry;
 import demos.student.Student;
 
 /**
@@ -36,6 +37,7 @@ public class Maps01 {
     for (Student s : grades.keySet()) {
       System.out.println(s.getMatriculationNumber() + " [ ]");
     }
+    System.out.println();
 
     /* Alle Werte */
     double total = 0;
@@ -45,6 +47,19 @@ public class Maps01 {
       size++;
     }
     System.out.println(total / size);
+    System.out.println();
+
+    /* Menge aller Eintraege (Schluessel-Wert-Paare) */
+    for (Entry<Student, Double> entry : grades.entrySet()) {
+      Student student = entry.getKey();
+      Double grade = entry.getValue();
+      System.out.println(student.getMatriculationNumber() + ": " + grade);
+    }
+    System.out.println();
+
+    /* Die forEach-Methode */
+    grades.forEach(
+        (student, grade) -> System.out.println(student.getMatriculationNumber() + ": " + grade));
 
   }
 

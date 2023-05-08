@@ -15,65 +15,67 @@ import java.util.Scanner;
  */
 public class Movies {
 
-	/*
-	 * Setter und Getter
-	 */
-	public static ArrayList<Movie> getMovies() throws FileNotFoundException {
-		ArrayList<Movie> movies = new ArrayList<>();
+  public static enum Genre {
 
-		File file = new File("src/resources/movies.csv");
+    ADVENTURE("Abenteuer"), ACTION("Action"), DOCUMENTATION("Dokumentation"), DRAMA(
+        "Drama"), EROTIC("Erotik"), FANTASY("Fantasy"), BIOGRAPHY("Biographie"), COMEDY(
+            "Komödie"), HORROR("Horror"), WAR("Kriegsfilm"), LOVE("Liebsfilm"), MARTIAL_ARTS(
+                "Martial Arts"), MUSIC("Musikfilm"), PORNO("Porno"), ROAD(
+                    "Roadmovie"), SCIENCE_FICTION("Science-Fiction"), SPORTS(
+                        "Sportfilm"), THRILLER("Thriller"), WESTERN("Western");
 
-		Scanner scanner = new Scanner(file);
+    private final String description;
 
-		while (scanner.hasNextLine()) {
-			String line = scanner.nextLine();
-			String[] tokens = line.split(";");
-			String title = tokens[0];
-			Genre genre = Genre.valueOf(tokens[1]);
-			String publishingYear = tokens[2];
-			double rating = Double.valueOf(tokens[3]);
-			Movie movie = new Movie(title, genre, publishingYear, rating);
-			movies.add(movie);
-		}
+    Genre(String description) {
+      this.description = description;
+    }
 
-		scanner.close();
+    public String description() {
+      return description;
+    }
 
-		return movies;
-	}
+  }
 
-	/*
-	 * Innere Klassen
-	 */
-	public static record Movie(String title, Genre genre, String publishingYear, double rating) {
+  /*
+   * Innere Klassen
+   */
+  public static record Movie(String title, Genre genre, String publishingYear, double rating) {
 
-	}
+  }
 
-	public static enum Genre {
+  public static class MovieByTitleAscendingComparator implements Comparator<Movie> {
 
-		ADVENTURE("Abenteuer"), ACTION("Action"), DOCUMENTATION("Dokumentation"), DRAMA("Drama"), EROTIC("Erotik"),
-		FANTASY("Fantasy"), BIOGRAPHY("Biographie"), COMEDY("Komödie"), HORROR("Horror"), WAR("Kriegsfilm"),
-		LOVE("Liebsfilm"), MARTIAL_ARTS("Martial Arts"), MUSIC("Musikfilm"), PORNO("Porno"), ROAD("Roadmovie"),
-		SCIENCE_FICTION("Science-Fiction"), SPORTS("Sportfilm"), THRILLER("Thriller"), WESTERN("Western");
+    @Override
+    public int compare(Movie o1, Movie o2) {
+      return o1.title().compareTo(o2.title());
+    }
 
-		private final String description;
+  }
 
-		Genre(String description) {
-			this.description = description;
-		}
+  /*
+   * Setter und Getter
+   */
+  public static ArrayList<Movie> getMovies() throws FileNotFoundException {
+    ArrayList<Movie> movies = new ArrayList<>();
 
-		public String description() {
-			return description;
-		}
+    File file = new File("src/resources/movies.csv");
 
-	}
+    Scanner scanner = new Scanner(file);
 
-	public static class MovieByTitleAscendingComparator implements Comparator<Movie> {
+    while (scanner.hasNextLine()) {
+      String line = scanner.nextLine();
+      String[] tokens = line.split(";");
+      String title = tokens[0];
+      Genre genre = Genre.valueOf(tokens[1]);
+      String publishingYear = tokens[2];
+      double rating = Double.valueOf(tokens[3]);
+      Movie movie = new Movie(title, genre, publishingYear, rating);
+      movies.add(movie);
+    }
 
-		@Override
-		public int compare(Movie o1, Movie o2) {
-			return o1.title().compareTo(o2.title());
-		}
+    scanner.close();
 
-	}
+    return movies;
+  }
 
 }

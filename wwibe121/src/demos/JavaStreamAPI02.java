@@ -7,7 +7,6 @@ import java.util.Map.Entry;
 import java.util.Optional;
 import java.util.OptionalDouble;
 import java.util.stream.Collectors;
-
 import helpers.Movies;
 import helpers.Movies.Genre;
 import helpers.Movies.Movie;
@@ -21,241 +20,241 @@ import helpers.Movies.Movie;
  */
 public class JavaStreamAPI02 {
 
-	private static List<Movie> movies;
+  private static List<Movie> movies;
 
-	public static void main(String[] args) throws FileNotFoundException {
+  private static void aggregate() {
+    System.out.println("Aggregate (durchschnittliche Bewertung aller Komoedien)");
 
-		movies = Movies.getMovies();
+    // double total = 0;
+    // int count = 0;
+    // double average;
+    // for (Movie m : movies) {
+    // if (m.genre().equals(Genre.COMEDY)) {
+    // total += m.rating();
+    // count++;
+    // }
+    // }
+    // if (count > 0) {
+    // average = total / count;
+    // System.out.println(average);
+    // }
 
-		/*
-		 * Intermediaere Operationen
-		 */
-		// Filtern (filter)
-		filter();
+    OptionalDouble average = movies.stream().filter(m -> m.genre().equals(Genre.COMEDY))
+        .mapToDouble(m -> m.rating()).average();
+    average.ifPresent(System.out::println);
 
-		// Abbilden (map, mapToInt, mapToDouble)
-		map();
+    System.out.println();
+  }
 
-		// Sortieren (sorted)
-		sort();
+  private static void check() {
+    System.out.println("Pruefen (gibt es einen Film aus dem Jahr 1990?)");
 
-		// Ueberspringen und Begrenzen (skip, limit)
-		skipAndLimit();
+    // boolean check = false;
+    // for (Movie m : movies) {
+    // if (m.publishingYear().equals("1990")) {
+    // check = true;
+    // break;
+    // }
+    // }
+    // System.out.println(check);
 
-		// Duplikate entfernen (distinct)
-		distinct();
+    boolean check = movies.stream().anyMatch(m -> m.publishingYear().equals("1990"));
+    System.out.println(check);
 
-		// Spaehen (peek)
-		peek();
+    System.out.println();
+  }
 
-		/*
-		 * Terminale Operationen
-		 */
-		// Ausfuehren (forEach)
-		execute();
+  private static void collect() {
+    System.out.println("Sammeln (alle Filme nach 1999 aufsteigend sortiert nach dem Filmtitel)");
 
-		// Finden (findAny, findFirst)
-		find();
+    List<Movie> filteredAndSortedMovies =
+        movies.stream().filter(m -> m.publishingYear().compareTo("1999") > 0)
+            .sorted((m1, m2) -> m1.title().compareTo(m2.title())).collect(Collectors.toList());
 
-		// Pruefen (allMatch, anyMatch, noneMatch)
-		check();
+    filteredAndSortedMovies.forEach(System.out::println);
 
-		// Aggregieren (average, count, max, min, reduce, sum)
-		aggregate();
+    System.out.println();
+  }
 
-		// Sammeln (collect)
-		collect();
-		collectAndGroup();
+  private static void collectAndGroup() {
+    System.out.println("Sammlen (alle Filme gruppiert nach dem Genre)");
 
-	}
+    Map<Genre, List<Movie>> moviesByGenre =
+        movies.stream().collect(Collectors.groupingBy(m -> m.genre()));
 
-	private static void filter() {
-		System.out.println("Filtern (alle Filme mit einer Bewertung von min. 7):");
+    for (Entry<Genre, List<Movie>> entry : moviesByGenre.entrySet()) {
+      System.out.println(entry.getKey() + ": " + entry.getValue());
+    }
+  }
 
-//		for (Movie m : movies) {
-//			if (m.rating() >= 7) {
-//				System.out.println(m);
-//			}
-//		}
+  private static void distinct() {
+    System.out.println("Duplikate entfernen");
 
-		movies.stream().filter(m -> m.rating() >= 7).forEach(System.out::println);
+    movies.add(new Movie("Der Pate 2", Genre.DRAMA, "1974", 9.0));
 
-		System.out.println();
-	}
+    // HashSet<Movie> tmp = new HashSet<>(movies);
+    // ArrayList<Movie> distinctMovies = new ArrayList<>(tmp);
+    // distinctMovies.forEach(System.out::println);
 
-	private static void map() {
-		System.out.println("Abbilden (filmtitel (Erscheinungsjahr)):");
+    movies.stream().distinct().forEach(System.out::println);
 
-//		for (Movie m : movies) {
-//			String tmp = m.title().toLowerCase() + " (" + m.publishingYear() + ")";
-//			System.out.println(tmp);
-//		}
+    System.out.println();
+  }
 
-		movies.stream()
-				.map(m -> m.title().toLowerCase() + " (" + m.publishingYear() + ")")
-				.forEach(System.out::println);
+  private static void execute() {
+    System.out.println("Ausfuehren (gib alle Filme auf der Konsole aus)");
 
-		System.out.println();
-	}
+    // for (Movie m : movies) {
+    // System.out.println(m);
+    // }
 
-	private static void sort() {
-		System.out.println("Sortieren (aufsteigend nach dem Genre)");
+    movies.stream().forEach(System.out::println);
 
-//		Collections.sort(movies, new Comparator<Movie>() {
-//			@Override
-//			public int compare(Movie o1, Movie o2) {
-//				return o1.genre().compareTo(o2.genre());
-//			}
-//		});
-//		for (Movie m : movies) {
-//			System.out.println(m);
-//		}
+    System.out.println();
+  }
 
-		movies.stream().sorted((m1, m2) -> m1.genre().compareTo(m2.genre())).forEach(System.out::println);
+  private static void filter() {
+    System.out.println("Filtern (alle Filme mit einer Bewertung von min. 7):");
 
-		System.out.println();
-	}
+    // for (Movie m : movies) {
+    // if (m.rating() >= 7) {
+    // System.out.println(m);
+    // }
+    // }
 
-	private static void skipAndLimit() {
-		System.out.println("Ueberspringen und Begrenzen (Filme 6-10)");
+    movies.stream().filter(m -> m.rating() >= 7).forEach(System.out::println);
 
-//		for (int i = 5; i < 10; i++) {
-//			System.out.println(movies.get(i));
-//		}
+    System.out.println();
+  }
 
-		movies.stream().skip(5).limit(5).forEach(System.out::println);
+  private static void find() {
+    System.out.println("Finden (einen beliebigen Thriller)");
 
-		System.out.println();
-	}
+    // Optional<Movie> thriller = Optional.ofNullable(null);
+    // for (Movie m : movies) {
+    // if (m.genre().equals(Genre.THRILLER)) {
+    // thriller = Optional.of(m);
+    // break;
+    // }
+    // }
+    // System.out.println(thriller.isPresent() ? thriller.get() : "kein entsprechender Film
+    // vorhanden");
+    // System.out.println(thriller.orElse(new Movie("Thriller", Genre.THRILLER, "2022", 5)));
+    // thriller.ifPresent(System.out::println);
 
-	private static void distinct() {
-		System.out.println("Duplikate entfernen");
+    Optional<Movie> thriller =
+        movies.stream().filter(m -> m.genre().equals(Genre.THRILLER)).findAny();
+    thriller.ifPresent(System.out::println);
 
-		movies.add(new Movie("Der Pate 2", Genre.DRAMA, "1974", 9.0));
+    // if (thriller.isPresent()) {
+    // System.out.println(thriller.get());
+    // }
 
-//		HashSet<Movie> tmp = new HashSet<>(movies);
-//		ArrayList<Movie> distinctMovies = new ArrayList<>(tmp);
-//		distinctMovies.forEach(System.out::println);
+    System.out.println();
+  }
 
-		movies.stream().distinct().forEach(System.out::println);
+  public static void main(String[] args) throws FileNotFoundException {
 
-		System.out.println();
-	}
+    movies = Movies.getMovies();
 
-	private static void peek() {
-		System.out.println("Spaehen");
+    /*
+     * Intermediaere Operationen
+     */
+    // Filtern (filter)
+    filter();
 
-		List<Movie> moviesWithMin8Rating = movies.stream()
-				.filter(m -> m.rating() > 8)
-				.peek(System.out::println)
-				.collect(Collectors.toList());
+    // Abbilden (map, mapToInt, mapToDouble)
+    map();
 
-		moviesWithMin8Rating.forEach(System.out::println);
+    // Sortieren (sorted)
+    sort();
 
-		System.out.println();
-	}
+    // Ueberspringen und Begrenzen (skip, limit)
+    skipAndLimit();
 
-	private static void execute() {
-		System.out.println("Ausfuehren (gib alle Filme auf der Konsole aus)");
+    // Duplikate entfernen (distinct)
+    distinct();
 
-//		for (Movie m : movies) {
-//			System.out.println(m);
-//		}
+    // Spaehen (peek)
+    peek();
 
-		movies.stream().forEach(System.out::println);
+    /*
+     * Terminale Operationen
+     */
+    // Ausfuehren (forEach)
+    execute();
 
-		System.out.println();
-	}
+    // Finden (findAny, findFirst)
+    find();
 
-	private static void find() {
-		System.out.println("Finden (einen beliebigen Thriller)");
+    // Pruefen (allMatch, anyMatch, noneMatch)
+    check();
 
-//		Optional<Movie> thriller = Optional.ofNullable(null);
-//		for (Movie m : movies) {
-//			if (m.genre().equals(Genre.THRILLER)) {
-//				thriller = Optional.of(m);
-//				break;
-//			}
-//		}
-//		System.out.println(thriller.isPresent() ? thriller.get() : "kein entsprechender Film vorhanden");
-//		System.out.println(thriller.orElse(new Movie("Thriller", Genre.THRILLER, "2022", 5)));
-//		thriller.ifPresent(System.out::println);
+    // Aggregieren (average, count, max, min, reduce, sum)
+    aggregate();
 
-		Optional<Movie> thriller = movies.stream().filter(m -> m.genre().equals(Genre.THRILLER)).findAny();
-		thriller.ifPresent(System.out::println);
+    // Sammeln (collect)
+    collect();
+    collectAndGroup();
 
-//		if (thriller.isPresent()) {
-//			System.out.println(thriller.get());
-//		}
+  }
 
-		System.out.println();
-	}
+  private static void map() {
+    System.out.println("Abbilden (filmtitel (Erscheinungsjahr)):");
 
-	private static void check() {
-		System.out.println("Pruefen (gibt es einen Film aus dem Jahr 1990?)");
+    // for (Movie m : movies) {
+    // String tmp = m.title().toLowerCase() + " (" + m.publishingYear() + ")";
+    // System.out.println(tmp);
+    // }
 
-//		boolean check = false;
-//		for (Movie m : movies) {
-//			if (m.publishingYear().equals("1990")) {
-//				check = true;
-//				break;
-//			}
-//		}
-//		System.out.println(check);
+    movies.stream().map(m -> m.title().toLowerCase() + " (" + m.publishingYear() + ")")
+        .forEach(System.out::println);
 
-		boolean check = movies.stream().anyMatch(m -> m.publishingYear().equals("1990"));
-		System.out.println(check);
+    System.out.println();
+  }
 
-		System.out.println();
-	}
+  private static void peek() {
+    System.out.println("Spaehen");
 
-	private static void aggregate() {
-		System.out.println("Aggregate (durchschnittliche Bewertung aller Komoedien)");
+    List<Movie> moviesWithMin8Rating =
+        movies.stream().filter(m -> m.rating() > 8).peek(System.out::println)
+            .sorted((m1, m2) -> m1.title().compareTo(m2.title())).peek(System.out::println)
+            .filter(m -> m.rating() > 8).peek(System.out::println).collect(Collectors.toList());
 
-//		double total = 0;
-//		int count = 0;
-//		double average;
-//		for (Movie m : movies) {
-//			if (m.genre().equals(Genre.COMEDY)) {
-//				total += m.rating();
-//				count++;
-//			}
-//		}
-//		if (count > 0) {
-//			average = total / count;
-//			System.out.println(average);
-//		}
+    moviesWithMin8Rating.forEach(System.out::println);
 
-		OptionalDouble average = movies.stream()
-				.filter(m -> m.genre().equals(Genre.COMEDY))
-				.mapToDouble(m -> m.rating())
-				.average();
-		average.ifPresent(System.out::println);
+    System.out.println();
+  }
 
-		System.out.println();
-	}
+  private static void skipAndLimit() {
+    System.out.println("Ueberspringen und Begrenzen (Filme 6-10)");
 
-	private static void collect() {
-		System.out.println("Sammeln (alle Filme nach 1999 aufsteigend sortiert nach dem Filmtitel)");
+    // for (int i = 5; i < 10; i++) {
+    // System.out.println(movies.get(i));
+    // }
 
-		List<Movie> filteredAndSortedMovies = movies.stream()
-				.filter(m -> m.publishingYear().compareTo("1999") > 0)
-				.sorted((m1, m2) -> m1.title().compareTo(m2.title()))
-				.collect(Collectors.toList());
+    movies.stream().skip(5).limit(5).forEach(System.out::println);
 
-		filteredAndSortedMovies.forEach(System.out::println);
+    System.out.println();
+  }
 
-		System.out.println();
-	}
+  private static void sort() {
+    System.out.println("Sortieren (aufsteigend nach dem Genre)");
 
-	private static void collectAndGroup() {
-		System.out.println("Sammlen (alle Filme gruppiert nach dem Genre)");
+    // Collections.sort(movies, new Comparator<Movie>() {
+    // @Override
+    // public int compare(Movie o1, Movie o2) {
+    // return o1.genre().compareTo(o2.genre());
+    // }
+    // });
+    // for (Movie m : movies) {
+    // System.out.println(m);
+    // }
 
-		Map<Genre, List<Movie>> moviesByGenre = movies.stream().collect(Collectors.groupingBy(m -> m.genre()));
+    movies.stream().sorted((m1, m2) -> m1.genre().compareTo(m2.genre()))
+        .forEach(System.out::println);
 
-		for (Entry<Genre, List<Movie>> entry : moviesByGenre.entrySet()) {
-			System.out.println(entry.getKey() + ": " + entry.getValue());
-		}
-	}
+    System.out.println();
+  }
 
 }
