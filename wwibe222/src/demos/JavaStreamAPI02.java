@@ -2,8 +2,6 @@ package demos;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
 import java.util.Optional;
 import java.util.OptionalDouble;
 import demos.movie.Movie;
@@ -17,7 +15,7 @@ import helpers.Movies;
  * @version 1.0
  *
  */
-public class Streams02 {
+public class JavaStreamAPI02 {
 
   private static ArrayList<Movie> movies;
 
@@ -25,17 +23,17 @@ public class Streams02 {
     System.out.println("Aggregieren: durchschnittliche Bewertung aller Komoedien");
 
     /* imperativ */
-    double total = 0;
-    int count = 0;
-    for (Movie m : movies) {
-      if (m.genres().contains(Genre.COMEDY)) {
-        count++;
-        total += m.rating();
-      }
-    }
-    double averageRating = total / count;
-    System.out.println(averageRating);
-    System.out.println();
+    // double total = 0;
+    // int count = 0;
+    // for (Movie m : movies) {
+    // if (m.genres().contains(Genre.COMEDY)) {
+    // count++;
+    // total += m.rating();
+    // }
+    // }
+    // double averageRating = total / count;
+    // System.out.println(averageRating);
+    // System.out.println();
 
     /* funktional */
     OptionalDouble optionalAverageRating = movies.stream()
@@ -48,12 +46,12 @@ public class Streams02 {
     System.out.println("Pruefen: gibt es einen Horrorfilm aus dem Jahr 1982");
 
     /* imperativ */
-    for (Movie m : movies) {
-      if (m.genres().contains(Genre.HORROR) && m.year().equals("1982")) {
-        System.out.println(true);
-      }
-    }
-    System.out.println();
+    // for (Movie m : movies) {
+    // if (m.genres().contains(Genre.HORROR) && m.year().equals("1982")) {
+    // System.out.println(true);
+    // }
+    // }
+    // System.out.println();
 
     /* funktional */
     boolean isSuccessful =
@@ -62,16 +60,36 @@ public class Streams02 {
     System.out.println();
   }
 
+  private static void distinct() {
+    System.out.println("Unterscheiden: keine Duplikate");
+
+    ArrayList<Movie> tmp = new ArrayList<>();
+    tmp.add(movies.get(0));
+    tmp.add(movies.get(0));
+    tmp.add(movies.get(0));
+
+    /* imperativ */
+    // HashSet<Movie> distinctMovies = new HashSet<>(tmp);
+    // for (Movie m : distinctMovies) {
+    // System.out.println(m);
+    // }
+    // System.out.println();
+
+    /* funktional */
+    tmp.stream().distinct().forEach(System.out::println);
+    System.out.println();
+  }
+
   private static void filter() {
     System.out.println("Filtern: alle Filme zwischen 1990 und 2000 ");
 
     /* imperativ */
-    for (Movie m : movies) {
-      if (m.year().compareTo("1990") >= 0 && m.year().compareTo("2000") < 0) {
-        System.out.println(m);
-      }
-    }
-    System.out.println();
+    // for (Movie m : movies) {
+    // if (m.year().compareTo("1990") >= 0 && m.year().compareTo("2000") < 0) {
+    // System.out.println(m);
+    // }
+    // }
+    // System.out.println();
 
     /* funktional */
     movies.stream().filter(m -> m.year().compareTo("1990") >= 0 && m.year().compareTo("2000") < 0)
@@ -83,13 +101,13 @@ public class Streams02 {
     System.out.println("Finden: ein Thriller");
 
     /* imperativ */
-    for (Movie m : movies) {
-      if (m.genres().contains(Genre.THRILLER)) {
-        System.out.println(m);
-        break;
-      }
-    }
-    System.out.println();
+    // for (Movie m : movies) {
+    // if (m.genres().contains(Genre.THRILLER)) {
+    // System.out.println(m);
+    // break;
+    // }
+    // }
+    // System.out.println();
 
     /* funktional */
     Optional<Movie> thriller =
@@ -100,7 +118,13 @@ public class Streams02 {
 
   public static void main(String[] args) throws FileNotFoundException {
 
-    movies = Movies.getMovies(25);
+    movies = Movies.getMoviesByVotes(10, 250000);
+
+    /* Ausgabe */
+    for (Movie m : movies) {
+      System.out.println(m);
+    }
+    System.out.println();
 
     /* Intermediaere Operationen */
     /* Filtern (filter) */
@@ -108,13 +132,16 @@ public class Streams02 {
 
     /* Abbilden (map, mapToInt, mapToDouble, mapToLong) */
     map();
-    map2();
+    mapToDouble();
 
     /* Sortieren (sorted) */
     sort();
 
-    /* Ueberspringen, Begrenzen und Unterscheiden (skip, limit, distinct) */
-    skipAndLimitAndDistinct();
+    /* Ueberspringen und Begrenzen (skip, limit) */
+    skip();
+
+    /* Unterscheiden (distinct) */
+    distinct();
 
     /* Terminale Operationen */
     /* Finden (findAny, findFirst) */
@@ -132,54 +159,44 @@ public class Streams02 {
     System.out.println("Abbilden: Filmtitel (Jahr)");
 
     /* imperativ */
-    ArrayList<String> titles = new ArrayList<>();
-    for (Movie m : movies) {
-      String title = m.title() + " (" + m.year() + ")";
-      titles.add(title);
-      System.out.println(title);
-    }
-    System.out.println();
+    // ArrayList<String> titles = new ArrayList<>();
+    // for (Movie m : movies) {
+    // String title = m.title() + " (" + m.year() + ")";
+    // titles.add(title);
+    // System.out.println(title);
+    // }
+    // System.out.println();
 
     /* funktional */
     movies.stream().map(m -> m.title() + " (" + m.year() + ")").forEach(System.out::println);
     System.out.println();
   }
 
-  private static void map2() {
+  private static void mapToDouble() {
     System.out.println("Abbilden: Bewertung");
 
     /* imperativ */
-    for (Movie m : movies) {
-      System.out.println(m.rating());
-    }
-    System.out.println();
+    // for (Movie m : movies) {
+    // System.out.println(m.rating());
+    // }
+    // System.out.println();
 
     /* funktional */
     movies.stream().mapToDouble(m -> m.rating()).forEach(System.out::println);
     System.out.println();
   }
 
-  private static void skipAndLimitAndDistinct() {
-    System.out.println("Ueberspringen, Begrenzen und Unterscheiden: Filme 6-10");
-
-    movies.add(new Movie("The Matrix", new ArrayList<>(), "1999", 120, 8.7, 50000));
-    movies.add(new Movie("The Matrix", new ArrayList<>(), "1999", 120, 8.7, 50000));
-
-    for (Movie m : movies) {
-      System.out.println(m);
-    }
-    System.out.println();
+  private static void skip() {
+    System.out.println("Ueberspringen: Die ersten 5 Filme");
 
     /* imperativ */
-    @SuppressWarnings("unused")
-    HashSet<Movie> distinctMovies = new HashSet<>(movies);
-    for (int i = 5; i < 10; i++) {
-      System.out.println(movies.get(i));
-    }
-    System.out.println();
+    // for (int i = 0; i < 5; i++) {
+    // System.out.println(movies.get(i));
+    // }
+    // System.out.println();
 
     /* funktional */
-    movies.stream().distinct().skip(5).limit(5).forEach(System.out::println);
+    movies.stream().limit(5).forEach(System.out::println);
     System.out.println();
   }
 
@@ -187,11 +204,11 @@ public class Streams02 {
     System.out.println("Sortieren: absteigend nach dem Filmtitel");
 
     /* imperativ */
-    Collections.sort(movies, (m1, m2) -> m2.title().compareTo(m1.title()));
-    for (Movie m : movies) {
-      System.out.println(m);
-    }
-    System.out.println();
+    // Collections.sort(movies, (m1, m2) -> m2.title().compareTo(m1.title()));
+    // for (Movie m : movies) {
+    // System.out.println(m);
+    // }
+    // System.out.println();
 
     /* funktional */
     movies.stream().sorted((m1, m2) -> m2.title().compareTo(m1.title()))

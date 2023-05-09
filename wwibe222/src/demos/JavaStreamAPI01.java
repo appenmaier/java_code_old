@@ -15,11 +15,11 @@ import helpers.Movies;
  * @version 1.0
  *
  */
-public class Streams01 {
+public class JavaStreamAPI01 {
 
   public static void main(String[] args) throws FileNotFoundException {
 
-    List<Movie> movies = Movies.getMovies(25);
+    List<Movie> movies = Movies.getMoviesByVotes(10, 250000);
 
     /* Imperative Programmierung */
     ArrayList<String> titles = new ArrayList<>();

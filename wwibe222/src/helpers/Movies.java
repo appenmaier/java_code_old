@@ -17,6 +17,38 @@ import demos.movie.Movie.Genre;
 public class Movies {
 
   public static ArrayList<Movie> getMovies(int entries) throws FileNotFoundException {
+    ArrayList<Movie> movies = load();
+
+    ArrayList<Movie> tmp = new ArrayList<>();
+    for (int i = 0; i < entries; i++) {
+      Random random = new Random();
+      int index = random.nextInt(movies.size());
+      tmp.add(movies.get(index));
+      movies.remove(index);
+    }
+    movies = tmp;
+
+    return movies;
+  }
+
+  public static ArrayList<Movie> getMoviesByVotes(int entries, int votes)
+      throws FileNotFoundException {
+    ArrayList<Movie> movies = load();
+    movies.removeIf(m -> m.votes() < votes);
+
+    ArrayList<Movie> tmp = new ArrayList<>();
+    for (int i = 0; i < entries; i++) {
+      Random random = new Random();
+      int index = random.nextInt(movies.size());
+      tmp.add(movies.get(index));
+      movies.remove(index);
+    }
+    movies = tmp;
+
+    return movies;
+  }
+
+  private static ArrayList<Movie> load() throws FileNotFoundException {
     ArrayList<Movie> movies = new ArrayList<>();
     File file = new File("src/resources/movies.csv");
     Scanner scanner = new Scanner(file);
@@ -40,16 +72,6 @@ public class Movies {
     }
 
     scanner.close();
-
-    ArrayList<Movie> tmp = new ArrayList<>();
-    for (int i = 0; i < entries; i++) {
-      Random random = new Random();
-      int index = random.nextInt(movies.size());
-      tmp.add(movies.get(index));
-      movies.remove(index);
-    }
-    movies = tmp;
-
     return movies;
   }
 
