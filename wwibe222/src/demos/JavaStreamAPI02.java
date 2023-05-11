@@ -2,8 +2,11 @@ package demos;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.OptionalDouble;
+import java.util.stream.Collectors;
 import demos.movie.Movie;
 import demos.movie.Movie.Genre;
 import helpers.Movies;
@@ -58,6 +61,43 @@ public class JavaStreamAPI02 {
         movies.stream().anyMatch(m -> m.genres().contains(Genre.HORROR) && m.year().equals("1982"));
     System.out.println(isSuccessful);
     System.out.println();
+  }
+
+  private static List<Movie> collect() {
+    System.out.println("Sammeln: alle Horrorfilme mit einer Bewertung von min. 5 als Liste");
+
+    /* imperativ */
+    // ArrayList<Movie> horrorFilms = new ArrayList<>();
+    // for (Movie m : movies) {
+    // if (m.genres().contains(Genre.HORROR) && m.rating() >= 5) {
+    // horrorFilms.add(m);
+    // }
+    // }
+    // return horrorFilms;
+
+    return movies.stream().filter(m -> m.genres().contains(Genre.HORROR) && m.rating() >= 5)
+        .collect(Collectors.toList());
+  }
+
+  private static Map<String, List<Movie>> collect2() {
+    System.out.println("Sammeln: alle Horrorfilme zu jedem Jahr");
+
+    /* imperativ */
+    // HashMap<String, List<Movie>> horrorFilmsByYear = new HashMap<>();
+    // for (Movie m : movies) {
+    // if (m.genres().contains(Genre.HORROR)) {
+    // if (!horrorFilmsByYear.containsKey(m.year())) {
+    // horrorFilmsByYear.put(m.year(), new ArrayList<>());
+    // }
+    // List<Movie> tmp = horrorFilmsByYear.get(m.year());
+    // tmp.add(m);
+    // }
+    // }
+    // return horrorFilmsByYear;
+
+    /* funktional */
+    return movies.stream().filter(m -> m.genres().contains(Genre.HORROR))
+        .collect(Collectors.groupingBy(m -> m.year()));
   }
 
   private static void distinct() {
@@ -116,6 +156,20 @@ public class JavaStreamAPI02 {
     System.out.println();
   }
 
+  private static void limit() {
+    System.out.println("Begrenzen: Die ersten 5 Filme");
+
+    /* imperativ */
+    // for (int i = 0; i < 5; i++) {
+    // System.out.println(movies.get(i));
+    // }
+    // System.out.println();
+
+    /* funktional */
+    movies.stream().limit(5).forEach(System.out::println);
+    System.out.println();
+  }
+
   public static void main(String[] args) throws FileNotFoundException {
 
     movies = Movies.getMoviesByVotes(10, 250000);
@@ -138,20 +192,31 @@ public class JavaStreamAPI02 {
     sort();
 
     /* Ueberspringen und Begrenzen (skip, limit) */
-    skip();
+    limit();
 
     /* Unterscheiden (distinct) */
     distinct();
+
+    /* Spaehen */
+    peek();
 
     /* Terminale Operationen */
     /* Finden (findAny, findFirst) */
     find();
 
-    /* Pruefen (anyMatch, allMatch) */
+    /* Pruefen (anyMatch, allMatch, noneMatch) */
     check();
 
     /* Aggregieren (count, sum, average, max, min) */
     aggregate();
+
+    /* Sammeln (collect) */
+    List<Movie> horrorFilms = collect();
+    horrorFilms.forEach(System.out::println);
+    System.out.println();
+
+    Map<String, List<Movie>> horrorFilmsByYear = collect2();
+    horrorFilmsByYear.forEach((year, movies) -> System.out.println(year + ": " + movies));
 
   }
 
@@ -186,18 +251,14 @@ public class JavaStreamAPI02 {
     System.out.println();
   }
 
-  private static void skip() {
-    System.out.println("Ueberspringen: Die ersten 5 Filme");
+  private static List<String> peek() {
+    System.out.println("Spaehen");
 
-    /* imperativ */
-    // for (int i = 0; i < 5; i++) {
-    // System.out.println(movies.get(i));
-    // }
-    // System.out.println();
+    List<String> tmp =
+        movies.stream().filter(m -> m.rating() > 5).map(m -> m.title() + ": " + m.rating())
+            .peek(System.out::println).sorted().collect(Collectors.toList());
 
-    /* funktional */
-    movies.stream().limit(5).forEach(System.out::println);
-    System.out.println();
+    return tmp;
   }
 
   private static void sort() {

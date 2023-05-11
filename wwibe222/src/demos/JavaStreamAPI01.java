@@ -19,7 +19,7 @@ public class JavaStreamAPI01 {
 
   public static void main(String[] args) throws FileNotFoundException {
 
-    List<Movie> movies = Movies.getMoviesByVotes(10, 250000);
+    List<Movie> movies = Movies.getMoviesByVotes(50, 250000);
 
     /* Imperative Programmierung */
     ArrayList<String> titles = new ArrayList<>();
