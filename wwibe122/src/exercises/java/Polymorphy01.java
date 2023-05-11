@@ -24,7 +24,8 @@ public class Polymorphy01 {
     truck1.print();
     car2.print();
 
-    car1.accelerate(50);
+    /* Outdated */
+    // car1.accelerate(50);
     truck1.transform();
     car1.doATurboBoost();
     truck1.transform();

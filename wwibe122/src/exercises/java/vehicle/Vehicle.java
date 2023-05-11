@@ -4,7 +4,7 @@ package exercises.java.vehicle;
  * Fahrzeug
  * 
  * @author Daniel Appenmaier
- * @version 6.0
+ * @version 7.0
  * 
  */
 public abstract class Vehicle {
@@ -27,12 +27,20 @@ public abstract class Vehicle {
     numberOfVehicles++;
   }
 
-  public final void accelerate(int value) {
+  public final void accelerate(int value) throws InvalidValueException {
+    if (value <= 0) {
+      throw new InvalidValueException();
+    }
+
     speed += value;
     System.out.println(make + " " + model + " beschleunigt auf " + speed + " km/h");
   }
 
-  public final void brake(int value) {
+  public final void brake(int value) throws InvalidValueException {
+    if (value <= 0) {
+      throw new InvalidValueException();
+    }
+
     speed -= value;
     System.out.println(make + " " + model + " bremst auf " + speed + " km/h ab");
   }
