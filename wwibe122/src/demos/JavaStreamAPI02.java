@@ -2,8 +2,11 @@ package demos;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.OptionalDouble;
+import java.util.stream.Collectors;
 import demos.movie.Movie;
 import demos.movie.Movie.MovieGenre;
 import helpers.Movies;
@@ -19,12 +22,36 @@ public class JavaStreamAPI02 {
 
   private static ArrayList<Movie> movies;
 
+  public static List<Movie> getAllActionFilmsAsList() {
+    System.out.println("Alle Actionfilme als Liste");
+
+    List<Movie> allActionFilms = movies.stream().filter(m -> m.genres().contains(MovieGenre.ACTION))
+        .collect(Collectors.toList());
+    return allActionFilms;
+  }
+
+  public static Map<String, List<Movie>> getAllMoviesByYear() {
+    System.out.println("Alle Filme gruppiert nach Jahr");
+
+    Map<String, List<Movie>> allMoviesByYear =
+        movies.stream().collect(Collectors.groupingBy(m -> m.year()));
+    return allMoviesByYear;
+  }
+
   public static OptionalDouble getAverageRatingOfAllMovies() {
     System.out.println("Durchschnittsbewertung aller Filme");
 
     OptionalDouble averageRatingOfAllMovies =
         movies.stream().mapToDouble(m -> m.rating()).average();
     return averageRatingOfAllMovies;
+  }
+
+  public static Optional<Movie> getDrama() {
+    System.out.println("Ein Drama");
+
+    Optional<Movie> drama =
+        movies.stream().filter(m -> m.genres().contains(MovieGenre.DRAMA)).findFirst();
+    return drama;
   }
 
   public static Optional<Movie> getLongestComedyMovie() {
@@ -34,6 +61,14 @@ public class JavaStreamAPI02 {
         movies.stream().filter(m -> m.genres().contains(MovieGenre.COMEDY))
             .max((m1, m2) -> Integer.valueOf(m1.runtime()).compareTo(m2.runtime()));
     return longestComedyMovie;
+  }
+
+  public static boolean isHorrorMovieFrom1982Available() {
+    System.out.println("Gibt es einen Horrorfilm aus 1982?");
+
+    boolean isHorrorMovieFrom1982Available = movies.stream()
+        .anyMatch(m -> m.genres().contains(MovieGenre.HORROR) && m.year().equals("1982"));
+    return isHorrorMovieFrom1982Available;
   }
 
   public static void main(String[] args) throws FileNotFoundException {
@@ -58,6 +93,35 @@ public class JavaStreamAPI02 {
     longestComedyMovie.ifPresent(System.out::println);
     System.out.println();
 
+    /* filter, findFirst/findAny */
+    Optional<Movie> drama = getDrama();
+    drama.ifPresent(System.out::println);
+    System.out.println();
+
+    /* anyMatch/allMatch/noneMatch */
+    boolean isHorrorMovieFrom1982Available = isHorrorMovieFrom1982Available();
+    System.out.println(isHorrorMovieFrom1982Available);
+    System.out.println();
+
+    /* filter, collect */
+    List<Movie> allActionFilms = getAllActionFilmsAsList();
+    allActionFilms.forEach(System.out::println);
+    System.out.println();
+
+    /* map, distinct, sorted, forEach */
+    printAllDistinctYearsAscending();
+
+    /* collect */
+    Map<String, List<Movie>> allMoviesByYear = getAllMoviesByYear();
+    allMoviesByYear.forEach((y, movies) -> System.out.println(y + ": " + movies));
+
+  }
+
+  public static void printAllDistinctYearsAscending() {
+    System.out.println();
+
+    movies.stream().map(m -> m.year()).distinct().sorted().forEach(System.out::println);
+    System.out.println();
   }
 
   public static void printAllThrillersWithRatingBE7() {
