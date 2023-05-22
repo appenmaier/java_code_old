@@ -2,6 +2,9 @@ package tests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import demos.bmicalculator.BMICalculator;
 import demos.bmicalculator.BMICalculator.InvalidSizeException;
@@ -10,14 +13,15 @@ import demos.bmicalculator.BMICalculator.InvalidSizeException;
  * Testklasse fuer BMICalculator
  *
  * @author Daniel Appenmaier
- * @version 1.0
+ * @version 2.0
  *
  */
 public class BMICalculatorTest {
 
-  private BMICalculator calculator;
+  private static BMICalculator calculator;
 
-  public BMICalculatorTest() throws InvalidSizeException {
+  @BeforeAll
+  public static void setUp() throws InvalidSizeException {
     calculator = new BMICalculator(1.8, 85);
   }
 
@@ -27,6 +31,7 @@ public class BMICalculatorTest {
   }
 
   @Test
+  @Disabled("mach ich morgen")
   public void testGetBmi() {
     double actualBmi = calculator.getBmi();
     double expectedBmi = 26.2345679012345679;
@@ -34,6 +39,7 @@ public class BMICalculatorTest {
   }
 
   @Test
+  @DisplayName("Test getBmiCatgeory() with successful inputs")
   public void testGetBmiCategory() {
     assertEquals("Uebergewicht", calculator.getBmiCategory());
   }

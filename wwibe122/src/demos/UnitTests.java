@@ -9,6 +9,7 @@ package demos;
  */
 public class UnitTests {
 
+  /* outdated */
   // public static void main(String[] args) throws InvalidSizeException {
   //
   // BMICalculatorTest test = new BMICalculatorTest();
