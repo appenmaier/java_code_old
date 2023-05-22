@@ -7,6 +7,13 @@ import demos.movie.Movie;
 import demos.movie.Movie.MovieGenre;
 import helpers.Movies;
 
+/**
+ * Die Java Stream API
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class JavaStreamAPI01 {
 
   public static void main(String[] args) throws FileNotFoundException {
