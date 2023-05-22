@@ -38,6 +38,13 @@ public class JavaStreamAPI02 {
     return allMoviesByYear;
   }
 
+  public static List<String> getAllTitlesWithRuntimeInMinutesLE90AsList() {
+    System.out.println("Alle Filmtitel von Filmen mit einer Laufzeit von max. 90 Minuten");
+
+    return movies.stream().filter(m -> m.runtime() <= 90).peek(System.out::println)
+        .map(m -> m.title()).collect(Collectors.toList());
+  }
+
   public static OptionalDouble getAverageRatingOfAllMovies() {
     System.out.println("Durchschnittsbewertung aller Filme");
 
@@ -114,6 +121,10 @@ public class JavaStreamAPI02 {
     /* collect */
     Map<String, List<Movie>> allMoviesByYear = getAllMoviesByYear();
     allMoviesByYear.forEach((y, movies) -> System.out.println(y + ": " + movies));
+    System.out.println();
+
+    /* filter, map, collect, peek */
+    getAllTitlesWithRuntimeInMinutesLE90AsList();
 
   }
 
