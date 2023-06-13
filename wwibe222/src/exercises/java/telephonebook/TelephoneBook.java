@@ -2,12 +2,13 @@ package exercises.java.telephonebook;
 
 import java.util.HashMap;
 import java.util.Map.Entry;
+import java.util.Optional;
 
 /**
  * Telefonbuch
  *
  * @author Daniel Appenmaier
- * @version 1.0
+ * @version 2.0
  *
  */
 public class TelephoneBook {
@@ -18,17 +19,20 @@ public class TelephoneBook {
     entries.put(person, telephoneNumber);
   }
 
-  public TelephoneNumber getTelephoneNumberByName(String name) {
+  public Optional<TelephoneNumber> getTelephoneNumberByName(String name) {
     for (Entry<Person, TelephoneNumber> entry : entries.entrySet()) {
       if (entry.getKey().name().equals(name)) {
-        return entry.getValue();
+        return Optional.of(entry.getValue());
       }
     }
-    return null;
+    return Optional.empty();
   }
 
-  public TelephoneNumber getTelephoneNumberByName2(String name) {
-    return entries.get(new Person(name));
+  public Optional<TelephoneNumber> getTelephoneNumberByName2(String name) {
+    if (entries.containsKey(new Person(name))) {
+      return Optional.of(entries.get(new Person(name)));
+    }
+    return Optional.empty();
   }
 
 }
