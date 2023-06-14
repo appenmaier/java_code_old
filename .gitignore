@@ -2,7 +2,9 @@ wwibe121/bin/
 wwibe221/bin/
 wwibe122/bin/
 wwibe222/bin/
-master/bin/
+demos/bin/
+exercises/bin/
+exams/bin/
 
 *.settings
 *.classpath
