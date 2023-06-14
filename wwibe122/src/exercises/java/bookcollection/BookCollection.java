@@ -4,7 +4,15 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map.Entry;
+import java.util.Optional;
 
+/**
+ * Buechersammlung
+ *
+ * @author Daniel Appenmaier
+ * @version 2.0
+ *
+ */
 public record BookCollection(HashMap<Author, List<Book>> collection) {
 
   public void addAuthor(Author author) throws DuplicateKeyException {
@@ -19,18 +27,18 @@ public record BookCollection(HashMap<Author, List<Book>> collection) {
     collection.get(author).add(book);
   }
 
-  public Book getBookByTitle(String title) {
+  public Optional<Book> getBookByTitle(String title) {
     for (List<Book> books : collection.values()) {
       for (Book b : books) {
         if (b.title().equals(title)) {
-          return b;
+          return Optional.of(b);
         }
       }
     }
-    return null;
+    return Optional.empty();
   }
 
-  public Author getMostDiligentAuthor() {
+  public Optional<Author> getMostDiligentAuthor() {
     Author mostDiligentAuthor = null;
     int mostBooks = 0;
 
@@ -41,7 +49,7 @@ public record BookCollection(HashMap<Author, List<Book>> collection) {
       }
     }
 
-    return mostDiligentAuthor;
+    return Optional.ofNullable(mostDiligentAuthor);
   }
 
 }

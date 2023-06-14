@@ -3,7 +3,7 @@ package exercises.java;
 import exercises.java.crate.BeerBottle;
 import exercises.java.crate.Crate;
 
-public class Generics02 {
+public class Optionals03 {
 
   public static void main(String[] args) {
 
@@ -14,9 +14,7 @@ public class Generics02 {
     crate.insertBottle(new BeerBottle(), 5);
     crate.insertBottle(new BeerBottle(), 6);
 
-    /* Outdated */
-    // BeerBottle beerBottle = crate.takeBottle(3);
-    // beerBottle.chugALug();
+    crate.takeBottle(3).ifPresent(t -> t.chugALug());
 
   }
 

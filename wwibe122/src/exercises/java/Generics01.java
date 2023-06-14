@@ -16,8 +16,9 @@ public class Generics01 {
     crate.insertBottle(new BeerBottle(), 5);
     crate.insertBottle(new BeerBottle(), 6);
 
-    BeerBottle beerBottle = (BeerBottle) crate.takeBottle(3);
-    beerBottle.chugALug();
+    /* Outdated */
+    // BeerBottle beerBottle = (BeerBottle) crate.takeBottle(3);
+    // beerBottle.chugALug();
 
   }
 
