@@ -2,6 +2,13 @@ package jappuccini.main;
 
 import jappuccini.model.Dice;
 
+/**
+ * OO03
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class OO03 {
 
   public static void main(String[] args) {

@@ -5,6 +5,13 @@ import jappuccini.model.Engine;
 import jappuccini.model.Rental;
 import jappuccini.model.Truck;
 
+/**
+ * Polymorphy02
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class Polymorphy02 {
 
   public static void main(String[] args) {

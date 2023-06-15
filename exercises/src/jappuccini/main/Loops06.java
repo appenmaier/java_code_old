@@ -2,7 +2,18 @@ package jappuccini.main;
 
 import java.util.Scanner;
 
+/**
+ * Loops06
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class Loops06 {
+
+  static double calculateInterestPerAnnum(int k, double p) {
+    return k * p / 100;
+  }
 
   public static void main(String[] args) {
 
@@ -27,10 +38,6 @@ public class Loops06 {
       loop = scanner.nextBoolean();
     } while (loop);
 
-  }
-
-  static double calculateInterestPerAnnum(int k, double p) {
-    return k * p / 100;
   }
 
 }

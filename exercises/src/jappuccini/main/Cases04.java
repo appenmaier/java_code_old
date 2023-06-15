@@ -3,6 +3,13 @@ package jappuccini.main;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * Cases04
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class Cases04 {
 
   public static void main(String[] args) {

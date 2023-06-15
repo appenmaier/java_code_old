@@ -2,6 +2,13 @@ package jappuccini.main;
 
 import java.util.Scanner;
 
+/**
+ * Loops04
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class Loops04 {
 
   public static void main(String[] args) {

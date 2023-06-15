@@ -3,6 +3,13 @@ package jappuccini.main;
 import jappuccini.model.Dice;
 import jappuccini.model.Player;
 
+/**
+ * ClassDiagrams01
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class ClassDiagrams01 {
 
   public static void main(String[] args) {

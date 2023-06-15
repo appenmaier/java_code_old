@@ -2,6 +2,13 @@ package jappuccini.main;
 
 import jappuccini.model.House;
 
+/**
+ * InnerClasses01
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class InnerClasses01 {
 
   public static void main(String[] args) {

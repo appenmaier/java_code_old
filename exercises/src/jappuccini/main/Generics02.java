@@ -3,6 +3,13 @@ package jappuccini.main;
 import jappuccini.model.BeerBottle;
 import jappuccini.model.Crate;
 
+/**
+ * Generics02
+ *
+ * @author Daniel Appenmaier
+ * @version 2.0
+ *
+ */
 public class Generics02 {
 
   public static void main(String[] args) {

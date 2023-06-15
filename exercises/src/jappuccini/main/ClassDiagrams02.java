@@ -4,6 +4,13 @@ import java.util.ArrayList;
 import jappuccini.model.DiceGame;
 import jappuccini.model.Player;
 
+/**
+ * ClassDiagrams02
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class ClassDiagrams02 {
 
   public static void main(String[] args) {

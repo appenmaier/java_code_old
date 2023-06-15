@@ -2,6 +2,13 @@ package jappuccini.main;
 
 import java.util.Scanner;
 
+/**
+ * Arrays03
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class Arrays03 {
 
   public static void main(String[] args) {

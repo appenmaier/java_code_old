@@ -1,5 +1,12 @@
 package jappuccini.main;
 
+/**
+ * Arrays02
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class Arrays02 {
 
   public static void main(String[] args) {

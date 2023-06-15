@@ -2,6 +2,13 @@ package jappuccini.main;
 
 import java.util.Scanner;
 
+/**
+ * JavaAPI02
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class JavaAPI02 {
 
   public static void main(String[] args) {

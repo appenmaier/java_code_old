@@ -4,6 +4,13 @@ import jappuccini.model.Person;
 import jappuccini.model.TelephoneBook;
 import jappuccini.model.TelephoneNumber;
 
+/**
+ * Optionals02
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class Optionals02 {
 
   public static void main(String[] args) {

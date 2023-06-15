@@ -4,6 +4,13 @@ import jappuccini.model.Car;
 import jappuccini.model.Engine;
 import jappuccini.model.InvalidValueException;
 
+/**
+ * Exceptions01
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class Exceptions01 {
 
   public static void main(String[] args) {

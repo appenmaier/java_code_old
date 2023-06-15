@@ -4,6 +4,13 @@ import java.util.ArrayList;
 import jappuccini.model.SkatCard;
 import jappuccini.model.SkatCardDeck;
 
+/**
+ * ClassDiagrams05
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class ClassDiagrams05 {
 
   public static void main(String[] args) {

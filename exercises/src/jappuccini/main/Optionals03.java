@@ -3,6 +3,13 @@ package jappuccini.main;
 import jappuccini.model.BeerBottle;
 import jappuccini.model.Crate;
 
+/**
+ * Optionals03
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class Optionals03 {
 
   public static void main(String[] args) {

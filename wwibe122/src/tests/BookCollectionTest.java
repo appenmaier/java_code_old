@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import exercises.java.bookcollection.Author;
 import exercises.java.bookcollection.Book;
 import exercises.java.bookcollection.BookCollection;
-import exercises.java.bookcollection.BookCollection.DuplicateKeyException;
+import exercises.java.bookcollection.DuplicateKeyException;
 
 /**
  * BookCollectionTest

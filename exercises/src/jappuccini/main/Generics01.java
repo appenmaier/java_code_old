@@ -4,6 +4,13 @@ import jappuccini.model.BeerBottle;
 import jappuccini.model.Crate;
 import jappuccini.model.WineBottle;
 
+/**
+ * Generics01
+ *
+ * @author Daniel Appenmaier
+ * @version 2.0
+ *
+ */
 public class Generics01 {
 
   @SuppressWarnings({"rawtypes", "unchecked"})

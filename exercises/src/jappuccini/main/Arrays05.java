@@ -3,6 +3,13 @@ package jappuccini.main;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Arrays05
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class Arrays05 {
 
   public static void main(String[] args) {

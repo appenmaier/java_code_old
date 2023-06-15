@@ -3,6 +3,13 @@ package jappuccini.main;
 import java.util.ArrayList;
 import jappuccini.model.Dice;
 
+/**
+ * OO04
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class OO04 {
 
   public static void main(String[] args) {

@@ -5,6 +5,13 @@ import java.util.Collections;
 import java.util.Comparator;
 import jappuccini.model.Coordinate;
 
+/**
+ * InnerClasses03
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class InnerClasses03 {
 
   public static void main(String[] args) {

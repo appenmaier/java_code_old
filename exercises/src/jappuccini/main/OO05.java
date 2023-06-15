@@ -4,6 +4,13 @@ import java.util.ArrayList;
 import jappuccini.model.Dice;
 import jappuccini.model.DiceCup;
 
+/**
+ * OO05
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class OO05 {
 
   public static void main(String[] args) {

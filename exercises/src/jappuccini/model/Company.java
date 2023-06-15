@@ -62,7 +62,7 @@ public class Company {
      */
 
   }
-  /* version 2.0: - */
+  /* version 1.0: - */
 
   private String name;
 

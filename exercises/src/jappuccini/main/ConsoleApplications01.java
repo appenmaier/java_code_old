@@ -2,6 +2,13 @@ package jappuccini.main;
 
 import java.util.Scanner;
 
+/**
+ * ConsoleApplications01
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class ConsoleApplications01 {
 
   public static void main(String[] args) {

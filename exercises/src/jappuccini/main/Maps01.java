@@ -4,6 +4,13 @@ import jappuccini.model.Person;
 import jappuccini.model.TelephoneBook;
 import jappuccini.model.TelephoneNumber;
 
+/**
+ * Maps01
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class Maps01 {
 
   public static void main(String[] args) {

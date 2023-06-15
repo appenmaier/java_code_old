@@ -2,6 +2,13 @@ package jappuccini.main;
 
 import jappuccini.model.Vehicle;
 
+/**
+ * Enumerations01
+ *
+ * @author Daniel Appenmaier
+ * @version 2.0
+ *
+ */
 public class Enumerations01 {
 
   public static void main(String[] args) {

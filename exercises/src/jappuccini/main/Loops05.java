@@ -3,6 +3,13 @@ package jappuccini.main;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * Loops05
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class Loops05 {
 
   public static void main(String[] args) {

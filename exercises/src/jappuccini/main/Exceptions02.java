@@ -3,6 +3,13 @@ package jappuccini.main;
 import jappuccini.model.Barrel;
 import jappuccini.model.BarrelOverflowException;
 
+/**
+ * Exceptions02
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class Exceptions02 {
 
   public static void main(String[] args) {

@@ -1,5 +1,12 @@
 package jappuccini.main;
 
+/**
+ * Operators01
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class Operators01 {
 
   public static void main(String[] args) {

@@ -1,5 +1,12 @@
 package jappuccini.main;
 
+/**
+ * DataObjects01
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class DataObjects01 {
 
   public static void main(String[] args) {

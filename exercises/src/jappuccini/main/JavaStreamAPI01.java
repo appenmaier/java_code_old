@@ -8,6 +8,13 @@ import jappuccini.model.VideoGameConsoleQueries;
 import jappuccini.model.VideoGameConsoles.Maker;
 import jappuccini.model.VideoGameConsoles.VideoGameConsole;
 
+/**
+ * JavaStreamAPI01
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class JavaStreamAPI01 {
 
   public static void main(String[] args) {

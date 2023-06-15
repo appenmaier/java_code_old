@@ -3,6 +3,13 @@ package jappuccini.main;
 import jappuccini.model.Company;
 import jappuccini.model.Person;
 
+/**
+ * ClassDiagrams04
+ *
+ * @author Daniel Appenmaier
+ * @version 2.0
+ *
+ */
 public class ClassDiagrams04 {
 
   @SuppressWarnings("unused")

@@ -4,6 +4,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import jappuccini.model.Coordinate;
 
+/**
+ * Comparators01
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class Comparators01 {
 
   public static void main(String[] args) {

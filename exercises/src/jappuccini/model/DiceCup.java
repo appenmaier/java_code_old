@@ -18,6 +18,7 @@ public class DiceCup {
       System.out.println(dice.getId() + " - " + dice.getValue());
     }
   }
+  /* version 1.0: - */
 
   public void rollTheDices(Dice[] dices) {
     for (int i = 0; i < dices.length; i++) {

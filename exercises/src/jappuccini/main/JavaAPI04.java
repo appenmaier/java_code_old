@@ -2,6 +2,13 @@ package jappuccini.main;
 
 import java.util.Scanner;
 
+/**
+ * JavaAPI04
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class JavaAPI04 {
 
   public static void main(String[] args) {

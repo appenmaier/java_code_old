@@ -1,5 +1,12 @@
 package jappuccini.main;
 
+/**
+ * Loops01
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class Loops01 {
 
   public static void main(String[] args) {

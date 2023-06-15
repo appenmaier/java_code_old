@@ -6,6 +6,13 @@ import jappuccini.model.Book;
 import jappuccini.model.BookCollection;
 import jappuccini.model.DuplicateKeyException;
 
+/**
+ * Optionals01
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class Optionals01 {
 
   public static void main(String[] args) {

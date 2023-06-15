@@ -5,6 +5,13 @@ import java.util.Collections;
 import jappuccini.model.Coordinate;
 import jappuccini.model.CoordinateComparator;
 
+/**
+ * Comparators02
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class Comparators02 {
 
   public static void main(String[] args) {

@@ -3,6 +3,13 @@ package jappuccini.main;
 import jappuccini.model.Creature;
 import jappuccini.model.CreatureGame;
 
+/**
+ * ClassDiagrams03
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class ClassDiagrams03 {
 
   public static void main(String[] args) {

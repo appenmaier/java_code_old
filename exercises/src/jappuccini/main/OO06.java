@@ -2,6 +2,13 @@ package jappuccini.main;
 
 import jappuccini.model.Creature;
 
+/**
+ * OO06
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class OO06 {
 
   public static void main(String[] args) {

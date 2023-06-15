@@ -1,18 +1,11 @@
-package jappuccini.main;
+package exercises.java;
 
 import java.util.HashMap;
-import jappuccini.model.Author;
-import jappuccini.model.Book;
-import jappuccini.model.BookCollection;
-import jappuccini.model.DuplicateKeyException;
+import exercises.java.bookcollection.Author;
+import exercises.java.bookcollection.Book;
+import exercises.java.bookcollection.BookCollection;
+import exercises.java.bookcollection.BookCollection.DuplicateKeyException;
 
-/**
- * Maps02
- *
- * @author Daniel Appenmaier
- * @version 1.0
- *
- */
 public class Maps02 {
 
   public static void main(String[] args) {
@@ -22,8 +15,9 @@ public class Maps02 {
     try {
       collection.addAuthor(new Author("Stephen King"));
       collection.addAuthor(new Author("George RR Martin"));
+      collection.addAuthor(new Author("George RR Martin"));
     } catch (DuplicateKeyException e) {
-      e.printStackTrace();
+      System.out.println("Fehler");
     }
 
     collection.addBook(new Author("Stephen King"), new Book("Es"));

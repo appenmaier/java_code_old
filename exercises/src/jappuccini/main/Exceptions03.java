@@ -3,6 +3,13 @@ package jappuccini.main;
 import jappuccini.model.Company;
 import jappuccini.model.Person;
 
+/**
+ * Exceptions03
+ *
+ * @author Daniel Appenmaier
+ * @version 2.0
+ *
+ */
 public class Exceptions03 {
 
   @SuppressWarnings("unused")

@@ -1,11 +1,18 @@
 package jappuccini.main;
 
 import jappuccini.model.Company;
+import jappuccini.model.Company.Employee;
 import jappuccini.model.Person;
 import jappuccini.model.SalaryDecreaseException;
 import jappuccini.model.SalaryIncreaseTooHighException;
-import jappuccini.model.Company.Employee;
 
+/**
+ * InnerClasses02
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class InnerClasses02 {
 
   public static void main(String[] args) {

@@ -3,6 +3,13 @@ package jappuccini.main;
 import java.util.ArrayList;
 import jappuccini.model.Vehicle;
 
+/**
+ * OO02
+ *
+ * @author Daniel Appenmaier
+ * @version 2.0
+ *
+ */
 public class OO02 {
 
   public static void main(String[] args) {

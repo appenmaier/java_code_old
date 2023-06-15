@@ -4,6 +4,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import jappuccini.model.Coordinate;
 
+/**
+ * InnerClasses05
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class InnerClasses05 {
 
   public static void main(String[] args) {

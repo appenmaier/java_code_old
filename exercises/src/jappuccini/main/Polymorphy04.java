@@ -4,6 +4,13 @@ import java.util.ArrayList;
 import jappuccini.model.DiceGame;
 import jappuccini.model.Player;
 
+/**
+ * Polymorphy04
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class Polymorphy04 {
 
   public static void main(String[] args) {

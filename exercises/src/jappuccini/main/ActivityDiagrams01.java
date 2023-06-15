@@ -3,6 +3,13 @@ package jappuccini.main;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * ActivityDiagrams01
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class ActivityDiagrams01 {
 
   private static Scanner sc = new Scanner(System.in);
@@ -12,21 +19,6 @@ public class ActivityDiagrams01 {
     Random random = new Random();
     randomNumber = random.nextInt(100) + 1;
     play();
-  }
-
-  private static void play() {
-    System.out.print("Spieler 1, Name eingeben: ");
-    String name1 = sc.nextLine();
-    System.out.print("Spieler 2, Name eingeben: ");
-    String name2 = sc.nextLine();
-
-    boolean loop = true;
-    while (loop) {
-      loop = move(name1);
-      if (loop) {
-        loop = move(name2);
-      }
-    }
   }
 
   private static boolean move(String name) {
@@ -43,6 +35,21 @@ public class ActivityDiagrams01 {
         System.out.println("Die gesuchte Zahl ist groesser");
       }
       return true;
+    }
+  }
+
+  private static void play() {
+    System.out.print("Spieler 1, Name eingeben: ");
+    String name1 = sc.nextLine();
+    System.out.print("Spieler 2, Name eingeben: ");
+    String name2 = sc.nextLine();
+
+    boolean loop = true;
+    while (loop) {
+      loop = move(name1);
+      if (loop) {
+        loop = move(name2);
+      }
     }
   }
 

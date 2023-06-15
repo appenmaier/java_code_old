@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Fahrzeugvermietung
  * 
  * @author Daniel Appenmaier
- * @version 3.0
+ * @version 4.0
  * 
  */
 public class Rental implements Partner {
@@ -19,6 +19,12 @@ public class Rental implements Partner {
     vehicles = new ArrayList<>();
   }
 
+  public void accelerateAllVehicles(int value) throws InvalidValueException {
+    for (Vehicle c : vehicles) {
+      c.accelerate(value);
+    }
+  }
+
   public void addAllVehicles(Vehicle... vehicles) {
     for (Vehicle v : vehicles) {
       this.vehicles.add(v);
@@ -27,6 +33,10 @@ public class Rental implements Partner {
 
   public void addVehicle(Vehicle vehicle) {
     vehicles.add(vehicle);
+  }
+
+  public ArrayList<Vehicle> getVehicles() {
+    return vehicles;
   }
 
   @Override

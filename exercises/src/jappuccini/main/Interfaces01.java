@@ -6,6 +6,13 @@ import jappuccini.model.Rental;
 import jappuccini.model.TravelAgency;
 import jappuccini.model.Truck;
 
+/**
+ * Interfaces01
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class Interfaces01 {
 
   public static void main(String[] args) {

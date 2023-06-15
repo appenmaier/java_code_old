@@ -15,10 +15,11 @@ public class Generics01 {
     crate.insertBottle(new WineBottle(), 5);
     crate.insertBottle(new WineBottle(), 2);
 
-    if (crate.takeBottle(3) instanceof BeerBottle) {
-      BeerBottle beerBottle = (BeerBottle) crate.takeBottle(3);
-      beerBottle.chugALug();
-    }
+    /* outdated */
+    // if (crate.takeBottle(3) instanceof BeerBottle) {
+    // BeerBottle beerBottle = (BeerBottle) crate.takeBottle(3);
+    // beerBottle.chugALug();
+    // }
 
   }
 
