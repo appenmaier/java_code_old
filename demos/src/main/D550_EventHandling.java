@@ -7,13 +7,13 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- * Szenenwechsel
+ * Ereignisbehandlung
  * 
  * @author Daniel Appenmaier
  * @version 1.0
  *
  */
-public class D560_JavaFX04 extends Application {
+public class D550_EventHandling extends Application {
 
   public static void main(String[] args) {
     launch(args);

@@ -13,7 +13,7 @@ import model.LinearSearch;
  * @version 1.0
  *
  */
-public class D680_Algorithms01 {
+public class D680_SearchingAlgorithms {
 
   public static void main(String[] args) {
 

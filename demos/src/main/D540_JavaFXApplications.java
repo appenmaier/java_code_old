@@ -7,13 +7,13 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- * Kommunikation zwischen Szenen
+ * Aufbau einer JavaFX-Anwendung
  * 
  * @author Daniel Appenmaier
  * @version 1.0
  *
  */
-public class D570_JavaFX05 extends Application {
+public class D540_JavaFXApplications extends Application {
 
   public static void main(String[] args) {
     launch(args);

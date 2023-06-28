@@ -7,13 +7,13 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- * Ereignisbehandlung
+ * Kommunikation zwischen Szenen
  * 
  * @author Daniel Appenmaier
  * @version 1.0
  *
  */
-public class D550_JavaFX03 extends Application {
+public class D570_SceneCommunication extends Application {
 
   public static void main(String[] args) {
     launch(args);

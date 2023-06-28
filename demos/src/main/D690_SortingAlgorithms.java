@@ -14,7 +14,7 @@ import model.SelectSort;
  * @version 1.0
  *
  */
-public class D690_Algorithms02 {
+public class D690_SortingAlgorithms {
 
   public static void main(String[] args) {
 

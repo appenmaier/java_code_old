@@ -12,7 +12,7 @@ import java.io.IOException;
  * @version 1.0
  *
  */
-public class D600_IOStreams02 {
+public class D600_CharacterBasedWriting {
 
   public static void main(String[] args) {
 

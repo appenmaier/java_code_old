@@ -7,13 +7,13 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- * Aufbau einer JavaFX-Anwendung
+ * Szenenwechsel
  * 
  * @author Daniel Appenmaier
  * @version 1.0
  *
  */
-public class D540_JavaFX02 extends Application {
+public class D560_SceneSwitching extends Application {
 
   public static void main(String[] args) {
     launch(args);

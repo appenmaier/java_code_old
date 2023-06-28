@@ -7,6 +7,6 @@ package main;
  * @version 1.0
  *
  */
-public class D580_JavaFX06 {
+public class D580_ControlsContainersAndDialogs {
 
 }

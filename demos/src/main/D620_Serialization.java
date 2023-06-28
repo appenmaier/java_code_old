@@ -11,7 +11,7 @@ import model.Log;
  * @version 2.0
  *
  */
-public class D620_IOStreams04 {
+public class D620_Serialization {
 
   public static void main(String[] args)
       throws IOException, InterruptedException, ClassNotFoundException {

@@ -10,7 +10,7 @@ import javafx.stage.Stage;
  * @version 1.0
  *
  */
-public class D530_JavaFX01 extends Application {
+public class D530_LifeCycleMethods extends Application {
 
   public static void main(String[] args) {
     launch(args);

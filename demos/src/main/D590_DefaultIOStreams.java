@@ -10,7 +10,7 @@ import java.util.Arrays;
  * @version 1.0
  *
  */
-public class D590_IOStreams01 {
+public class D590_DefaultIOStreams {
 
   public static void main(String[] args) {
 
