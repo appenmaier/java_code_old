@@ -11,6 +11,13 @@ import java.util.ArrayList;
  */
 public class Order {
 
+  /**
+   * Bestell-Position
+   *
+   * @author Daniel Appenmaier
+   * @version 1.0
+   *
+   */
   public class OrderItem {
 
     public String description;

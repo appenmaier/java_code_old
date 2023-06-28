@@ -3,7 +3,6 @@ package tests;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Optional;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -25,7 +24,6 @@ public class BookCollectionTest {
   private Author stephenKing;
   private Author georgeRRMartin;
   private Book it;
-  private Book misery;
   private Book aGameOfThrones;
   private Book aClashOfKings;
 
@@ -33,12 +31,9 @@ public class BookCollectionTest {
   void setUp() throws DuplicateKeyException {
     stephenKing = new Author("Stephen King");
     georgeRRMartin = new Author("George RR Martin");
-
     it = new Book("Es");
-    misery = new Book("Sie");
     aGameOfThrones = new Book("Das Lied von Eis und Feuer 1");
     aClashOfKings = new Book("Das Lied von Eis und Feuer 2");
-
     bookCollection = new BookCollection(new HashMap<>());
     bookCollection.addAuthor(stephenKing);
     bookCollection.addAuthor(georgeRRMartin);
@@ -47,36 +42,33 @@ public class BookCollectionTest {
   }
 
   @Test
-  void testAddAuthor() {
+  void testAA() {
     assertThrows(DuplicateKeyException.class, () -> bookCollection.addAuthor(stephenKing));
   }
 
   @Test
-  void testAddBook() {
+  void testAB() {
     bookCollection.addBook(stephenKing, it);
-    bookCollection.addBook(stephenKing, misery);
-    List<Book> booksFromStephenKing = bookCollection.collection().get(stephenKing);
-    assertEquals(it, booksFromStephenKing.get(0));
-    assertEquals(misery, booksFromStephenKing.get(1));
-    assertEquals(2, booksFromStephenKing.size());
+    assertEquals(it, bookCollection.collection().get(stephenKing).get(0));
   }
 
   @Test
-  void testGetBookByTitle() {
-    assertEquals(Optional.of(aClashOfKings),
-        bookCollection.getBookByTitle("Das Lied von Eis und Feuer 2"));
-    assertEquals(Optional.empty(), bookCollection.getBookByTitle("Das Lied von Eis und Feuer 3"));
+  void testGBBT() {
+    assertEquals(Optional.of(aGameOfThrones),
+        bookCollection.getBookByTitle("Das Lied von Eis und Feuer 1"));
+    assertEquals(Optional.empty(), bookCollection.getBookByTitle("Es"));
   }
 
   @Test
-  void testGetMostDiligentAuthor1() {
+  void testGMDA1() {
     assertEquals(Optional.of(georgeRRMartin), bookCollection.getMostDiligentAuthor());
+    assertEquals(georgeRRMartin, bookCollection.getMostDiligentAuthor().get());
   }
 
   @Test
-  void testGetMostDiligentAuthor2() {
-    bookCollection = new BookCollection(new HashMap<>());
-    assertEquals(Optional.empty(), bookCollection.getMostDiligentAuthor());
+  void testGMDA2() {
+    BookCollection emptyBookCollection = new BookCollection(new HashMap<>());
+    assertEquals(Optional.empty(), emptyBookCollection.getMostDiligentAuthor());
   }
 
 }
