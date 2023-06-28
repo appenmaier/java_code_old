@@ -3,8 +3,8 @@ package main;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import model.Movie;
-import model.Movie.Genre;
 import model.Movies;
+import model.Movie.Genre;
 
 /**
  * Bedarfsauswertung (Lazy Evaluation)

@@ -4,8 +4,8 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Collections;
 import model.Movie;
-import model.Movie.Genre;
 import model.Movies;
+import model.Movie.Genre;
 
 /**
  * Die Java Stream API

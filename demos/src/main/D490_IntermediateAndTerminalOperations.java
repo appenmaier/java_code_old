@@ -9,8 +9,8 @@ import java.util.Optional;
 import java.util.OptionalDouble;
 import java.util.stream.Collectors;
 import model.Movie;
-import model.Movie.Genre;
 import model.Movies;
+import model.Movie.Genre;
 
 /**
  * Intermediaere und Terminale Operationen
