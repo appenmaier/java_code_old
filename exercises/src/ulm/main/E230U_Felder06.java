@@ -26,7 +26,7 @@ public class E230U_Felder06 {
     }
     System.out.println();
 
-    System.out.print("T (�C): ");
+    System.out.print("T (Grad C): ");
     for (int i = 0; i < temperatures.length; i++) {
       System.out.printf("%3d", temperatures[i]);
     }
@@ -46,7 +46,7 @@ public class E230U_Felder06 {
     }
 
     System.out.println("Hoechster Temperaturunterschied (Tag " + day1 + " auf Tag " + day2 + "): "
-        + maxDifference + "�C");
+        + maxDifference + "Grad C");
 
   }
 
