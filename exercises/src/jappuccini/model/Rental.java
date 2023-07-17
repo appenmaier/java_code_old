@@ -4,13 +4,12 @@ import java.util.ArrayList;
 
 /**
  * Fahrzeugvermietung
- * 
+ *
  * @author Daniel Appenmaier
  * @version 4.0
- * 
+ *
  */
 public class Rental implements Partner {
-  /* version 2.0: public class Rental */
 
   private String name;
   private ArrayList<Vehicle> vehicles;
@@ -62,3 +61,4 @@ public class Rental implements Partner {
   /* version 1.0: - */
 
 }
+/* version 2.0: public class Rental {...} */

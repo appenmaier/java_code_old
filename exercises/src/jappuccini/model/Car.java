@@ -2,13 +2,12 @@ package jappuccini.model;
 
 /**
  * Auto
- * 
+ *
  * @author Daniel Appenmaier
  * @version 2.0
  *
  */
 public final class Car extends Vehicle {
-  /* version 1.0: public class Car extends Vehicle { */
 
   private int seats;
 
@@ -34,3 +33,4 @@ public final class Car extends Vehicle {
   }
 
 }
+/* version 1.0: public class Car extends Vehicle {...} */

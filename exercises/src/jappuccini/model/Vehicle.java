@@ -2,13 +2,12 @@ package jappuccini.model;
 
 /**
  * Fahrzeug
- * 
+ *
  * @author Daniel Appenmaier
  * @version 7.0
- * 
+ *
  */
 public abstract class Vehicle {
-  /* version 5.0: public class Vehicle { */
 
   private static int numberOfVehicles;
   /* version 2.0: - */
@@ -18,12 +17,12 @@ public abstract class Vehicle {
   }
   /* version 2.0: - */
 
+  private Engine engine;
   private String make;
   private String model;
-  private Engine engine;
   /* version 3.0: - */
   protected int speed;
-  // version 4.0: private int speed */
+  /* version 4.0: private int speed */
 
   public Vehicle(String make, String model, Engine engine) {
     this.make = make;
@@ -114,3 +113,4 @@ public abstract class Vehicle {
   /* version 3.0: public void print() { System.out.println(make + " " + model); } */
 
 }
+/* version 5.0: public class Vehicle {...} */

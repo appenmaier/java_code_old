@@ -16,13 +16,12 @@ import model.InputModel;
 
 /**
  * OutputController
- * 
+ *
  * @author Daniel Appenmaier
  * @version 2.0
  *
  */
 public class OutputController implements Initializable {
-  /* version 1.0: public class OutputController { */
 
   @FXML
   private Label outputLabel;
@@ -47,3 +46,4 @@ public class OutputController implements Initializable {
   /* version 1.0: - */
 
 }
+/* version 1.0: public class OutputController {...} */

@@ -2,13 +2,12 @@ package model;
 
 /**
  * Lampe
- * 
+ *
  * @author Daniel Appenmaier
  * @version 2.0
  *
  */
 public abstract class Light {
-  /* version 1.0: public class Light { */
 
   protected boolean isOn;
   protected boolean isShining;
@@ -33,3 +32,4 @@ public abstract class Light {
   /* version 1.0: public void switchOn() { isOn = true; isShining = true; } */
 
 }
+/* version 1.0: public class Light {...} */

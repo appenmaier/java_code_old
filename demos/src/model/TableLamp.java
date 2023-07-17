@@ -2,20 +2,17 @@ package model;
 
 /**
  * Tischleuchte
- * 
+ *
  * @author Daniel Appenmaier
  * @version 8.0
  *
  */
 public final class TableLamp extends Light implements WiredDevice {
-  /* version 6.0: public final class TableLamp extends Light */
-  /* version 5.0: public class TableLamp extends Light */
-  /* version 4.0: public class TableLamp */
 
-  private final static String TYPE = "Tischleuchte";
   /* version 3.0: - */
   private static int numberOfTableLamps;
   /* version 3.0: - */
+  private final static String TYPE = "Tischleuchte";
 
   public static int getNumberOfTableLamps() {
     return numberOfTableLamps;
@@ -84,3 +81,6 @@ public final class TableLamp extends Light implements WiredDevice {
   }
 
 }
+/* version 6.0: public final class TableLamp extends Light {...} */
+/* version 5.0: public class TableLamp extends Light {...} */
+/* version 4.0: public class TableLamp {...} */

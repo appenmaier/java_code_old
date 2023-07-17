@@ -2,12 +2,14 @@ package main;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import model.Movie;
+import model.Movie.Genre;
 import model.Movie.MovieByYearDescendingAndTitleAscendingComparator;
 
 /**
  * Komparatoren
- * 
+ *
  * @author Daniel Appenmaier
  * @version 2.0
  *
@@ -27,11 +29,13 @@ public class D390_Comparators {
     names.add("Lisa");
 
     ArrayList<Movie> movies = new ArrayList<>();
-    /*
-     * version 1.0: movies.add(new Movie("John Wick 4", "2023", 8.4)); movies.add(new
-     * Movie("Disaster Movie", "2008", 2.1)); movies.add(new Movie("Der Pate", "1972", 9.2));
-     * movies.add(new Movie("The Super Mario Bros. Movie", "2023", 7.2));
-     */
+    movies.add(new Movie("John Wick 4", List.of(Genre.ACTION, Genre.CRIME, Genre.THRILLER), "2023",
+        169, 7.8, 241552));
+    movies.add(new Movie("Disaster Movie", List.of(Genre.COMEDY, Genre.SCIENCE_FICTION), "2008", 87,
+        2.1, 93334));
+    movies.add(new Movie("Der Pate", List.of(Genre.DRAMA, Genre.CRIME), "1972", 175, 9.2, 1900000));
+    movies.add(new Movie("The Super Mario Bros. Movie",
+        List.of(Genre.ANIMATION, Genre.ADVENTURE, Genre.COMEDY), "2023", 92, 7.1, 161146));
 
     Collections.sort(numbers);
     Collections.sort(names);

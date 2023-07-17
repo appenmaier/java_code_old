@@ -2,13 +2,12 @@ package jappuccini.model;
 
 /**
  * LKW
- * 
+ *
  * @author Daniel Appenmaier
  * @version 2.0
  *
  */
 public final class Truck extends Vehicle {
-  /* version 1.0: public class Truck extends Vehicle { */
 
   private int cargo;
   private boolean isTransformed;
@@ -44,3 +43,4 @@ public final class Truck extends Vehicle {
   }
 
 }
+/* version 1.0: public class Truck extends Vehicle {...} */

@@ -10,7 +10,6 @@ import java.util.Optional;
  *
  */
 public class Crate<T extends Bottle> {
-  /* version 1.0: public class Crate { */
 
   private T box1;
   /* version 1.0: private Object box1; */
@@ -62,3 +61,4 @@ public class Crate<T extends Bottle> {
    */
 
 }
+/* version 1.0: public class Crate {...} */

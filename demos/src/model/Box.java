@@ -2,13 +2,12 @@ package model;
 
 /**
  * Kiste
- * 
+ *
  * @author Daniel Appenmaier
  * @version 2.0
  *
  */
 public class Box<T> {
-  /* 1.0: public class Box { */
 
   private T content;
   /* version 1.0: private Object content; */
@@ -28,3 +27,4 @@ public class Box<T> {
   /* version 1.0: public void setContent(Object content) { this.content = content; } */
 
 }
+/* 1.0: public class Box {...} */

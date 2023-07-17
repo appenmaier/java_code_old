@@ -15,10 +15,6 @@ public class D620_Serialization {
 
   public static void main(String[] args)
       throws IOException, InterruptedException, ClassNotFoundException {
-    /*
-     * version 1.0: public static void main(String[] args) throws IOException, InterruptedException
-     * {
-     */
 
     Log log = new Log();
     File file = new File("src/resources/log.dat");
@@ -38,5 +34,9 @@ public class D620_Serialization {
     log.printLogEntries();
 
   }
+  /*
+   * version 1.0: public static void main(String[] args) throws IOException, InterruptedException
+   * {...}
+   */
 
 }

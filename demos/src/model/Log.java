@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 /**
  * Protokoll
- * 
+ *
  * @author Daniel Appenmaier
  * @version 2.0
  *
@@ -20,15 +20,14 @@ public class Log {
 
   /**
    * Protokoll-Eintrag
-   * 
+   *
    * @author Daniel Appenmaier
    * @version 2.0
    *
    */
   private record LogEntry(long timeStamp, String content) implements Serializable {
-    /* version 1.0: private record LogEntry(long timeStamp, String content) { */
-
   }
+  /* version 1.0: private record LogEntry(long timeStamp, String content) {...} */
 
   private ArrayList<LogEntry> logEntries;
 
