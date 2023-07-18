@@ -12,7 +12,7 @@ import model.ProducerThread;
  * @version 1.0
  *
  */
-public class D660_Threads04 {
+public class D660_WaitingLists {
 
   public static ArrayList<Integer> numbers = new ArrayList<>();
 

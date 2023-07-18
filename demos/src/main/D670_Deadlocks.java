@@ -10,7 +10,7 @@ import model.Friend;
  * @version 1.0
  *
  */
-public class D670_Threads05 {
+public class D670_Deadlocks {
 
   public static void main(String[] args) throws InterruptedException {
 

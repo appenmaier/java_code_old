@@ -9,7 +9,7 @@ import model.TickerThread;
  * @version 1.0
  *
  */
-public class D640_Threads02 {
+public class D640_DaemonThreads {
 
   @SuppressWarnings("unused")
   public static void main(String[] args) throws InterruptedException {

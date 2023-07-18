@@ -1,7 +1,7 @@
 package model;
 
 import java.util.ArrayList;
-import main.D660_Threads04;
+import main.D660_WaitingLists;
 
 /**
  * ConsumerThread
@@ -13,7 +13,7 @@ import main.D660_Threads04;
 public class ConsumerThread implements Runnable {
 
   private boolean isRunning;
-  private ArrayList<Integer> numbers = D660_Threads04.numbers;
+  private ArrayList<Integer> numbers = D660_WaitingLists.numbers;
   private Thread thread;
 
   @Override

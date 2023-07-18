@@ -2,7 +2,7 @@ package model;
 
 import java.util.ArrayList;
 import java.util.Random;
-import main.D660_Threads04;
+import main.D660_WaitingLists;
 
 /**
  * ProducerThread
@@ -14,7 +14,7 @@ import main.D660_Threads04;
 public class ProducerThread implements Runnable {
 
   private boolean isRunning;
-  private ArrayList<Integer> numbers = D660_Threads04.numbers;
+  private ArrayList<Integer> numbers = D660_WaitingLists.numbers;
   private Thread thread;
 
   @Override

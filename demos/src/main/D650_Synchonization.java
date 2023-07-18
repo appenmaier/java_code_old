@@ -4,18 +4,20 @@ import model.Counter;
 import model.CounterThread;
 
 /**
- * Nebenlaeufige Programmierung (Threading)
+ * Synchronisieren von Threads
  *
  * @author Daniel Appenmaier
  * @version 1.0
  *
  */
-public class D630_Threads01 {
+public class D650_Synchonization {
 
   public static void main(String[] args) throws InterruptedException {
 
-    CounterThread counter1 = new CounterThread("Counter 1", Thread.MIN_PRIORITY, new Counter());
-    CounterThread counter2 = new CounterThread("Counter 2", Thread.MAX_PRIORITY, new Counter());
+    Counter counter = new Counter();
+
+    CounterThread counter1 = new CounterThread("Counter 1", Thread.MIN_PRIORITY, counter);
+    CounterThread counter2 = new CounterThread("Counter 2", Thread.MAX_PRIORITY, counter);
 
     counter1.start();
     counter2.start();

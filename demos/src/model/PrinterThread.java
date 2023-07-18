@@ -1,7 +1,7 @@
 package model;
 
 import java.util.ArrayList;
-import main.D660_Threads04;
+import main.D660_WaitingLists;
 
 /**
  * PrinterThread
@@ -12,7 +12,7 @@ import main.D660_Threads04;
  */
 public class PrinterThread implements Runnable {
 
-  private ArrayList<Integer> numbers = D660_Threads04.numbers;
+  private ArrayList<Integer> numbers = D660_WaitingLists.numbers;
   private Thread thread;
 
   @Override
