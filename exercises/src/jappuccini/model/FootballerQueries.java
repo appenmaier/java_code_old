@@ -67,7 +67,7 @@ public class FootballerQueries {
         .map(f -> f.footballClub())
         .distinct()
         .filter(fc -> fc.positionInAllTimeTable() != -1)
-        .mapToInt(fc -> fc.pointsinAllTimeTable())
+        .mapToInt(fc -> fc.pointsInAllTimeTable())
         .average();
 
     return x;
