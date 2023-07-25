@@ -3,7 +3,7 @@ package model;
 import java.util.Objects;
 
 /**
- * Student
+ * Studierender
  *
  * @author Daniel Appenmaier
  * @version 1.0
