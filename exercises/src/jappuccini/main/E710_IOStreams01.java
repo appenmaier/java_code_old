@@ -16,7 +16,7 @@ import jappuccini.model.Student;
  * @version 1.0
  *
  */
-public class E700_IOStreams01 {
+public class E710_IOStreams01 {
 
   private static File file;
   private static ArrayList<Student> students;

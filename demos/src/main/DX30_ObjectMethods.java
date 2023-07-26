@@ -10,7 +10,7 @@ import model.VideoGameConsole;
  * @version 1.0
  *
  */
-public class D720_BestOfJavaI03 {
+public class DX30_ObjectMethods {
 
   public static void main(String[] args) {
 

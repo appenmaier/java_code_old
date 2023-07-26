@@ -11,7 +11,7 @@ import model.VideoGameConsole;
  * @version 1.0
  *
  */
-public class D730_BestOfJavaI04 {
+public class DX40_Lists {
 
   public static void main(String[] args) {
 

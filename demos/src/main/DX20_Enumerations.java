@@ -10,7 +10,7 @@ import model.VideoGameConsole;
  * @version 1.0
  *
  */
-public class D710_BestOfJavaI02 {
+public class DX20_Enumerations {
 
   public static void main(String[] args) {
 
