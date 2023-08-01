@@ -6,13 +6,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- * Stellenangebote
+ * JobOfferReader
  *
  * @author Daniel Appenmaier
  * @version 1.0
  *
  */
-public class JobOffers {
+public class JobOfferReader {
 
   public static ArrayList<JobOffer> getJobOffers(File file) throws FileNotFoundException {
     ArrayList<JobOffer> jobOffers = new ArrayList<>();

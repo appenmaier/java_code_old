@@ -1,7 +1,7 @@
 package jappuccini.exams2.joboffer;
 
 /**
- * Recruiter:in
+ * Recruiter
  *
  * @author Daniel Appenmaier
  * @version 1.0

@@ -1,7 +1,7 @@
 package jappuccini.exams2.library;
 
 /**
- * gedrucktes Buch
+ * Gedrucktes Buch
  *
  * @author Daniel Appenmaier
  * @version 1.0

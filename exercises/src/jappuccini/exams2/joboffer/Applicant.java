@@ -3,7 +3,7 @@ package jappuccini.exams2.joboffer;
 import java.util.ArrayList;
 
 /**
- * Bewerber:in
+ * Bewerber
  *
  * @author Daniel Appenmaier
  * @version 1.0
