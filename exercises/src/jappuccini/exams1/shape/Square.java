@@ -1,16 +1,16 @@
-package jappuccini.exams1.parkinggarage;
+package jappuccini.exams1.shape;
 
 /**
- * Bus
+ * Quadrat
  *
  * @author Daniel Appenmaier
  * @version 1.0
  *
  */
-public class Bus extends Vehicle {
+public class Square extends Rectangle {
 
-  public Bus(String make, String model, double length, double height) {
-    super(make, model, length, height);
+  public Square(double a) {
+    super(a, a);
   }
 
   @Override
@@ -31,8 +31,7 @@ public class Bus extends Vehicle {
 
   @Override
   public String toString() {
-    return "Bus [height()=" + height() + ", length()=" + length() + ", make()=" + make()
-        + ", model()=" + model() + "]";
+    return "Square [a()=" + a() + ", b()=" + b() + "]";
   }
 
 }

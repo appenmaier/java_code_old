@@ -1,16 +1,16 @@
-package jappuccini.exams1.parkinggarage;
+package jappuccini.exams1.fastfood;
 
 /**
- * Bus
+ * Burger
  *
  * @author Daniel Appenmaier
  * @version 1.0
  *
  */
-public class Bus extends Vehicle {
+public class Burger extends FastFood {
 
-  public Bus(String make, String model, double length, double height) {
-    super(make, model, length, height);
+  public Burger(String name, FoodCategory foodCategory, double calories, boolean isVegetarian) {
+    super(name, foodCategory, calories, isVegetarian);
   }
 
   @Override
@@ -31,8 +31,8 @@ public class Bus extends Vehicle {
 
   @Override
   public String toString() {
-    return "Bus [height()=" + height() + ", length()=" + length() + ", make()=" + make()
-        + ", model()=" + model() + "]";
+    return "Burger [isVegetarian()=" + isVegetarian() + ", ratings()=" + ratings() + ", calories()="
+        + calories() + ", foodCategory()=" + foodCategory() + ", name()=" + name() + "]";
   }
 
 }

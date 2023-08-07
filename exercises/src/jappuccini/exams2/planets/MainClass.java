@@ -7,13 +7,13 @@ import java.util.OptionalDouble;
 import java.util.stream.Collectors;
 
 /**
- * PlanetQueries
+ * MainClass
  *
  * @author Daniel Appenmaier
  * @version 1.0
  *
  */
-public class PlanetQueries {
+public class MainClass {
 
   public static void main(String[] args) {
 
