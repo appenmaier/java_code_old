@@ -1,4 +1,4 @@
-package jappuccini.exams2.shoppingcart;
+package jappuccini.exams2.shoppingportal;
 
 import java.util.ArrayList;
 
@@ -17,9 +17,7 @@ public record ShoppingPortal(String user, ArrayList<Product> products,
   }
 
   public void clearShoppingCart() {
-    for (int i = 0; i < shoppingCart.items().size(); i++) {
-      shoppingCart.items().remove(i);
-    }
+    shoppingCart.items().clear();
   }
 
   public void removeProductFromShoppingCart(Product product) {

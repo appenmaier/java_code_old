@@ -1,6 +1,7 @@
-package jappuccini.exams2.shoppingcart;
+package jappuccini.exams2.shoppingportal;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * Warenkorb
@@ -14,8 +15,8 @@ public class ShoppingCart<T extends Sellable> {
 
   public class Item {
 
-    private final T sellable;
     private final int amount;
+    private final T sellable;
 
     private Item(T sellable, int amount) {
       this.sellable = sellable;
@@ -46,6 +47,19 @@ public class ShoppingCart<T extends Sellable> {
     items.add(new Item(sellable, amount));
   }
 
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj)
+      return true;
+    if (obj == null)
+      return false;
+    if (getClass() != obj.getClass())
+      return false;
+    @SuppressWarnings("unchecked")
+    ShoppingCart<T> other = (ShoppingCart<T>) obj;
+    return Objects.equals(items, other.items);
+  }
+
   public double getTotal() {
     double total = 0;
     for (Item item : items) {
@@ -54,16 +68,28 @@ public class ShoppingCart<T extends Sellable> {
     return total;
   }
 
+  @Override
+  public int hashCode() {
+    return Objects.hash(items);
+  }
+
   public ArrayList<Item> items() {
     return items;
   }
 
   public void removeItem(T sellable) {
+    ArrayList<Item> tmp = new ArrayList<>();
     for (Item i : items) {
       if (i.sellable.equals(sellable)) {
-        items.remove(i);
+        tmp.add(i);
       }
     }
+    items.removeAll(tmp);
+  }
+
+  @Override
+  public String toString() {
+    return "ShoppingCart [items=" + items + "]";
   }
 
 }

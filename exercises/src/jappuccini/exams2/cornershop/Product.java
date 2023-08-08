@@ -1,5 +1,7 @@
 package jappuccini.exams2.cornershop;
 
+import java.util.Objects;
+
 /**
  * Produkt
  *
@@ -21,8 +23,31 @@ public abstract class Product {
     return description;
   }
 
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj)
+      return true;
+    if (obj == null)
+      return false;
+    if (getClass() != obj.getClass())
+      return false;
+    Product other = (Product) obj;
+    return Objects.equals(description, other.description)
+        && Double.doubleToLongBits(price) == Double.doubleToLongBits(other.price);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(description, price);
+  }
+
   public double price() {
     return price;
+  }
+
+  @Override
+  public String toString() {
+    return "Product [description=" + description + ", price=" + price + "]";
   }
 
 }

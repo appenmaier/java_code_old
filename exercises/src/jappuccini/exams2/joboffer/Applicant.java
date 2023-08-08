@@ -1,6 +1,7 @@
 package jappuccini.exams2.joboffer;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * Bewerber
@@ -30,6 +31,34 @@ public final class Applicant extends Person {
 
   public ArrayList<ApplicationDocument> applicationDocuments() {
     return applicationDocuments;
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj)
+      return true;
+    if (!super.equals(obj))
+      return false;
+    if (getClass() != obj.getClass())
+      return false;
+    Applicant other = (Applicant) obj;
+    return applicantId == other.applicantId
+        && Objects.equals(applicationDocuments, other.applicationDocuments);
+  }
+
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = super.hashCode();
+    result = prime * result + Objects.hash(applicantId, applicationDocuments);
+    return result;
+  }
+
+  @Override
+  public String toString() {
+    return "Applicant [applicantId=" + applicantId + ", applicationDocuments="
+        + applicationDocuments + ", birthDateTimeStamp()=" + birthDateTimeStamp() + ", name()="
+        + name() + "]";
   }
 
 }

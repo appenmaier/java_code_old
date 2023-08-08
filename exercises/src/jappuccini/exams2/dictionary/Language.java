@@ -9,7 +9,7 @@ package jappuccini.exams2.dictionary;
  */
 public enum Language {
 
-  DE("DE", "Deutsch"), EN("EN", "Englisch");
+  DE("DE", "Deutsch"), EN("EN", "Englisch"), FR("FR", "Franzoesisch");
 
   private final String code;
   private final String description;

@@ -1,5 +1,7 @@
 package jappuccini.exams2.videocollection;
 
+import java.util.Objects;
+
 /**
  * Blu-Ray
  *
@@ -18,6 +20,31 @@ public class BluRay extends Video {
 
   public double capacity() {
     return capacity;
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj)
+      return true;
+    if (!super.equals(obj))
+      return false;
+    if (getClass() != obj.getClass())
+      return false;
+    BluRay other = (BluRay) obj;
+    return Double.doubleToLongBits(capacity) == Double.doubleToLongBits(other.capacity);
+  }
+
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = super.hashCode();
+    result = prime * result + Objects.hash(capacity);
+    return result;
+  }
+
+  @Override
+  public String toString() {
+    return "BluRay [capacity=" + capacity + ", movie()=" + movie() + "]";
   }
 
 }

@@ -1,6 +1,7 @@
 package jappuccini.exams2.joboffer;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * Stellenangebot
@@ -11,10 +12,10 @@ import java.util.ArrayList;
  */
 public class JobOffer {
 
-  private final int id;
-  private final String title;
-  private Recruiter recruiter;
   private final ArrayList<Applicant> applicants;
+  private final int id;
+  private Recruiter recruiter;
+  private final String title;
 
   public JobOffer(int id, String title, Recruiter recruiter) {
     this.id = id;
@@ -31,6 +32,24 @@ public class JobOffer {
     return applicants;
   }
 
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj)
+      return true;
+    if (obj == null)
+      return false;
+    if (getClass() != obj.getClass())
+      return false;
+    JobOffer other = (JobOffer) obj;
+    return Objects.equals(applicants, other.applicants) && id == other.id
+        && Objects.equals(recruiter, other.recruiter) && Objects.equals(title, other.title);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(applicants, id, recruiter, title);
+  }
+
   public int id() {
     return id;
   }
@@ -41,6 +60,12 @@ public class JobOffer {
 
   public String title() {
     return title;
+  }
+
+  @Override
+  public String toString() {
+    return "JobOffer [id=" + id + ", title=" + title + ", recruiter=" + recruiter + ", applicants="
+        + applicants + "]";
   }
 
 }

@@ -1,5 +1,7 @@
 package jappuccini.exams2.videocollection;
 
+import java.util.Objects;
+
 /**
  * VHS
  *
@@ -16,8 +18,33 @@ public class VHS extends Video {
     this.isRewritable = isRewritable;
   }
 
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj)
+      return true;
+    if (!super.equals(obj))
+      return false;
+    if (getClass() != obj.getClass())
+      return false;
+    VHS other = (VHS) obj;
+    return isRewritable == other.isRewritable;
+  }
+
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = super.hashCode();
+    result = prime * result + Objects.hash(isRewritable);
+    return result;
+  }
+
   public boolean isRewritable() {
     return isRewritable;
+  }
+
+  @Override
+  public String toString() {
+    return "VHS [isRewritable=" + isRewritable + ", movie()=" + movie() + "]";
   }
 
 }

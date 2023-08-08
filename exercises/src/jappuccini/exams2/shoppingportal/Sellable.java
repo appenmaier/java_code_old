@@ -1,4 +1,4 @@
-package jappuccini.exams2.shoppingcart;
+package jappuccini.exams2.shoppingportal;
 
 /**
  * Verkaufbar
