@@ -18,7 +18,7 @@ import jappuccini.model.Vehicle;
  * @version 1.0
  *
  */
-public class E730_UnitTests02 {
+public class E750_UnitTests02 {
 
   private static Rental rental;
 

@@ -17,7 +17,7 @@ import jappuccini.model.SalaryIncreaseTooHighException;
  * @version 1.0
  *
  */
-public class E720_UnitTests01 {
+public class E740_UnitTests01 {
 
   private static Company company;
   private static Employee employee;

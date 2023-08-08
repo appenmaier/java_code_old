@@ -19,7 +19,7 @@ import jappuccini.model.DuplicateKeyException;
  * @version 1.0
  *
  */
-public class E750_UnitTests04 {
+public class E770_UnitTests04 {
 
   private Book aClashOfKings;
   private Book aGameOfThrones;

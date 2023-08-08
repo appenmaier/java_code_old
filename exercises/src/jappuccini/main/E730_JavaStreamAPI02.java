@@ -9,7 +9,7 @@ import jappuccini.model.FootballerQueries;
  * @version 1.0
  *
  */
-public class E710_JavaStreamAPI02 {
+public class E730_JavaStreamAPI02 {
 
   public static void main(String[] args) {
     System.out.println("Die Summe aller geschossener Tore von Mittelfeldspielerinnen: "

@@ -15,7 +15,7 @@ import jappuccini.model.VideoGameConsoles.VideoGameConsole;
  * @version 1.0
  *
  */
-public class E700_JavaStreamAPI01 {
+public class E720_JavaStreamAPI01 {
 
   public static void main(String[] args) {
 

@@ -5,13 +5,13 @@ import jappuccini.model.TelephoneBook;
 import jappuccini.model.TelephoneNumber;
 
 /**
- * Maps01
+ * Optionals02
  *
  * @author Daniel Appenmaier
  * @version 1.0
  *
  */
-public class E650_Maps01 {
+public class E700_Optionals02 {
 
   public static void main(String[] args) {
 
@@ -20,7 +20,8 @@ public class E650_Maps01 {
     telephoneBook.addEntry(new Person("Peter Mueller"), new TelephoneNumber("07544 62718"));
     telephoneBook.addEntry(new Person("Lisa Schmidt"), new TelephoneNumber("0751 90182"));
 
-    System.out.println(telephoneBook.getTelephoneNumberByName("Peter Mueller"));
+    telephoneBook.getTelephoneNumberByName("Peter Mueller").ifPresentOrElse(System.out::println,
+        () -> System.out.println("Die gesuchte Telefonnummer ist nicht vorhanden"));
 
   }
 

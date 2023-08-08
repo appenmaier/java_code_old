@@ -7,13 +7,13 @@ import jappuccini.model.BookCollection;
 import jappuccini.model.DuplicateKeyException;
 
 /**
- * Maps02
+ * Optionals01
  *
  * @author Daniel Appenmaier
  * @version 1.0
  *
  */
-public class E660_Maps02 {
+public class E690_Optionals01 {
 
   public static void main(String[] args) {
 
@@ -35,8 +35,10 @@ public class E660_Maps02 {
     collection.addBook(new Author("George RR Martin"), new Book("Das Lied von Eis und Feuer 5"));
     collection.addBook(new Author("George RR Martin"), new Book("Das Lied von Eis und Feuer 6"));
 
-    System.out.println(collection.getBookByTitle("Das Lied von Eis und Feuer 5"));
-    System.out.println(collection.getMostDiligentAuthor());
+    collection.getBookByTitle("Das Lied von Eis und Feuer 5").ifPresentOrElse(System.out::println,
+        () -> System.out.println("Das gesuchte Buch ist nicht vorhanden"));
+    collection.getMostDiligentAuthor().ifPresentOrElse(System.out::println,
+        () -> System.out.println("Es ist kein entsprechender Autor vorhanden"));
 
   }
 

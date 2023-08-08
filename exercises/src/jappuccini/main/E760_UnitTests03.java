@@ -15,7 +15,7 @@ import jappuccini.model.TelephoneNumber;
  * @version 1.0
  *
  */
-public class E740_UnitTests03 {
+public class E760_UnitTests03 {
 
   private static TelephoneBook telephoneBook;
 
