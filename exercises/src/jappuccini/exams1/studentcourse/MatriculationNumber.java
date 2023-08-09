@@ -11,7 +11,7 @@ import java.util.Arrays;
  */
 public class MatriculationNumber {
 
-  private int[] digits;
+  private final int[] digits;
 
   public MatriculationNumber(int digit1, int digit2, int digit3, int digit4, int digit5, int digit6,
       int digit7) {

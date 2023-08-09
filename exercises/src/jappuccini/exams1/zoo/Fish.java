@@ -38,8 +38,8 @@ public class Fish extends Animal {
     return result;
   }
 
-  public void sing() {
-    System.out.println("blub, blub");
+  public void swim() {
+    System.out.println("schwimm, schwimm");
   }
 
   @Override

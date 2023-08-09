@@ -1,4 +1,4 @@
-package jappuccini.exams1.creatures;
+package jappuccini.exams1.creature;
 
 /**
  * Kreaturentyp

@@ -1,4 +1,4 @@
-package jappuccini.exams1.creatures;
+package jappuccini.exams1.creature;
 
 import java.util.Objects;
 
@@ -14,7 +14,6 @@ public class Position {
   private int x, y;
 
   public Position(int x, int y) {
-    super();
     this.x = x;
     this.y = y;
   }
