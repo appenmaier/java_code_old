@@ -7,6 +7,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Scanner;
 import jappuccini.model.Student;
 
 /**
@@ -21,29 +22,32 @@ public class E780_IOStreams01 {
   private static File file;
   private static ArrayList<Student> students;
 
+  @SuppressWarnings("resource")
   public static void main(String[] args) throws IOException {
 
-    file = new File("src/resources/students.txt");
+    Scanner scanner = new Scanner(System.in);
+
+    file = new File("src/jappuccini/resources/students.txt");
     if (!file.exists()) {
       file.createNewFile();
     }
 
     students = new ArrayList<>();
 
-    Student student1 = new Student("8172093", "Hans Maier", 'm');
-    Student student2 = new Student("2335409", "Peter Mueller", 'm');
-    Student student3 = new Student("5065411", "Lisa Schmid", 'w');
+    System.out.print("Moechtest Du Lesen (1) oder Schreiben (2): ");
+    int answer = scanner.nextInt();
 
-    students.add(student1);
-    students.add(student2);
-    students.add(student3);
-
-    write();
-
-    students.clear();
-
-    read();
-
+    if (answer == 1) {
+      read();
+    } else {
+      Student student1 = new Student("8172093", "Hans Maier", 'm');
+      Student student2 = new Student("2335409", "Peter Mueller", 'm');
+      Student student3 = new Student("5065411", "Lisa Schmid", 'w');
+      students.add(student1);
+      students.add(student2);
+      students.add(student3);
+      write();
+    }
     students.forEach(System.out::println);
 
   }
