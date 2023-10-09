@@ -1,6 +1,7 @@
 package jappuccini.exams2.joboffer;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -13,7 +14,7 @@ import java.util.Objects;
 public final class Applicant extends Person {
 
   private final int applicantId;
-  private final ArrayList<ApplicationDocument> applicationDocuments;
+  private final List<ApplicationDocument> applicationDocuments;
 
   public Applicant(String name, long birthDateTimeStamp, int applicantId) {
     super(name, birthDateTimeStamp);
@@ -29,7 +30,7 @@ public final class Applicant extends Person {
     return applicantId;
   }
 
-  public ArrayList<ApplicationDocument> applicationDocuments() {
+  public List<ApplicationDocument> applicationDocuments() {
     return applicationDocuments;
   }
 

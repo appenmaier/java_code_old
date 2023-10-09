@@ -3,6 +3,7 @@ package jappuccini.exams2.joboffer;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -14,8 +15,8 @@ import java.util.Scanner;
  */
 public class JobOfferReader {
 
-  public static ArrayList<JobOffer> getJobOffers(File file) throws FileNotFoundException {
-    ArrayList<JobOffer> jobOffers = new ArrayList<>();
+  public static List<JobOffer> getJobOffers(File file) throws FileNotFoundException {
+    List<JobOffer> jobOffers = new ArrayList<>();
     Scanner scanner = new Scanner(file);
     while (scanner.hasNextLine()) {
       String line = scanner.nextLine();

@@ -1,6 +1,7 @@
 package jappuccini.exams1.studentcourse;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -14,8 +15,8 @@ public class StudentCourse {
 
   private final CourseOfStudies courseOfStudies;
   private final String description;
-  private final ArrayList<Lecture> lectures;
-  private final ArrayList<Student> students;
+  private final List<Lecture> lectures;
+  private final List<Student> students;
 
   public StudentCourse(String description, CourseOfStudies courseOfStudies) {
     this.description = description;
@@ -58,8 +59,7 @@ public class StudentCourse {
     Lecture lecture = lectures.get(0);
     int creditPoints = lecture.creditPoints();
     for (int i = 0; i < lectures.size(); i++) {
-      if (lectures.get(i)
-          .creditPoints() > creditPoints) {
+      if (lectures.get(i).creditPoints() > creditPoints) {
         lecture = lectures.get(i);
         creditPoints = lecture.creditPoints();
       }
@@ -72,11 +72,11 @@ public class StudentCourse {
     return Objects.hash(courseOfStudies, description, lectures, students);
   }
 
-  public ArrayList<Lecture> lectures() {
+  public List<Lecture> lectures() {
     return lectures;
   }
 
-  public ArrayList<Student> students() {
+  public List<Student> students() {
     return students;
   }
 

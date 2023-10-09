@@ -1,6 +1,7 @@
 package jappuccini.exams2.joboffer;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -12,7 +13,7 @@ import java.util.Objects;
  */
 public class JobOffer {
 
-  private final ArrayList<Applicant> applicants;
+  private final List<Applicant> applicants;
   private final int id;
   private Recruiter recruiter;
   private final String title;
@@ -28,7 +29,7 @@ public class JobOffer {
     applicants.add(applicant);
   }
 
-  public ArrayList<Applicant> applicants() {
+  public List<Applicant> applicants() {
     return applicants;
   }
 

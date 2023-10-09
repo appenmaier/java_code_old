@@ -1,6 +1,7 @@
 package jappuccini.exams1.cardsdealer;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -12,7 +13,7 @@ import java.util.Objects;
  */
 public class Player {
 
-  private final ArrayList<Card> cards;
+  private final List<Card> cards;
 
   public Player() {
     cards = new ArrayList<>();
@@ -22,7 +23,7 @@ public class Player {
     cards.add(card);
   }
 
-  public ArrayList<Card> cards() {
+  public List<Card> cards() {
     return cards;
   }
 
@@ -38,12 +39,11 @@ public class Player {
     return Objects.equals(cards, other.cards);
   }
 
-  public ArrayList<Card> getCardsByColour(String colour) {
-    ArrayList<Card> cardsByColour = new ArrayList<>();
+  public List<Card> getCardsByColour(String colour) {
+    List<Card> cardsByColour = new ArrayList<>();
 
     for (Card c : cards) {
-      if (c.colour()
-          .equals(colour)) {
+      if (c.colour().equals(colour)) {
         cardsByColour.add(c);
       }
     }
@@ -76,4 +76,3 @@ public class Player {
   }
 
 }
-

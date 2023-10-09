@@ -1,6 +1,7 @@
 package jappuccini.exams1.cookiejar;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -12,7 +13,7 @@ import java.util.Objects;
  */
 public class CookieJar {
 
-  private final ArrayList<Cookie> cookies;
+  private final List<Cookie> cookies;
 
   public CookieJar() {
     cookies = new ArrayList<>();
@@ -22,7 +23,7 @@ public class CookieJar {
     cookies.add(cookie);
   }
 
-  public ArrayList<Cookie> cookies() {
+  public List<Cookie> cookies() {
     return cookies;
   }
 
@@ -41,8 +42,7 @@ public class CookieJar {
   public Cookie getCookieByName(String name) {
     for (int i = 0; i < cookies.size(); i++) {
       Cookie cookie = cookies.get(i);
-      if (cookie.name()
-          .equals(name)) {
+      if (cookie.name().equals(name)) {
         cookies.remove(cookie);
         return cookie;
       }
@@ -72,4 +72,3 @@ public class CookieJar {
   }
 
 }
-

@@ -1,7 +1,8 @@
 package jappuccini.exams2.library;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Map.Entry;
 
 /**
@@ -11,7 +12,7 @@ import java.util.Map.Entry;
  * @version 1.0
  *
  */
-public record Library(String name, HashMap<Book, Status> books) {
+public record Library(String name, Map<Book, Status> books) {
 
   public void addBook(Book book) {
     books.put(book, Status.AVAILABLE);
@@ -26,8 +27,8 @@ public record Library(String name, HashMap<Book, Status> books) {
     return null;
   }
 
-  public ArrayList<PaperBook> getPaperBooksByStatus(Status status) {
-    ArrayList<PaperBook> paperBooks = new ArrayList<>();
+  public List<PaperBook> getPaperBooksByStatus(Status status) {
+    List<PaperBook> paperBooks = new ArrayList<>();
     for (Entry<Book, Status> entry : books.entrySet()) {
       if (entry.getKey() instanceof PaperBook p && entry.getValue().equals(status)) {
         paperBooks.add(p);

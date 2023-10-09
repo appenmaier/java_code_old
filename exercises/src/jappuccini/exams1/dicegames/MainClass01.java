@@ -1,6 +1,7 @@
 package jappuccini.exams1.dicegames;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -12,7 +13,7 @@ import java.util.Scanner;
  */
 public class MainClass01 {
 
-  private static ArrayList<ShapeSymbolDice> dices;
+  private static List<ShapeSymbolDice> dices;
   private static Player player;
   private static int rounds;
   private static Scanner scanner;

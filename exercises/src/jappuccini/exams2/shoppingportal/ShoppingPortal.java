@@ -1,6 +1,6 @@
 package jappuccini.exams2.shoppingportal;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Einkaufsportal
@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * @version 1.0
  *
  */
-public record ShoppingPortal(String user, ArrayList<Product> products,
+public record ShoppingPortal(String user, List<Product> products,
     ShoppingCart<Product> shoppingCart) {
 
   public void addProductToShoppingCart(Product product, int amount) {

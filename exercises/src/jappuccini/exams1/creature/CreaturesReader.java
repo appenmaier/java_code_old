@@ -3,6 +3,7 @@ package jappuccini.exams1.creature;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -14,8 +15,8 @@ import java.util.Scanner;
  */
 public class CreaturesReader {
 
-  public static ArrayList<Creature> getCreatures(File file) throws FileNotFoundException {
-    ArrayList<Creature> creatures = new ArrayList<>();
+  public static List<Creature> getCreatures(File file) throws FileNotFoundException {
+    List<Creature> creatures = new ArrayList<>();
     Scanner sc = new Scanner(file);
 
     while (sc.hasNextLine()) {

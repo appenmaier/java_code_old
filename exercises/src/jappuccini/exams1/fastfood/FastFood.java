@@ -1,6 +1,7 @@
 package jappuccini.exams1.fastfood;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -13,7 +14,7 @@ import java.util.Objects;
 public class FastFood extends Food {
 
   private boolean isVegetarian;
-  private ArrayList<Integer> ratings;
+  private List<Integer> ratings;
 
   public FastFood(String name, FoodCategory foodCategory, double calories, boolean isVegetarian) {
     super(name, foodCategory, calories);
@@ -58,7 +59,7 @@ public class FastFood extends Food {
     return isVegetarian;
   }
 
-  public ArrayList<Integer> ratings() {
+  public List<Integer> ratings() {
     return ratings;
   }
 
@@ -69,4 +70,3 @@ public class FastFood extends Food {
   }
 
 }
-

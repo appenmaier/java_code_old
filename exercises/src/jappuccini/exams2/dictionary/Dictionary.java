@@ -2,9 +2,9 @@ package jappuccini.exams2.dictionary;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Scanner;
-import java.util.TreeMap;
 
 /**
  * Woerterbuch
@@ -14,7 +14,7 @@ import java.util.TreeMap;
  *
  */
 public record Dictionary(Language sourceLanguage, Language targetLanguage,
-    TreeMap<Word, Word> entries) {
+    Map<Word, Word> entries) {
 
   public void addEntry(Word sourceWord, Word targetWord) throws InvalidLanguageException {
     if (!sourceWord.language().equals(sourceLanguage)

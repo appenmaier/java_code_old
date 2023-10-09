@@ -3,6 +3,7 @@ package jappuccini.exams1.cookiejar;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -14,7 +15,7 @@ import java.util.Scanner;
  */
 public class IngredientsReader {
 
-  public static ArrayList<Ingredient> readIngredients(File file) throws FileNotFoundException {
+  public static List<Ingredient> readIngredients(File file) throws FileNotFoundException {
     Scanner sc = new Scanner(file);
 
     ArrayList<Ingredient> ingredients = new ArrayList<>();

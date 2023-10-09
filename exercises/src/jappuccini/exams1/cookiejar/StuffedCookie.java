@@ -1,6 +1,6 @@
 package jappuccini.exams1.cookiejar;
 
-import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -32,12 +32,10 @@ public class StuffedCookie extends Cookie {
   }
 
   @Override
-  public ArrayList<Ingredient> getIngredients() {
-    ArrayList<Ingredient> ingredients = super.getIngredients();
-    for (int i = 0; i < jam.ingredients()
-        .size(); i++) {
-      Ingredient ingredient = jam.ingredients()
-          .get(i);
+  public List<Ingredient> getIngredients() {
+    List<Ingredient> ingredients = super.getIngredients();
+    for (int i = 0; i < jam.ingredients().size(); i++) {
+      Ingredient ingredient = jam.ingredients().get(i);
       if (ingredients.contains(ingredient)) {
         continue;
       }

@@ -1,7 +1,7 @@
 package jappuccini.exams2.cornershop;
 
+import java.util.Map;
 import java.util.Map.Entry;
-import java.util.TreeMap;
 
 /**
  * Tante-Emma-Laden
@@ -10,7 +10,7 @@ import java.util.TreeMap;
  * @version 1.0
  *
  */
-public record CornerShop(String name, TreeMap<Goods, Integer> store) {
+public record CornerShop(String name, Map<Goods, Integer> store) {
 
   public Entry<Goods, Integer> getEntryByDescription(String description) {
     for (Entry<Goods, Integer> entry : store.entrySet()) {

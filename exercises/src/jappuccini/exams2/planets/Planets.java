@@ -1,6 +1,7 @@
 package jappuccini.exams2.planets;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Planeten
@@ -11,8 +12,8 @@ import java.util.ArrayList;
  */
 public class Planets {
 
-  public static ArrayList<Planet> getPlanets() {
-    ArrayList<Planet> planets = new ArrayList<>();
+  public static List<Planet> getPlanets() {
+    List<Planet> planets = new ArrayList<>();
 
     planets.add(new Planet("Merkur", 1220, 0.33, 0, Type.TERRESTRIAL_PLANET));
     planets.add(new Planet("Venus", 3025, 4.86, 0, Type.TERRESTRIAL_PLANET));

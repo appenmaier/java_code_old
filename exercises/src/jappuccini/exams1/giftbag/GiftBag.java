@@ -1,6 +1,7 @@
 package jappuccini.exams1.giftbag;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -12,7 +13,7 @@ import java.util.Objects;
  */
 public class GiftBag {
 
-  private final ArrayList<Present> presents;
+  private final List<Present> presents;
 
   public GiftBag() {
     this.presents = new ArrayList<>();
@@ -52,7 +53,7 @@ public class GiftBag {
     return Objects.hash(presents);
   }
 
-  public ArrayList<Present> presents() {
+  public List<Present> presents() {
     return presents;
   }
 

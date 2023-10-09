@@ -1,7 +1,8 @@
 package jappuccini.exams2.humanresources;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Map.Entry;
 
 /**
@@ -11,8 +12,7 @@ import java.util.Map.Entry;
  * @version 1.0
  *
  */
-public record HumanResources(HashMap<TelephoneNumber, Person> telephoneNumbers,
-    ArrayList<Person> staff) {
+public record HumanResources(Map<TelephoneNumber, Person> telephoneNumbers, List<Person> staff) {
 
   public void addTelephoneNumber(TelephoneNumber telephoneNumber, Person person) {
     telephoneNumbers.put(telephoneNumber, person);
@@ -27,8 +27,8 @@ public record HumanResources(HashMap<TelephoneNumber, Person> telephoneNumbers,
     staff.add(person);
   }
 
-  public ArrayList<TelephoneNumber> getTelephoneNumbersByPersonId(int id) {
-    ArrayList<TelephoneNumber> numbers = new ArrayList<>();
+  public List<TelephoneNumber> getTelephoneNumbersByPersonId(int id) {
+    List<TelephoneNumber> numbers = new ArrayList<>();
     for (Entry<TelephoneNumber, Person> entry : telephoneNumbers.entrySet()) {
       if (entry.getValue().id() == id) {
         numbers.add(entry.getKey());

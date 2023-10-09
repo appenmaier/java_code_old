@@ -2,7 +2,7 @@ package jappuccini.exams2.videocollection;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @version 1.0
  *
  */
-public record VideoCollection(ArrayList<Video> videos) {
+public record VideoCollection(List<Video> videos) {
 
   public void addVideo(Video video) {
     videos.add(video);

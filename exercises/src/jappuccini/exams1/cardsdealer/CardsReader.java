@@ -3,6 +3,7 @@ package jappuccini.exams1.cardsdealer;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -14,8 +15,8 @@ import java.util.Scanner;
  */
 public class CardsReader {
 
-  public static ArrayList<Card> getCards(File file) throws FileNotFoundException {
-    ArrayList<Card> cards = new ArrayList<>();
+  public static List<Card> getCards(File file) throws FileNotFoundException {
+    List<Card> cards = new ArrayList<>();
     Scanner sc = new Scanner(file);
 
     while (sc.hasNextLine()) {

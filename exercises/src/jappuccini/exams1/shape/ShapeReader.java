@@ -3,6 +3,7 @@ package jappuccini.exams1.shape;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -14,7 +15,7 @@ import java.util.Scanner;
  */
 public class ShapeReader {
 
-  private final ArrayList<Shape> shapes = new ArrayList<>();
+  private final List<Shape> shapes = new ArrayList<>();
 
   public ShapeReader(File file) throws FileNotFoundException {
     Scanner sc = new Scanner(file);
@@ -38,8 +39,8 @@ public class ShapeReader {
     sc.close();
   }
 
-  public ArrayList<Circle> getCircles() {
-    ArrayList<Circle> circles = new ArrayList<>();
+  public List<Circle> getCircles() {
+    List<Circle> circles = new ArrayList<>();
     for (int i = 0; i < shapes.size(); i++) {
       Shape shape = shapes.get(i);
       if (shape instanceof Circle circle) {
@@ -49,8 +50,8 @@ public class ShapeReader {
     return circles;
   }
 
-  public ArrayList<Shape> getShapesWithMinArea(double minArea) {
-    ArrayList<Shape> shapesWithMinArea = new ArrayList<>();
+  public List<Shape> getShapesWithMinArea(double minArea) {
+    List<Shape> shapesWithMinArea = new ArrayList<>();
     for (int i = 0; i < shapes.size(); i++) {
       Shape shape = shapes.get(i);
       if (shape.getArea() >= minArea) {

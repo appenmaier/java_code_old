@@ -1,6 +1,6 @@
 package jappuccini.exams1.cardsdealer;
 
-import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -12,11 +12,11 @@ import java.util.Random;
  */
 public class CardsDealer {
 
-  private final ArrayList<Card> deck;
+  private final List<Card> deck;
   private final Player player1;
   private final Player player2;
 
-  public CardsDealer(ArrayList<Card> deck, Player player1, Player player2) {
+  public CardsDealer(List<Card> deck, Player player1, Player player2) {
     this.deck = deck;
     this.player1 = player1;
     this.player2 = player2;
@@ -35,7 +35,7 @@ public class CardsDealer {
     }
   }
 
-  public ArrayList<Card> deck() {
+  public List<Card> deck() {
     return deck;
   }
 

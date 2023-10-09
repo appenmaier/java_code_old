@@ -1,6 +1,7 @@
 package jappuccini.exams1.fastfood;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -12,7 +13,7 @@ import java.util.Objects;
  */
 public class FastFoodShop {
 
-  private ArrayList<FastFood> fastFood;
+  private List<FastFood> fastFood;
   private String name;
 
   public FastFoodShop(String name) {
@@ -36,7 +37,7 @@ public class FastFoodShop {
     return Objects.equals(fastFood, other.fastFood) && Objects.equals(name, other.name);
   }
 
-  public ArrayList<FastFood> fastFood() {
+  public List<FastFood> fastFood() {
     return fastFood;
   }
 
@@ -72,4 +73,3 @@ public class FastFoodShop {
   }
 
 }
-

@@ -1,6 +1,6 @@
 package jappuccini.exams2.spacestation;
 
-import java.util.HashMap;
+import java.util.Map;
 import java.util.Map.Entry;
 
 /**
@@ -10,7 +10,7 @@ import java.util.Map.Entry;
  * @version 1.0
  *
  */
-public record SpaceStation(String name, HashMap<Integer, SpaceFighter> bays) {
+public record SpaceStation(String name, Map<Integer, SpaceFighter> bays) {
 
   public void land(SpaceFighter spaceFighter, Integer bayNumber)
       throws SpaceFighterAlreadyLandedException, BayAlreadyLoadedException {
@@ -38,4 +38,3 @@ public record SpaceStation(String name, HashMap<Integer, SpaceFighter> bays) {
   }
 
 }
-

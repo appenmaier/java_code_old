@@ -1,6 +1,6 @@
 package jappuccini.exams1.cookiejar;
 
-import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -36,7 +36,7 @@ public class Cookie {
     return Objects.equals(dough, other.dough) && Objects.equals(name, other.name);
   }
 
-  public ArrayList<Ingredient> getIngredients() {
+  public List<Ingredient> getIngredients() {
     return dough.ingredients();
   }
 

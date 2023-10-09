@@ -1,6 +1,7 @@
 package jappuccini.exams1.christmastree;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -12,7 +13,7 @@ import java.util.Objects;
  */
 public class ChristmasTree {
 
-  private final ArrayList<Candle> candles;
+  private final List<Candle> candles;
   private final double size;
   private final String type;
 
@@ -26,7 +27,7 @@ public class ChristmasTree {
     candles.add(candle);
   }
 
-  public ArrayList<Candle> candles() {
+  public List<Candle> candles() {
     return candles;
   }
 

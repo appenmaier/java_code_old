@@ -1,6 +1,7 @@
 package jappuccini.exams1.zoo;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -12,7 +13,7 @@ import java.util.Objects;
  */
 public class Zoo {
 
-  private final ArrayList<Animal> animals;
+  private final List<Animal> animals;
   private final String name;
 
   public Zoo(String name) {
@@ -24,7 +25,7 @@ public class Zoo {
     animals.add(animal);
   }
 
-  public ArrayList<Animal> animals() {
+  public List<Animal> animals() {
     return animals;
   }
 
@@ -54,8 +55,8 @@ public class Zoo {
     return animal;
   }
 
-  public ArrayList<Fish> getFishesByColor(String color) {
-    ArrayList<Fish> fishes = new ArrayList<>();
+  public List<Fish> getFishesByColor(String color) {
+    List<Fish> fishes = new ArrayList<>();
 
     for (Animal a : animals) {
       if (a instanceof Fish f) {

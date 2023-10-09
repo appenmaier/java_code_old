@@ -1,6 +1,7 @@
 package jappuccini.exams1.cookiejar;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -12,7 +13,7 @@ import java.util.Objects;
  */
 public class Recipe {
 
-  private final ArrayList<Ingredient> ingredients;
+  private final List<Ingredient> ingredients;
   private final String name;
 
   public Recipe(String name) {
@@ -41,7 +42,7 @@ public class Recipe {
     return Objects.hash(ingredients, name);
   }
 
-  public ArrayList<Ingredient> ingredients() {
+  public List<Ingredient> ingredients() {
     return ingredients;
   }
 

@@ -1,6 +1,7 @@
 package jappuccini.exams2.shoppingportal;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -37,7 +38,7 @@ public class ShoppingCart<T extends Sellable> {
 
   }
 
-  private final ArrayList<Item> items;
+  private final List<Item> items;
 
   public ShoppingCart() {
     items = new ArrayList<>();
@@ -73,7 +74,7 @@ public class ShoppingCart<T extends Sellable> {
     return Objects.hash(items);
   }
 
-  public ArrayList<Item> items() {
+  public List<Item> items() {
     return items;
   }
 
