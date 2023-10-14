@@ -7,6 +7,6 @@ package jappuccini.model;
  * @version 1.0
  *
  */
-public record Club(String name, int marketValueInMillions) {
+public record Club(String name, int marketValueInMillionEuros) {
 
 }
