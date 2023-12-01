@@ -1,6 +1,5 @@
 package main;
 
-
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,8 +8,8 @@ import java.util.Optional;
 import java.util.OptionalDouble;
 import java.util.stream.Collectors;
 import model.Movie;
-import model.Movies;
 import model.Movie.Genre;
+import model.Movies;
 
 /**
  * Intermediaere und Terminale Operationen
