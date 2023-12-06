@@ -9,8 +9,9 @@ package model;
  */
 public class BMICalculator {
 
-  @SuppressWarnings("serial")
   public static class InvalidSizeExeption extends Exception {
+
+    private static final long serialVersionUID = 1L;
 
   }
 

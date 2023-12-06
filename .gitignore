@@ -4,7 +4,8 @@ wwibe122/bin/
 wwibe222/bin/
 demos/bin/
 exercises/bin/
-exams/bin/
+
+.vscode/
 
 *.settings
 *.classpath
