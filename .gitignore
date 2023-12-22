@@ -1,12 +1,4 @@
-wwibe121/bin/
-wwibe221/bin/
-wwibe122/bin/
-wwibe222/bin/
-demos/bin/
-exercises/bin/
-
-.vscode/
-
+*.class
 *.settings
 *.classpath
 *.project
