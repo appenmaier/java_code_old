@@ -4,7 +4,7 @@ import java.util.Scanner;
 import koblenz.model.Printer;
 
 /**
- * https://www.uni-koblenz-landau.de/de/koblenz/fb4/ist/rgebert/teaching/SS08/java-programming/programmieraufgaben.pdf/view
+ * /pdf/exercises-koblenz.pdf
  * Aufgabe C4
  */
 public class E160K_C04 {

@@ -1,7 +1,7 @@
 package ulm.main;
 
 /**
- * https://studium.hs-ulm.de/de/org/I/vorkurse/Documents/java_aufgaben.pdf Aufgabe Variablen-6
+ * /pdf/exercises-ulm.pdf Aufgabe Variablen-6
  *
  * Hinweise: ohne Einlesen, Kreisflaeche A = PI * r * r
  */

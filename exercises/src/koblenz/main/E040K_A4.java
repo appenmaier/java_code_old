@@ -4,7 +4,7 @@ package koblenz.main;
 import java.util.Scanner;
 
 /**
- * https://www.uni-koblenz-landau.de/de/koblenz/fb4/ist/rgebert/teaching/SS08/java-programming/programmieraufgaben.pdf/view
+ * /pdf/exercises-koblenz.pdf
  * Aufgabe A4
  */
 public class E040K_A4 {

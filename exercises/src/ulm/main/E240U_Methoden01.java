@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * https://studium.hs-ulm.de/de/org/I/vorkurse/Documents/java_aufgaben.pdf Aufgabe Methoden-1
+ * /pdf/exercises-ulm.pdf Aufgabe Methoden-1
  */
 public class E240U_Methoden01 {
 

@@ -4,7 +4,7 @@ import java.util.Random;
 import koblenz.model.IntegerArray;
 
 /**
- * https://www.uni-koblenz-landau.de/de/koblenz/fb4/ist/rgebert/teaching/SS08/java-programming/programmieraufgaben.pdf/view
+ * /pdf/exercises-koblenz.pdf
  * Aufgabe E9
  * 
  * Hinweis: ohne Fehlerbehandlung

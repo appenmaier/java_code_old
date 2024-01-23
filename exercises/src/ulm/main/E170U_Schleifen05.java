@@ -4,7 +4,7 @@ import java.util.Scanner;
 import ulm.model.Printer;
 
 /**
- * https://studium.hs-ulm.de/de/org/I/vorkurse/Documents/java_aufgaben.pdf Aufgabe Schleifen-5
+ * /pdf/exercises-ulm.pdf Aufgabe Schleifen-5
  */
 public class E170U_Schleifen05 {
 

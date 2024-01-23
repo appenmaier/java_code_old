@@ -3,7 +3,7 @@ package ulm.main;
 import java.util.Scanner;
 
 /**
- * https://studium.hs-ulm.de/de/org/I/vorkurse/Documents/java_aufgaben.pdf Aufgabe Verzweigungen-4
+ * /pdf/exercises-ulm.pdf Aufgabe Verzweigungen-4
  */
 public class E110U_Verzweigungen04 {
 

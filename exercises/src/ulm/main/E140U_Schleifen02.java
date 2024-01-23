@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 /**
- * https://studium.hs-ulm.de/de/org/I/vorkurse/Documents/java_aufgaben.pdf Aufgabe Schleifen-2
+ * /pdf/exercises-ulm.pdf Aufgabe Schleifen-2
  */
 public class E140U_Schleifen02 {
 

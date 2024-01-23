@@ -3,7 +3,7 @@ package koblenz.main;
 import java.util.Scanner;
 
 /**
- * https://www.uni-koblenz-landau.de/de/koblenz/fb4/ist/rgebert/teaching/SS08/java-programming/programmieraufgaben.pdf/view
+ * /pdf/exercises-koblenz.pdf
  * Aufgabe B3
  */
 public class E100K_B3 {

@@ -4,7 +4,7 @@ import java.util.Scanner;
 import ulm.model.Printer;
 
 /**
- * https://studium.hs-ulm.de/de/org/I/vorkurse/Documents/java_aufgaben.pdf Aufgabe Methoden-3
+ * /pdf/exercises-ulm.pdf Aufgabe Methoden-3
  */
 public class E260U_Methoden03 {
 

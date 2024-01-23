@@ -1,7 +1,7 @@
 package ulm.main;
 
 /**
- * https://studium.hs-ulm.de/de/org/I/vorkurse/Documents/java_aufgaben.pdf Aufgabe Methoden-4
+ * /pdf/exercises-ulm.pdf Aufgabe Methoden-4
  */
 public class E270U_Methoden04 {
 

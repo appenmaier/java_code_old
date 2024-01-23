@@ -3,7 +3,7 @@ package ulm.main;
 import java.util.Scanner;
 
 /**
- * https://studium.hs-ulm.de/de/org/I/vorkurse/Documents/java_aufgaben.pdf Aufgabe Felder-6
+ * /pdf/exercises-ulm.pdf Aufgabe Felder-6
  */
 public class E230U_Felder06 {
 

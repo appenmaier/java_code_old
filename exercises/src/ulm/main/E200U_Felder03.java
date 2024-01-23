@@ -3,7 +3,7 @@ package ulm.main;
 import java.util.Arrays;
 
 /**
- * https://studium.hs-ulm.de/de/org/I/vorkurse/Documents/java_aufgaben.pdf Aufgabe Felder-3
+ * /pdf/exercises-ulm.pdf Aufgabe Felder-3
  */
 public class E200U_Felder03 {
 

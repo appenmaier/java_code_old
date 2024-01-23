@@ -3,7 +3,7 @@ package ulm.main;
 import java.util.Scanner;
 
 /**
- * https://studium.hs-ulm.de/de/org/I/vorkurse/Documents/java_aufgaben.pdf Aufgabe Schleifen-1
+ * /pdf/exercises-ulm.pdf Aufgabe Schleifen-1
  */
 public class E130U_Schleifen01 {
 
