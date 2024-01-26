@@ -1,8 +1,11 @@
 package koblenz.main;
 
 /**
- * /pdf/exercises-koblenz.pdf
  * Aufgabe B4
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
  */
 public class E110K_B4 {
 

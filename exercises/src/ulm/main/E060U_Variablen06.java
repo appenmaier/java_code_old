@@ -1,9 +1,11 @@
 package ulm.main;
 
 /**
- * /pdf/exercises-ulm.pdf Aufgabe Variablen-6
+ * Aufgabe Variablen-6 (ohne Einlesen, Kreisflaeche A = PI * r * r)
  *
- * Hinweise: ohne Einlesen, Kreisflaeche A = PI * r * r
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
  */
 public class E060U_Variablen06 {
 

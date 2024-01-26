@@ -3,7 +3,11 @@ package ulm.main;
 import java.util.Scanner;
 
 /**
- * /pdf/exercises-ulm.pdf Aufgabe Verzweigungen-5
+ * Aufgabe Verzweigungen-5
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
  */
 public class E120U_Verzweigungen05 {
 

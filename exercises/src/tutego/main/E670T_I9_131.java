@@ -4,10 +4,11 @@ import tutego.model.IllegalWattException;
 import tutego.model.TV;
 
 /**
- * https://tutego.de/javabuch/aufgaben/exception.html Aufgabe Exception-1.3.1
- * 
+ * Aufgabe Exception-1.3.1
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E670T_I9_131 {
 

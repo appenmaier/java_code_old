@@ -3,11 +3,11 @@ package tutego.main;
 import tutego.model.CandyType;
 
 /**
- * https://tutego.de/javabuch/aufgaben/interface_enum_sealed_classes_record.html Aufgabe
- * Interface-1.2.3
- * 
+ * Aufgabe Interface-1.2.3
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E510T_I8_123 {
 

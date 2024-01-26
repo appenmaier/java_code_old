@@ -4,10 +4,11 @@ import java.util.Scanner;
 import tutego.model.Printer;
 
 /**
- * https://tutego.de/javabuch/aufgaben/imperativ.html Aufgabe Imperativ-1.5.8
- * 
+ * Aufgabe Imperativ-1.5.8
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E180T_I2_158 {
 

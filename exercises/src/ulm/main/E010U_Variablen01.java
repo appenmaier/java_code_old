@@ -1,9 +1,11 @@
 package ulm.main;
 
 /**
- * /pdf/exercises-ulm.pdf Aufgabe Variablen-1
+ * Aufgabe Variablen-1 (ohne Einlesen)
  *
- * Hinweis: ohne Einlesen
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
  */
 public class E010U_Variablen01 {
 

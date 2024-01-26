@@ -5,11 +5,11 @@ import tutego.model.Ship;
 import tutego.model.TV;
 
 /**
- * https://tutego.de/javabuch/aufgaben/interface_enum_sealed_classes_record.html Aufgabe
- * Interface-1.1.5
- * 
+ * Aufgabe Interface-1.1.5
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E635T_I8_115 {
 

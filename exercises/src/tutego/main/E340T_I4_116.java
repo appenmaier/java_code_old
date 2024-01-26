@@ -3,10 +3,11 @@ package tutego.main;
 import java.util.Arrays;
 
 /**
- * https://tutego.de/javabuch/aufgaben/array.html Aufgabe Array-1.1.6
- * 
+ * Aufgabe Array-1.1.6
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E340T_I4_116 {
 

@@ -3,7 +3,11 @@ package ulm.main;
 import java.util.Scanner;
 
 /**
- * /pdf/exercises-ulm.pdf Aufgabe Felder-6
+ * Aufgabe Felder-6
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
  */
 public class E230U_Felder06 {
 

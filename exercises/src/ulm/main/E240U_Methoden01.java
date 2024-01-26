@@ -4,7 +4,11 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * /pdf/exercises-ulm.pdf Aufgabe Methoden-1
+ * Aufgabe Methoden-1
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
  */
 public class E240U_Methoden01 {
 

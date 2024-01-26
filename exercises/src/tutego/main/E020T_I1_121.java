@@ -1,10 +1,11 @@
 package tutego.main;
 
 /**
- * https://tutego.de/javabuch/aufgaben/intro.html Aufgabe Intro-1.2.1
- * 
+ * Aufgabe Intro-1.2.1
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E020T_I1_121 {
 

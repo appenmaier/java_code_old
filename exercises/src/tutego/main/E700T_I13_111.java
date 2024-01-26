@@ -8,10 +8,11 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 /**
- * https://tutego.de/javabuch/aufgaben/lambda-functional-programming.htm Aufgabe Lambda-1.1.1
- * 
+ * Lambda-1.1.1
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E700T_I13_111 {
 

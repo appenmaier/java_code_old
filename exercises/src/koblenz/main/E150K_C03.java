@@ -3,8 +3,11 @@ package koblenz.main;
 import java.util.Scanner;
 
 /**
- * /pdf/exercises-koblenz.pdf
  * Aufgabe C3
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
  */
 public class E150K_C03 {
 

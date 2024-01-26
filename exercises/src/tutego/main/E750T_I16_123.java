@@ -9,10 +9,11 @@ import tutego.model.Heroes;
 import tutego.model.Heroes.Hero;
 
 /**
- * https://tutego.de/javabuch/aufgaben/javalib.html Aufgabe Javalib-1.2.3
- * 
+ * Aufgabe Javalib-1.2.3
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E750T_I16_123 {
 

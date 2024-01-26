@@ -4,10 +4,11 @@ import java.util.Arrays;
 import tutego.model.IntegerArray;
 
 /**
- * https://tutego.de/javabuch/aufgaben/array.html Aufgabe Array-1.1.1
- * 
+ * Aufgabe Array-1.1.1
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E320T_I4_114 {
 

@@ -1,4 +1,3 @@
-/pdf/exercises-ulm.pdf
 Aufgabe Variablen-4
 
 Variable            Deklaration (Zeile)    Initialisierung (Zeile)

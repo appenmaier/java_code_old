@@ -3,10 +3,11 @@ package tutego.main;
 import java.util.Scanner;
 
 /**
- * https://tutego.de/javabuch/aufgaben/imperativ.html Aufgabe Imperativ-1.5.3
- * 
+ * Aufgabe Imperativ-1.5.3
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E130T_I2_153 {
 

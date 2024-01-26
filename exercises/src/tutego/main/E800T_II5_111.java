@@ -10,10 +10,11 @@ import tutego.model.Heroes.Hero;
 import tutego.model.Heroes.Hero.Sex;
 
 /**
- * https://tutego.de/javabuch/aufgaben/java.util.stream-api.html Aufgabe Streams-1.1.1
- * 
+ * Aufgabe Streams-1.1.1
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E800T_II5_111 {
 

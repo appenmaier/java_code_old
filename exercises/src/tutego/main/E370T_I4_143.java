@@ -1,12 +1,11 @@
 package tutego.main;
 
 /**
- * https://tutego.de/javabuch/aufgaben/array.html Aufgabe Array-1.4.3
- * 
- * Hinweis: ohne Fehlerbehandlung
- * 
+ * Aufgabe Array-1.4.3 (ohne Fehlerbehandlung)
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E370T_I4_143 {
 

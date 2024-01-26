@@ -3,13 +3,17 @@ package ulm.main;
 import java.util.Scanner;
 
 /**
- * /pdf/exercises-ulm.pdf Aufgabe Schleifen-4
+ * Aufgabe Schleifen-4
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
  */
 public class E160U_Schleifen04 {
 
   static String player1Name;
-  static String player2Name;
   static int player1Points;
+  static String player2Name;
   static int player2Points;
 
   static Scanner sc;

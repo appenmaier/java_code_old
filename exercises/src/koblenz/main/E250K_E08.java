@@ -5,10 +5,11 @@ import java.util.Scanner;
 import koblenz.model.IntegerArray;
 
 /**
- * /pdf/exercises-koblenz.pdf
- * Aufgabe E8
- * 
- * Hinweis: ohne Fehlerbehandlung
+ * Aufgabe E8 (ohne Fehlerbehandlung)
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
  */
 public class E250K_E08 {
 

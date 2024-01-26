@@ -4,8 +4,11 @@ import java.util.Scanner;
 import koblenz.model.Calculator;
 
 /**
- * /pdf/exercises-koblenz.pdf
  * Aufgabe B5
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
  */
 public class E120K_B5 {
 

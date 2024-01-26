@@ -6,11 +6,11 @@ import tutego.model.Radio;
 import tutego.model.TV;
 
 /**
- * https://tutego.de/javabuch/aufgaben/interface_enum_sealed_classes_record.html Aufgabe
- * Interface-1.1.1
- * 
+ * Aufgabe Interface-1.1.1
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E610T_I8_111 {
 

@@ -5,12 +5,11 @@ import java.util.Arrays;
 import java.util.Random;
 
 /**
- * https://tutego.de/javabuch/aufgaben/array.html Aufgabe Array-1.1.5
- * 
- * Hinweis: ohne Fehlerbehandlung
- * 
+ * Aufgabe Array-1.1.5 (ohne Fehlerbehandlung)
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E330T_I4_115 {
 

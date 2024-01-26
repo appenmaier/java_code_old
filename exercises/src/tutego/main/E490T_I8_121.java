@@ -4,13 +4,11 @@ import java.util.Scanner;
 import tutego.model.CandyType;
 
 /**
- * https://tutego.de/javabuch/aufgaben/interface_enum_sealed_classes_record.html Aufgabe
- * Interface-1.2.1
- * 
- * Hinweis: ohne Optional
- * 
+ * Aufgabe Interface-1.2.1 (ohne Optionals)
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E490T_I8_121 {
 

@@ -4,10 +4,11 @@ import tutego.model.Radio;
 import tutego.model.Radio.Modulation;
 
 /**
- * https://tutego.de/javabuch/aufgaben/oop_classes.html Aufgabe OOP-1.3.2
- * 
+ * Aufgabe OOP-1.3.2
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E460T_I6_132 {
 

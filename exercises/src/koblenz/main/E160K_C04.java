@@ -4,8 +4,11 @@ import java.util.Scanner;
 import koblenz.model.Printer;
 
 /**
- * /pdf/exercises-koblenz.pdf
  * Aufgabe C4
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
  */
 public class E160K_C04 {
 

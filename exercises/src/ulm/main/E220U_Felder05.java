@@ -4,7 +4,11 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * /pdf/exercises-ulm.pdf Aufgabe Felder-5
+ * Aufgabe Felder-5
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
  */
 public class E220U_Felder05 {
 

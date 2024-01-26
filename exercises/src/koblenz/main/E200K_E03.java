@@ -4,10 +4,11 @@ import java.util.Scanner;
 import koblenz.model.IntegerArray;
 
 /**
- * /pdf/exercises-koblenz.pdf
- * Aufgabe E3
- * 
- * Hinweis: ohne Fehlerbehandlung
+ * Aufgabe E3 (ohne Fehlerbehandlung)
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
  */
 public class E200K_E03 {
 

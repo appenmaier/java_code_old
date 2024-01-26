@@ -6,10 +6,11 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * https://tutego.de/javabuch/aufgaben/javalib.html AufgabeJavalib-1.2.6
- * 
+ * AufgabeJavalib-1.2.6
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E770T_I16_126 {
 

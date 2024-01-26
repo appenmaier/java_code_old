@@ -4,7 +4,11 @@ import java.util.Scanner;
 import ulm.model.Printer;
 
 /**
- * /pdf/exercises-ulm.pdf Aufgabe Schleifen-3
+ * Aufgabe Schleifen-3
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
  */
 public class E150U_Schleifen03 {
 

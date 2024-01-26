@@ -3,10 +3,11 @@ package tutego.main;
 import tutego.model.TV;
 
 /**
- * https://tutego.de/javabuch/aufgaben/oop_classes.html Aufgabe OOP-1.5.1
- * 
+ * Aufgabe OOP-1.5.1
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E470T_I6_151 {
 

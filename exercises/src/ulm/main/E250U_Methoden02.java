@@ -3,7 +3,11 @@ package ulm.main;
 import java.util.Scanner;
 
 /**
- * /pdf/exercises-ulm.pdf Aufgabe Methoden-2
+ * Aufgabe Methoden-2
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
  */
 public class E250U_Methoden02 {
 

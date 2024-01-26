@@ -4,10 +4,11 @@ import java.util.Scanner;
 import tutego.model.CoinMachine;
 
 /**
- * https://tutego.de/javabuch/aufgaben/imperativ.html Aufgabe Imperativ-1.3.4
- * 
+ * Aufgabe Imperativ-1.3.4
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E060T_I2_134 {
 

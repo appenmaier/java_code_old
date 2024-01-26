@@ -1,9 +1,11 @@
 package koblenz.main;
 
-
 /**
- * /pdf/exercises-koblenz.pdf
  * Aufgabe A1
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
  */
 public class E010K_A1 {
 

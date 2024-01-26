@@ -1,10 +1,11 @@
 package tutego.main;
 
 /**
- * https://tutego.de/javabuch/aufgaben/imperativ.html Aufgabe Imperativ-1.4.6
- * 
+ * Aufgabe Imperativ-1.4.6
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E120T_I2_146 {
 

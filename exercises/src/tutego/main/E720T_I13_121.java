@@ -4,10 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * https://tutego.de/javabuch/aufgaben/lambda-functional-programming.htm Aufgabe Lambda-1.2.1
- * 
+ * Aufgabe Lambda-1.2.1
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E720T_I13_121 {
 

@@ -1,4 +1,3 @@
-/pdf/exercises-ulm.pdf
 Aufgabe Verzweigungen-1
 
 a != 4: false

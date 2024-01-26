@@ -1,11 +1,13 @@
 package koblenz.main;
 
-
 import java.util.Scanner;
 
 /**
- * /pdf/exercises-koblenz.pdf
  * Aufgabe A4
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
  */
 public class E040K_A4 {
 

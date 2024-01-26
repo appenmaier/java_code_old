@@ -5,10 +5,11 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 /**
- * https://tutego.de/javabuch/aufgaben/javalib.html Aufgabe Javalib-1.2.5
- * 
+ * Aufgabe Javalib-1.2.5
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E760T_I16_125 {
 

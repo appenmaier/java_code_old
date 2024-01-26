@@ -1,7 +1,11 @@
 package ulm.main;
 
 /**
- * /pdf/exercises-ulm.pdf Aufgabe Methoden-4
+ * Aufgabe Methoden-4
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
  */
 public class E270U_Methoden04 {
 

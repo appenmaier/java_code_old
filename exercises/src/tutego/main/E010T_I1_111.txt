@@ -1,4 +1,3 @@
-http://tutego.de/javabuch/aufgaben/intro.html
 Aufgabe Intro-1.1.1
 
 Frage: Kann man die Datei Application.class von einem Windows-Rechner auf Linux kopieren und dort mit dem Programm java zur Ausfuehrung bringen?

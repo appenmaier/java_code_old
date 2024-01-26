@@ -3,7 +3,11 @@ package ulm.main;
 import java.util.Scanner;
 
 /**
- * /pdf/exercises-ulm.pdf Aufgabe Verzweigungen-2
+ * Aufgabe Verzweigungen-2
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
  */
 public class E090U_Verzweigungen02 {
 

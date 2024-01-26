@@ -5,10 +5,11 @@ import java.util.function.LongToDoubleFunction;
 import java.util.function.UnaryOperator;
 
 /**
- * https://tutego.de/javabuch/aufgaben/lambda-functional-programming.htm Aufgabe Lambda-1.1.2
- * 
+ * Aufgabe Lambda-1.1.2
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E710T_I13_112 {
 

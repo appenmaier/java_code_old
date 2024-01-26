@@ -3,10 +3,11 @@ package tutego.main;
 import tutego.model.Printer;
 
 /**
- * https://tutego.de/javabuch/aufgaben/array.html Aufgabe Array-1.2.1
- * 
+ * Aufgabe Array-1.2.1
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E350T_I4_121 {
 

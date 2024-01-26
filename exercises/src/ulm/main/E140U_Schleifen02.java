@@ -4,7 +4,11 @@ import java.util.Random;
 import java.util.Scanner;
 
 /**
- * /pdf/exercises-ulm.pdf Aufgabe Schleifen-2
+ * Aufgabe Schleifen-2
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
  */
 public class E140U_Schleifen02 {
 

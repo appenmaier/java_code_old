@@ -3,10 +3,11 @@ package tutego.main;
 import java.util.Random;
 
 /**
- * https://tutego.de/javabuch/aufgaben/array.html Aufgabe Array-1.1.1
- * 
+ * Aufgabe Array-1.1.1
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E290T_I4_111 {
 

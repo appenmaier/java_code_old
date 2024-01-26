@@ -5,12 +5,11 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 /**
- * https://tutego.de/javabuch/aufgaben/exception.html Aufgabe Exception-1.1.1
- * 
- * Hinweis: ohne java.nio.file.Files
- * 
+ * Aufgabe Exception-1.1.1 (ohne java.nio.file.Files)
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E640T_I9_111 {
 

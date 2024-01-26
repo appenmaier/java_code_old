@@ -4,10 +4,11 @@ import java.util.Random;
 import koblenz.model.IntegerArray;
 
 /**
- * /pdf/exercises-koblenz.pdf
- * Aufgabe E9
- * 
- * Hinweis: ohne Fehlerbehandlung
+ * Aufgabe E9 (ohne Fehlerbehandlung)
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
  */
 public class E260K_E09 {
 

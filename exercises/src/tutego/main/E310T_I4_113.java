@@ -3,12 +3,11 @@ package tutego.main;
 import java.util.Arrays;
 
 /**
- * https://tutego.de/javabuch/aufgaben/array.html Aufgabe Array-1.1.3
- * 
- * Hinweis: ohne Fehlerbehandlung
- * 
+ * Aufgabe Array-1.1.3 (ohne Fehlerbehandlung)
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E310T_I4_113 {
 

@@ -7,10 +7,11 @@ import tutego.model.Heroes;
 import tutego.model.Heroes.Hero;
 
 /**
- * https://tutego.de/javabuch/aufgaben/javalib.html Aufgabe Javalib-1.2.2
- * 
+ * Aufgabe Javalib-1.2.2
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E740T_I16_122 {
 

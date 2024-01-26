@@ -3,7 +3,11 @@ package ulm.main;
 import java.util.Arrays;
 
 /**
- * /pdf/exercises-ulm.pdf Aufgabe Felder-3
+ * Aufgabe Felder-3
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
  */
 public class E200U_Felder03 {
 

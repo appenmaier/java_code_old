@@ -3,7 +3,11 @@ package ulm.main;
 import java.util.Scanner;
 
 /**
- * /pdf/exercises-ulm.pdf Aufgabe Schleifen-1
+ * Aufgabe Schleifen-1
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
  */
 public class E130U_Schleifen01 {
 

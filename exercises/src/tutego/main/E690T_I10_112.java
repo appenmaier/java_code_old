@@ -7,10 +7,11 @@ import tutego.model.Radio;
 import tutego.model.TV;
 
 /**
- * https://tutego.de/javabuch/aufgaben/nested_types.html Aufgabe Nested-1.1.2
- * 
+ * Aufgabe Nested-1.1.2
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E690T_I10_112 {
 

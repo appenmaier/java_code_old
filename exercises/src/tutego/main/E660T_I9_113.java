@@ -3,10 +3,11 @@ package tutego.main;
 import java.util.Arrays;
 
 /**
- * https://tutego.de/javabuch/aufgaben/exception.html Aufgabe Exception-1.1.3
- * 
+ * Aufgabe Exception-1.1.3
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E660T_I9_113 {
 

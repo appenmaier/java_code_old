@@ -7,10 +7,11 @@ import tutego.model.Ship;
 import tutego.model.TV;
 
 /**
- * https://tutego.de/javabuch/aufgaben/oop_classes.html Aufgabe OOP-1.7.1
- * 
+ * Aufgabe OOP-1.7.1
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E600T_I6_171 {
 

@@ -5,10 +5,11 @@ import tutego.model.Radio;
 import tutego.model.Ship;
 
 /**
- * https://tutego.de/javabuch/aufgaben/oop_classes.html Aufgabe OOP-1.6.3
- * 
+ * Aufgabe OOP-1.6.3
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E540T_I6_163 {
 

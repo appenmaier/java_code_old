@@ -4,12 +4,11 @@ import java.util.Arrays;
 import java.util.Random;
 
 /**
- * https://tutego.de/javabuch/aufgaben/array.html Aufgabe Array-1.1.2
- * 
- * Hinweis: ohne Fehlerbehandlung
- * 
+ * Aufgabe Array-1.1.2 (ohne Fehlerbehandlung)
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E300T_I4_112 {
 

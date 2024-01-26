@@ -3,16 +3,16 @@ package tutego.main;
 import java.util.Scanner;
 
 /**
- * https://tutego.de/javabuch/aufgaben/imperativ.html Aufgabe Imperativ-1.4.1
- * 
+ * Aufgabe Imperativ-1.4.1
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E080T_I2_141 {
 
-  final static int PRICE = 1000;
-  final static double HIGH_DEVIATION_LIMIT = PRICE + PRICE * 0.2;
-  final static double LOW_DEVIATION_LIMIT = PRICE - PRICE * 0.1;
+  final static double HIGH_DEVIATION_LIMIT = 1200;
+  final static double LOW_DEVIATION_LIMIT = 900;
 
   public static void main(String[] args) {
 

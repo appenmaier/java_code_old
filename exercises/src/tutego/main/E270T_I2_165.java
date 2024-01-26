@@ -1,24 +1,13 @@
 package tutego.main;
 
 /**
- * https://tutego.de/javabuch/aufgaben/imperativ.html Aufgabe Imperativ-1.6.5
- * 
- * Hinweis: ohne Rekursion
- * 
+ * Aufgabe Imperativ-1.6.5 (ohne Rekursion)
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E270T_I2_165 {
-
-  public static void main(String[] args) {
-
-    long n = 27L;
-
-    collatz(n);
-    long max = collatzMax(n);
-    System.out.println("max: " + max);
-
-  }
 
   public static void collatz(long n) {
     while (n != 1) {
@@ -45,6 +34,16 @@ public class E270T_I2_165 {
       }
     }
     return max;
+  }
+
+  public static void main(String[] args) {
+
+    long n = 27L;
+
+    collatz(n);
+    long max = collatzMax(n);
+    System.out.println("max: " + max);
+
   }
 
 }

@@ -3,10 +3,11 @@ package tutego.main;
 import tutego.model.Radio;
 
 /**
- * https://tutego.de/javabuch/aufgaben/oop_classes.html Aufgabe OOP-1.4.2
- * 
+ * Aufgabe OOP-1.4.2
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E440T_I6_142 {
 

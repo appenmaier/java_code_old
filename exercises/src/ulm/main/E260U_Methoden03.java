@@ -4,7 +4,11 @@ import java.util.Scanner;
 import ulm.model.Printer;
 
 /**
- * /pdf/exercises-ulm.pdf Aufgabe Methoden-3
+ * Aufgabe Methoden-3
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
  */
 public class E260U_Methoden03 {
 

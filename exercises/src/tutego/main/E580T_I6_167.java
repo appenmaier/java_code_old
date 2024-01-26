@@ -7,10 +7,11 @@ import tutego.model.IceMachine;
 import tutego.model.Radio;
 
 /**
- * https://tutego.de/javabuch/aufgaben/oop_classes.html Aufgabe OOP-1.6.7
- * 
+ * Aufgabe OOP-1.6.7
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E580T_I6_167 {
 

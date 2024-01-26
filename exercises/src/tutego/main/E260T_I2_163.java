@@ -3,10 +3,11 @@ package tutego.main;
 import tutego.model.Calculator;
 
 /**
- * https://tutego.de/javabuch/aufgaben/imperativ.html Aufgabe Imperativ-1.6.3
- * 
+ * Aufgabe Imperativ-1.6.3
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E260T_I2_163 {
 

@@ -5,10 +5,11 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * https://tutego.de/javabuch/aufgaben/java.util.stream-api.html Aufgabe Streams-1.1.2
- * 
+ * Aufgabe Streams-1.1.2
+ *
  * @author Daniel Appenmaier
  * @version 1.0
+ *
  */
 public class E810T_II5_112 {
 
