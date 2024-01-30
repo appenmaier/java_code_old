@@ -1,3 +1,0 @@
-Hans Maier;42;m;true
-Peter Mueller;18;m;false
-Lisa Schmidt;29;w;true

@@ -8,16 +8,15 @@ package ntu.model;
  *
  */
 public class Circle {
+
   private String color;
   private double radius;
 
-  /** Constructs a Circle instance with default value for radius and color */
   public Circle() {
     radius = 1.0;
     color = "red";
   }
 
-  /** Constructs a Circle instance with the given radius and default color */
   public Circle(double radius) {
     this.radius = radius;
     color = "red";
@@ -28,7 +27,6 @@ public class Circle {
     this.color = color;
   }
 
-  /** Returns the area of this Circle instance */
   public double getArea() {
     return radius * radius * Math.PI;
   }
@@ -42,7 +40,6 @@ public class Circle {
     return color;
   }
 
-  /** Returns the radius */
   public double getRadius() {
     return radius;
   }
@@ -55,7 +52,6 @@ public class Circle {
     this.radius = radius;
   }
 
-  /** Return a self-descriptive string of this instance in the form of Circle[radius=?,color=?] */
   @Override
   public String toString() {
     return "Circle [radius=" + radius + " color=" + color + "]";
